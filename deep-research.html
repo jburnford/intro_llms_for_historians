@@ -103,14 +103,25 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./research-tasks.html"> 
 <span class="menu-text">Research Tasks</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./deep-research.html" aria-current="page"> 
-<span class="menu-text">Deep Research</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-deep-research" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Deep Research</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-deep-research">    
+        <li>
+    <a class="dropdown-item" href="./deep-research.html">
+ <span class="dropdown-text">Deep Research Tools</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./deep-research-example.html"> 
-<span class="menu-text">— Example</span></a>
+        <li>
+    <a class="dropdown-item" href="./deep-research-example.html">
+ <span class="dropdown-text">Example: Marine Insurance</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./deep-research-algonquin.html">
+ <span class="dropdown-text">Example: Algonquin Land Claim</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="./case-studies.html"> 
 <span class="menu-text">Case Studies</span></a>
@@ -148,18 +159,24 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#what-are-deep-research-tools" id="toc-what-are-deep-research-tools" class="nav-link active" data-scroll-target="#what-are-deep-research-tools">What Are Deep Research Tools?</a></li>
+  <li><a href="#two-cases-discovery-and-fabrication" id="toc-two-cases-discovery-and-fabrication" class="nav-link" data-scroll-target="#two-cases-discovery-and-fabrication">Two Cases: Discovery and Fabrication</a>
+  <ul class="collapse">
+  <li><a href="#case-1-the-algonquin-land-claim-a-genuine-discovery" id="toc-case-1-the-algonquin-land-claim-a-genuine-discovery" class="nav-link" data-scroll-target="#case-1-the-algonquin-land-claim-a-genuine-discovery">Case 1: The Algonquin Land Claim — A Genuine Discovery</a></li>
+  <li><a href="#case-2-marine-insurance-and-the-slave-trade-systematic-fabrication" id="toc-case-2-marine-insurance-and-the-slave-trade-systematic-fabrication" class="nav-link" data-scroll-target="#case-2-marine-insurance-and-the-slave-trade-systematic-fabrication">Case 2: Marine Insurance and the Slave Trade — Systematic Fabrication</a></li>
+  <li><a href="#what-the-two-cases-tell-us" id="toc-what-the-two-cases-tell-us" class="nav-link" data-scroll-target="#what-the-two-cases-tell-us">What the Two Cases Tell Us</a></li>
+  </ul></li>
   <li><a href="#what-they-do-well" id="toc-what-they-do-well" class="nav-link" data-scroll-target="#what-they-do-well">What They Do Well</a>
   <ul class="collapse">
   <li><a href="#rapid-orientation-in-an-unfamiliar-field" id="toc-rapid-orientation-in-an-unfamiliar-field" class="nav-link" data-scroll-target="#rapid-orientation-in-an-unfamiliar-field">Rapid Orientation in an Unfamiliar Field</a></li>
+  <li><a href="#surfacing-sources-across-disciplines-and-archives" id="toc-surfacing-sources-across-disciplines-and-archives" class="nav-link" data-scroll-target="#surfacing-sources-across-disciplines-and-archives">Surfacing Sources Across Disciplines and Archives</a></li>
   <li><a href="#finding-recent-work" id="toc-finding-recent-work" class="nav-link" data-scroll-target="#finding-recent-work">Finding Recent Work</a></li>
-  <li><a href="#identifying-connections-across-fields" id="toc-identifying-connections-across-fields" class="nav-link" data-scroll-target="#identifying-connections-across-fields">Identifying Connections Across Fields</a></li>
   <li><a href="#producing-working-bibliographies" id="toc-producing-working-bibliographies" class="nav-link" data-scroll-target="#producing-working-bibliographies">Producing Working Bibliographies</a></li>
   </ul></li>
   <li><a href="#where-they-fail-and-why-it-matters-more-here" id="toc-where-they-fail-and-why-it-matters-more-here" class="nav-link" data-scroll-target="#where-they-fail-and-why-it-matters-more-here">Where They Fail — and Why It Matters More Here</a>
   <ul class="collapse">
   <li><a href="#mixed-real-and-fabricated-citations" id="toc-mixed-real-and-fabricated-citations" class="nav-link" data-scroll-target="#mixed-real-and-fabricated-citations">Mixed Real and Fabricated Citations</a></li>
   <li><a href="#confident-mischaracterization" id="toc-confident-mischaracterization" class="nav-link" data-scroll-target="#confident-mischaracterization">Confident Mischaracterization</a></li>
-  <li><a href="#historiographic-flattening" id="toc-historiographic-flattening" class="nav-link" data-scroll-target="#historiographic-flattening">Historiographic Flattening</a></li>
+  <li><a href="#fabricated-consensus" id="toc-fabricated-consensus" class="nav-link" data-scroll-target="#fabricated-consensus">Fabricated Consensus</a></li>
   <li><a href="#source-quality-blindness" id="toc-source-quality-blindness" class="nav-link" data-scroll-target="#source-quality-blindness">Source Quality Blindness</a></li>
   </ul></li>
   <li><a href="#a-practical-workflow" id="toc-a-practical-workflow" class="nav-link" data-scroll-target="#a-practical-workflow">A Practical Workflow</a>
@@ -167,13 +184,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#step-1-generate" id="toc-step-1-generate" class="nav-link" data-scroll-target="#step-1-generate">Step 1: Generate</a></li>
   <li><a href="#step-2-verify-every-citation" id="toc-step-2-verify-every-citation" class="nav-link" data-scroll-target="#step-2-verify-every-citation">Step 2: Verify Every Citation</a></li>
   <li><a href="#step-3-check-summaries-against-originals" id="toc-step-3-check-summaries-against-originals" class="nav-link" data-scroll-target="#step-3-check-summaries-against-originals">Step 3: Check Summaries Against Originals</a></li>
-  <li><a href="#step-4-fill-the-gaps" id="toc-step-4-fill-the-gaps" class="nav-link" data-scroll-target="#step-4-fill-the-gaps">Step 4: Fill the Gaps</a></li>
-  <li><a href="#step-5-read" id="toc-step-5-read" class="nav-link" data-scroll-target="#step-5-read">Step 5: Read</a></li>
+  <li><a href="#step-4-check-the-numbers" id="toc-step-4-check-the-numbers" class="nav-link" data-scroll-target="#step-4-check-the-numbers">Step 4: Check the Numbers</a></li>
+  <li><a href="#step-5-fill-the-gaps" id="toc-step-5-fill-the-gaps" class="nav-link" data-scroll-target="#step-5-fill-the-gaps">Step 5: Fill the Gaps</a></li>
+  <li><a href="#step-6-read" id="toc-step-6-read" class="nav-link" data-scroll-target="#step-6-read">Step 6: Read</a></li>
   </ul></li>
   <li><a href="#comparing-the-tools" id="toc-comparing-the-tools" class="nav-link" data-scroll-target="#comparing-the-tools">Comparing the Tools</a>
   <ul class="collapse">
   <li><a href="#a-note-on-gemini-and-the-limits-of-knowledge" id="toc-a-note-on-gemini-and-the-limits-of-knowledge" class="nav-link" data-scroll-target="#a-note-on-gemini-and-the-limits-of-knowledge">A Note on Gemini and the Limits of Knowledge</a></li>
-  <li><a href="#a-note-on-claude-and-the-limits-of-training-data" id="toc-a-note-on-claude-and-the-limits-of-training-data" class="nav-link" data-scroll-target="#a-note-on-claude-and-the-limits-of-training-data">A Note on Claude and the Limits of Training Data</a></li>
   </ul></li>
   <li><a href="#when-deep-research-tools-are-most-useful" id="toc-when-deep-research-tools-are-most-useful" class="nav-link" data-scroll-target="#when-deep-research-tools-are-most-useful">When Deep Research Tools Are Most Useful</a></li>
   <li><a href="#when-they-are-not-useful" id="toc-when-they-are-not-useful" class="nav-link" data-scroll-target="#when-they-are-not-useful">When They Are Not Useful</a></li>
@@ -208,14 +225,60 @@ ul.task-list li input[type="checkbox"] {
 <section id="what-are-deep-research-tools" class="level2">
 <h2 class="anchored" data-anchor-id="what-are-deep-research-tools">What Are Deep Research Tools?</h2>
 <p>Several GenAI products now offer a “deep research” or “research” mode that goes beyond a simple chatbot response. Instead of answering your question from memory, these tools search the web, read multiple sources, synthesize what they find, and produce a structured report — often with citations and footnotes.</p>
-<p>The major options as of mid-2026:</p>
+<p>The major options as of early 2026:</p>
 <ul>
-<li><strong>Gemini Deep Research</strong> (Google) — available with Gemini Advanced ($20/month). Searches the web, reads pages, and produces multi-page reports with source links.</li>
+<li><strong>Gemini Deep Research</strong> (Google) — available with Google AI Pro ($20/month). Searches the web, reads pages, and produces multi-page reports with source links.</li>
 <li><strong>ChatGPT Deep Research</strong> (OpenAI) — available with ChatGPT Plus and Pro. Similar approach: extended web browsing, synthesis, and structured output.</li>
 <li><strong>Perplexity</strong> (<a href="https://perplexity.ai">perplexity.ai</a>) — available in a free tier with limits, and a Pro tier (~$20/month). Designed from the ground up as a research tool. Every claim is linked to a source. The free tier is a good starting point.</li>
 <li><strong>Claude with web search</strong> (Anthropic) — Claude Pro can search the web when asked. Less automated than the dedicated deep research tools, but the underlying model is strong on synthesis and nuance.</li>
 </ul>
 <p>These tools represent a genuine step forward from the basic chatbot experience described in earlier sections. They can produce results in minutes that would take hours of manual searching. They are also where GenAI’s limitations become most consequential for historians.</p>
+</section>
+<section id="two-cases-discovery-and-fabrication" class="level2">
+<h2 class="anchored" data-anchor-id="two-cases-discovery-and-fabrication">Two Cases: Discovery and Fabrication</h2>
+<p>The best way to understand what deep research tools can and cannot do is to see them in action. The two cases below, both drawn from real research projects, illustrate the full range of outcomes: from genuine historiographic contribution to confident, systematic fabrication. Both outputs looked equally authoritative. Only domain expertise and careful verification could tell the difference.</p>
+<section id="case-1-the-algonquin-land-claim-a-genuine-discovery" class="level3">
+<h3 class="anchored" data-anchor-id="case-1-the-algonquin-land-claim-a-genuine-discovery">Case 1: The Algonquin Land Claim — A Genuine Discovery</h3>
+<p>A historian had spent three years researching the history of Westmeath Township and the Algonquin in the Ottawa Valley. Through conventional archival work, he had assembled a detailed picture of Algonquin petitions and land claims using Joan Holmes &amp; Associates’ comprehensive research reports, which included many transcribed petitions. But a key piece of the story remained elusive: why had the promising 1835 negotiations between Algonquin leaders and Lieutenant-Governor Sir John Colborne collapsed so abruptly in 1836?</p>
+<p>When the historian ran a deep research query on the topic, Gemini produced a structured report that identified two sources he had not encountered in three years of research:</p>
+<ol type="1">
+<li><strong>Brian Lawson, “Aboriginal Dispossession in the Emergence of a Capitalist Resource Extractive Region: The Ottawa Valley, 1800–1830s”</strong> (a conference paper presented at the Canadian Political Science Association, 2009), which analyzed the political economy behind the Crown’s treatment of the Algonquin claims.</li>
+<li><strong>A Government of Canada publication</strong> from the federal publications archive, containing additional documentation of the negotiations.</li>
+</ol>
+<p>These sources provided the missing context: Colborne had left Toronto in late 1835 and been replaced by Sir Francis Bond Head, who was ideologically opposed to creating new reserves near areas of active settlement. Head revoked the agreement Colborne’s administration had made, citing a contested interpretation of the Crawford Purchase (a 1783 treaty with the Mississauga) as justification. This explained the abrupt reversal that the Holmes reports documented but did not fully account for.</p>
+<p>The historian followed his standard practice: <em>Interesting, I wonder if that is true.</em> He located the Lawson PDF, read it carefully, and confirmed that it contained the analysis of the Colborne-to-Head transition and its implications for the Algonquin reserve proposal. The source was real, and the key historical argument held up. Not every detail in the deep research report was necessarily correct — for example, some of the narrative about specific meetings may have been embellished or inferred beyond what the sources support — but the tool had surfaced the crucial sources and the essential connection between them. That was enough to answer a question that had remained unresolved for years.</p>
+<p>Crucially, this finding had not been flagged by three peer reviewers who had read the historian’s earlier work on the topic. The deep research tool surfaced a connection across a conference paper and a government publication that conventional research methods and expert human review had both missed.</p>
+</section>
+<section id="case-2-marine-insurance-and-the-slave-trade-systematic-fabrication" class="level3">
+<h3 class="anchored" data-anchor-id="case-2-marine-insurance-and-the-slave-trade-systematic-fabrication">Case 2: Marine Insurance and the Slave Trade — Systematic Fabrication</h3>
+<p>The same verification habit — <em>Interesting, I wonder if that is true</em> — produced very different results when applied to a deep research report on marine insurance and the British Atlantic slave trade. This report, <a href="./deep-research-example.html">reproduced in full as a worked example</a>, was generated by Gemini Deep Research in response to a query about the key secondary literature and scholarly debates on the topic. It was fluent, well-structured, and read like the work of a knowledgeable historian. Careful verification revealed systematic errors across several categories.</p>
+<section id="distorted-quantitative-claims" class="level4">
+<h4 class="anchored" data-anchor-id="distorted-quantitative-claims">Distorted quantitative claims</h4>
+<p>The report cited Pearson and Richardson’s 2019 study in the <em>Journal of Economic History</em> as finding that direct slave voyages accounted for “5 to 10 percent” of total marine insurance premiums and bilateral plantation trade for “~30 percent,” with a combined estimate of “33 percent and 40 percent.” The actual article reports <strong>7 percent</strong> for slaving voyages and <strong>41 percent</strong> combined — specific, single findings, not the vague ranges the report presented. The report appears to have blended Pearson and Richardson’s numbers with Nicholas Draper’s earlier 33% figure for 1769–1770, then fabricated a “consensus” range of 33–40% that appears nowhere in the literature.</p>
+<p>Matthew David Mitchell’s monograph <em>The Prince of Slavers</em> says Humphry Morice trafficked “over 25,000” enslaved Africans. The report inflated this to “over 30,000.”</p>
+</section>
+<section id="garbled-and-fabricated-citations" class="level4">
+<h4 class="anchored" data-anchor-id="garbled-and-fabricated-citations">Garbled and fabricated citations</h4>
+<p>Mallory Hope’s article was cited as “Underwriting the Slave Trade: Risk, Uncertainty, and Marine Insurance in the Eighteenth-Century French Atlantic.” The actual title is <strong>“Risk and Uncertainty in France’s Atlantic Slave Trade”</strong> — and the article analyzes the <em>French</em> Atlantic, not the British system. The report presented it as if it were a comparative study of the British insurance market.</p>
+<p>The ISBNs for both Ian Baucom’s <em>Specters of the Atlantic</em> and Mitchell’s <em>The Prince of Slavers</em> were wrong — close enough to look plausible, but with transposed or altered digits. This is a hallmark of LLM fabrication: the numbers look right at a glance but do not correspond to any real edition.</p>
+<p>The report cited “Lloyd’s Historical Research (Recent)” as a source for the 5–10% / 30% breakdown. This does not correspond to any identifiable publication. It appears to be a wholly invented institutional citation designed to anchor a fabricated data point.</p>
+</section>
+<section id="invented-scholarly-consensus" class="level4">
+<h4 class="anchored" data-anchor-id="invented-scholarly-consensus">Invented scholarly consensus</h4>
+<p>Perhaps most dangerously, the report constructed a false consensus by blending figures from different scholars, periods, and methodologies into composite ranges that no individual source supports. It presented these ranges in a table with scholarly attributions, giving the fabricated synthesis the visual authority of a literature review. A reader unfamiliar with the field would have no reason to doubt it.</p>
+</section>
+<section id="mischaracterized-arguments" class="level4">
+<h4 class="anchored" data-anchor-id="mischaracterized-arguments">Mischaracterized arguments</h4>
+<p>Anita Rupprecht’s article on the <em>Zong</em> massacre was summarized as arguing that “abolitionists deliberately stripped the event of its complex insurance logic.” Rupprecht’s actual argument is more nuanced: she traces how the case was <em>transformed</em> as it circulated through abolitionist propaganda, not that abolitionists conspired to simplify it. The difference matters for how you would use the source.</p>
+<p>The “Underwriting Souls” project was attributed solely to Alexandre White at Johns Hopkins, omitting his co-investigator Pyar Seth entirely.</p>
+</section>
+</section>
+<section id="what-the-two-cases-tell-us" class="level3">
+<h3 class="anchored" data-anchor-id="what-the-two-cases-tell-us">What the Two Cases Tell Us</h3>
+<p>Both reports were produced by the same tool, using the same technology, with the same confident, authoritative tone. The Algonquin report made a real contribution to an active research project. The insurance report systematically fabricated a scholarly consensus out of distorted numbers, garbled citations, and invented sources. There was nothing in the format, tone, or structure of either report that would allow a reader to distinguish the reliable one from the unreliable one without independent verification.</p>
+<p>This is the fundamental challenge of deep research tools for historians: <strong>they are most impressive when they are right, and most dangerous when they are wrong, and they look exactly the same in both cases.</strong></p>
+<p>The only safeguard is the question the historian applied to both reports: <em>Interesting, I wonder if that is true.</em> In the Algonquin case, verification confirmed a genuine discovery. In the insurance case, verification exposed systematic fabrication. The habit is the same; only the outcome differs.</p>
+</section>
 </section>
 <section id="what-they-do-well" class="level2">
 <h2 class="anchored" data-anchor-id="what-they-do-well">What They Do Well</h2>
@@ -223,17 +286,17 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="rapid-orientation-in-an-unfamiliar-field">Rapid Orientation in an Unfamiliar Field</h3>
 <p>If you are beginning a project in a historiography you do not know, a deep research tool can produce a useful map of the terrain in fifteen minutes. Ask:</p>
 <blockquote class="blockquote">
-<p>I am a historian beginning a research project on the role of marine insurance in the British Atlantic slave trade, roughly 1700–1807. Please search for the key secondary literature and major scholarly debates. I am interested in work published since 2000, particularly at the intersection of financial history and the history of slavery. Provide full bibliographic details for each source and a brief summary of its argument.</p>
+<p>I am a historian beginning a research project on the role of marine insurance in the British Atlantic slave trade, roughly 1700–1807. Please search for the key secondary literature and major scholarly debates. I am particularly interested in work published since 2000, particularly at the intersection of financial history and the history of slavery. Provide full bibliographic details for each source and a brief summary of its argument.</p>
 </blockquote>
 <p>The result will typically be a structured report identifying major scholars, key monographs and articles, and the main lines of debate. This is genuinely useful as a starting point — comparable to asking a knowledgeable colleague for reading suggestions, but faster and more systematic.</p>
+</section>
+<section id="surfacing-sources-across-disciplines-and-archives" class="level3">
+<h3 class="anchored" data-anchor-id="surfacing-sources-across-disciplines-and-archives">Surfacing Sources Across Disciplines and Archives</h3>
+<p>As the Algonquin case demonstrates, deep research tools search broadly and can surface relevant work in adjacent fields, government publications, conference papers, and other sources that a historian searching within disciplinary databases might miss. This is a real advantage, particularly for topics that span multiple archives, jurisdictions, or scholarly communities.</p>
 </section>
 <section id="finding-recent-work" class="level3">
 <h3 class="anchored" data-anchor-id="finding-recent-work">Finding Recent Work</h3>
 <p>Deep research tools that search the web can surface recent publications that may not yet appear in standard bibliographic databases. For fast-moving fields or recent special issues, this is a real advantage over traditional database searching.</p>
-</section>
-<section id="identifying-connections-across-fields" class="level3">
-<h3 class="anchored" data-anchor-id="identifying-connections-across-fields">Identifying Connections Across Fields</h3>
-<p>Because these tools search broadly, they sometimes surface relevant work in adjacent fields that a historian searching within disciplinary databases might miss — economics journals, legal history, historical geography, environmental science.</p>
 </section>
 <section id="producing-working-bibliographies" class="level3">
 <h3 class="anchored" data-anchor-id="producing-working-bibliographies">Producing Working Bibliographies</h3>
@@ -245,22 +308,22 @@ ul.task-list li input[type="checkbox"] {
 <p>The limitations described in the <a href="./limitations.html">Limitations</a> section apply to deep research tools with particular force, because the output <em>looks</em> more authoritative. A chatbot response that gets something wrong is easy to spot — it reads like a casual answer. A deep research report with footnotes, structured sections, and scholarly language is much harder to evaluate critically. The very features that make these tools useful also make their failures more dangerous.</p>
 <section id="mixed-real-and-fabricated-citations" class="level3">
 <h3 class="anchored" data-anchor-id="mixed-real-and-fabricated-citations">Mixed Real and Fabricated Citations</h3>
-<p>This is the central problem. Deep research reports typically contain a mixture of:</p>
+<p>As the insurance case demonstrates, deep research reports typically contain a mixture of:</p>
 <ul>
 <li><strong>Real sources</strong>, correctly cited and accurately summarized.</li>
-<li><strong>Real sources</strong>, cited but inaccurately summarized or mischaracterized.</li>
-<li><strong>Fabricated sources</strong> that do not exist, presented with plausible-sounding titles, authors, journal names, and dates.</li>
+<li><strong>Real sources</strong>, cited but with wrong titles, wrong ISBNs, or inaccurately summarized.</li>
+<li><strong>Fabricated sources</strong> that do not exist, presented with plausible-sounding institutional attributions.</li>
 </ul>
 <p>The fabricated sources are not flagged. They appear in the same footnote format as the real ones. The ratio has improved — current models fabricate less frequently than their 2024 predecessors — but this makes the problem harder, not easier. When most citations check out, the temptation to stop verifying is strong. The one fabrication you miss is the one that ends up in your footnotes.</p>
-<p><strong>This means every single citation in a deep research report must be independently verified.</strong> This is not a suggestion; it is a requirement. A historian who cites a source from a deep research report without checking that it exists risks citing a work that was never published.</p>
+<p><strong>This means every single citation in a deep research report must be independently verified.</strong> This is not a suggestion; it is a requirement.</p>
 </section>
 <section id="confident-mischaracterization" class="level3">
 <h3 class="anchored" data-anchor-id="confident-mischaracterization">Confident Mischaracterization</h3>
-<p>Even when a source is real, the tool may misrepresent its argument. A nuanced article that complicates a received narrative may be summarized as if it simply confirms it. A book that is primarily about one topic may be cited for a claim it makes only in passing. The tool does not distinguish between a work’s central thesis and an incidental observation.</p>
+<p>Even when a source is real, the tool may misrepresent its argument. The insurance report’s treatment of Rupprecht’s article is a clear example: a nuanced argument about how the <em>Zong</em> case was transformed through circulation was flattened into a claim about deliberate simplification by abolitionists. A book that is primarily about one topic may be cited for a claim it makes only in passing. The tool does not distinguish between a work’s central thesis and an incidental observation.</p>
 </section>
-<section id="historiographic-flattening" class="level3">
-<h3 class="anchored" data-anchor-id="historiographic-flattening">Historiographic Flattening</h3>
-<p>Deep research tools tend to present scholarly debates as settled when they are not, or to smooth over genuine disagreements. A report on the “Williams thesis” might present it as either confirmed or refuted, when the actual historiographic situation is far more complicated. That said, the best current models have improved markedly at handling historiographic nuance. Cameron Blevins tested ChatGPT’s deep research mode on American Western history in late 2025 and found it produced a “remarkably accurate” synthesis that demonstrated sophisticated understanding of major historiographic frameworks.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> The tools are getting better at this — but “better” is not “reliable,” and historiographic flattening remains a risk, particularly for less well-documented debates.</p>
+<section id="fabricated-consensus" class="level3">
+<h3 class="anchored" data-anchor-id="fabricated-consensus">Fabricated Consensus</h3>
+<p>The most insidious failure mode, visible in the insurance case, is the construction of false scholarly consensus. The tool blended figures from different scholars, different periods, and different methodologies into composite ranges, then presented these ranges in a table with scholarly attributions. The result looked like a literature review summarizing established findings. It was actually a fabrication built from distorted parts of real scholarship. This kind of error is far harder to catch than a simple invented citation, because each individual piece has a kernel of truth.</p>
 </section>
 <section id="source-quality-blindness" class="level3">
 <h3 class="anchored" data-anchor-id="source-quality-blindness">Source Quality Blindness</h3>
@@ -284,15 +347,20 @@ ul.task-list li input[type="checkbox"] {
 <li>Search for each title in your library catalogue, Google Scholar, JSTOR, or WorldCat.</li>
 <li>If a source does not appear in any database, it probably does not exist. Remove it.</li>
 <li>If a source exists, check that the author, date, and publication details match.</li>
+<li>Check ISBNs. LLMs frequently generate plausible-looking but incorrect ISBNs with transposed digits.</li>
 </ul>
 <p>This step is non-negotiable. Budget time for it.</p>
 </section>
 <section id="step-3-check-summaries-against-originals" class="level3">
 <h3 class="anchored" data-anchor-id="step-3-check-summaries-against-originals">Step 3: Check Summaries Against Originals</h3>
-<p>For sources you plan to use, read at least the abstract and introduction yourself. Verify that the tool’s summary accurately reflects the work’s argument. Do not rely on the tool’s characterization.</p>
+<p>For sources you plan to use, read at least the abstract and introduction yourself. Verify that the tool’s summary accurately reflects the work’s argument. Do not rely on the tool’s characterization. As the insurance case shows, even real sources can be subtly misrepresented in ways that distort your understanding of the field.</p>
 </section>
-<section id="step-4-fill-the-gaps" class="level3">
-<h3 class="anchored" data-anchor-id="step-4-fill-the-gaps">Step 4: Fill the Gaps</h3>
+<section id="step-4-check-the-numbers" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-check-the-numbers">Step 4: Check the Numbers</h3>
+<p>If the report presents quantitative claims attributed to specific scholars, verify them against the original sources. The insurance case demonstrated how a tool can take real numbers from real scholars and blend them into fabricated consensus ranges. A table with scholarly attributions is not the same as a table that accurately reflects what those scholars actually found.</p>
+</section>
+<section id="step-5-fill-the-gaps" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-fill-the-gaps">Step 5: Fill the Gaps</h3>
 <p>Deep research reports are biased toward digitally accessible, English-language sources. After verifying what the tool found, search manually for:</p>
 <ul>
 <li>Work in other languages relevant to your topic.</li>
@@ -301,14 +369,14 @@ ul.task-list li input[type="checkbox"] {
 <li>Recent work that may not yet be indexed.</li>
 </ul>
 </section>
-<section id="step-5-read" class="level3">
-<h3 class="anchored" data-anchor-id="step-5-read">Step 5: Read</h3>
+<section id="step-6-read" class="level3">
+<h3 class="anchored" data-anchor-id="step-6-read">Step 6: Read</h3>
 <p>There is no substitute for this. The deep research report tells you what might be worth reading. The reading itself is your job.</p>
 </section>
 </section>
 <section id="comparing-the-tools" class="level2">
 <h2 class="anchored" data-anchor-id="comparing-the-tools">Comparing the Tools</h2>
-<p>Each deep research tool has different strengths. Based on mid-2026 capabilities (these change rapidly — verify before relying on this comparison):</p>
+<p>Each deep research tool has different strengths. Based on early 2026 capabilities (these change rapidly — verify before relying on this comparison):</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 20%">
@@ -330,8 +398,8 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td><strong>Gemini Deep Research</strong></td>
-<td>Excellent on well-documented historiography; thorough multi-page reports</td>
-<td>Degrades badly at the edges of knowledge (see below)</td>
+<td>Excellent on well-documented historiography; thorough multi-page reports; strong Google Scholar integration</td>
+<td>Fabricates confidently at the edges of knowledge; does not signal uncertainty</td>
 </tr>
 <tr class="odd">
 <td><strong>ChatGPT Deep Research</strong></td>
@@ -341,21 +409,16 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td><strong>Claude (web search)</strong></td>
 <td>More cautious; better at flagging uncertainty and acknowledging gaps</td>
-<td>Weaker on historiography; less automated; requires more guidance</td>
+<td>Less automated; requires more guidance</td>
 </tr>
 </tbody>
 </table>
 <p>These assessments will change as the tools improve. The verification workflow remains the same regardless of which tool you use.</p>
 <section id="a-note-on-gemini-and-the-limits-of-knowledge" class="level3">
 <h3 class="anchored" data-anchor-id="a-note-on-gemini-and-the-limits-of-knowledge">A Note on Gemini and the Limits of Knowledge</h3>
-<p>Gemini Deep Research deserves special mention because it illustrates a pattern that applies to all these tools but is particularly visible here. When you ask Gemini about a well-established historiographic debate — the Williams thesis, the standard of living debate, the “great divergence” — it is genuinely impressive. It identifies the key scholars, maps the lines of argument, and produces reports that a graduate student would find useful.</p>
+<p>Gemini Deep Research deserves special mention because it illustrates a pattern that applies to all these tools but is particularly visible here. When you ask Gemini about a well-established historiographic debate — the Williams thesis, the standard of living debate, the “great divergence” — it is genuinely impressive. It identifies the key scholars, maps the lines of argument, and produces reports that a graduate student would find useful. As Cameron Blevins tested in late 2025, its synthesis of American Western history was “remarkably accurate.”<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <p>The problem emerges when you push toward questions at the frontier of historical knowledge — topics where the primary sources are thin, not digitized, or simply do not exist. When Gemini cannot find strong evidence, it does not say so. Instead, it answers the question anyway, drawing on whatever it can find: sources from the wrong decade, tangentially related evidence, or speculative claims from weak secondary sources presented with the same confidence as established scholarship. The report reads just as polished and authoritative as one about a well-documented topic. The difference is invisible unless you already know enough to spot it.</p>
 <p>This is the fundamental trap of deep research tools: <strong>they are most useful when you know the least about a topic, and least reliable in exactly that situation.</strong> When you are entering an unfamiliar field — the very moment you most need guidance — you are also least equipped to evaluate what the tool gives you. The verification workflow described above is the only safeguard.</p>
-</section>
-<section id="a-note-on-claude-and-the-limits-of-training-data" class="level3">
-<h3 class="anchored" data-anchor-id="a-note-on-claude-and-the-limits-of-training-data">A Note on Claude and the Limits of Training Data</h3>
-<p>Claude presents roughly the opposite trade-off from Gemini. Because Anthropic likely had less access to paywalled academic journals and monographs in its training data, Claude is noticeably weaker on established historiography — it may miss key works or be vague where Gemini is specific. On the other hand, Claude is better at recognizing and communicating its own uncertainty. When it cannot find strong evidence for a claim, it is more likely to say so rather than filling the gap with weak or mismatched sources.</p>
-<p>This is a genuine advantage, but it is not absolute. Claude will still sometimes present uncertain claims with more confidence than they deserve. The difference is one of degree: you are somewhat less likely to receive a confident answer built on evidence from the wrong decade, and somewhat more likely to receive an honest “I am not sure about this.” For a historian, a tool that says “I don’t know” is often more useful than one that gives you a plausible-sounding wrong answer — but you should still verify everything regardless of which tool you use.</p>
 </section>
 </section>
 <section id="when-deep-research-tools-are-most-useful" class="level2">
@@ -364,24 +427,26 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Entering a new field.</strong> You are starting a project outside your usual area and need a map of the literature.</li>
 <li><strong>Checking for recent work.</strong> You have not searched a particular topic in a year or two and want to see what has been published.</li>
 <li><strong>Interdisciplinary questions.</strong> Your project touches on economics, law, environmental science, or another field, and you want to find relevant work outside history journals.</li>
+<li><strong>Connecting sources across archives.</strong> As the Algonquin case shows, these tools can sometimes link government publications, conference papers, and archival materials that conventional database searches treat as separate silos.</li>
 <li><strong>Generating leads, not conclusions.</strong> You treat the output as a list of things to check, not as a finished literature review.</li>
 </ul>
 </section>
 <section id="when-they-are-not-useful" class="level2">
 <h2 class="anchored" data-anchor-id="when-they-are-not-useful">When They Are Not Useful</h2>
 <ul>
-<li><strong>Your own specialty.</strong> You almost certainly know the literature better than the tool does. It may surface the occasional overlooked article, but the risk of fabricated or mischaracterized sources is not worth the time for a field you already command.</li>
+<li><strong>Your own specialty.</strong> You almost certainly know the literature better than the tool does. It may surface the occasional overlooked source — as in the Algonquin case — but the risk of fabricated or mischaracterized sources means you must verify everything regardless.</li>
 <li><strong>Archival research.</strong> These tools cannot access unpublished sources, manuscript collections, or finding aids.</li>
 <li><strong>Historiographic argument.</strong> A literature review in a thesis or article must reflect <em>your</em> reading and <em>your</em> interpretation of the field. A deep research report is a starting point for that work, not a substitute for it.</li>
 </ul>
 </section>
 <section id="see-it-for-yourself" class="level2">
 <h2 class="anchored" data-anchor-id="see-it-for-yourself">See It for Yourself</h2>
-<p>To illustrate what deep research output actually looks like — and why verification is essential — we ran the marine insurance prompt from the examples above through Gemini Deep Research and reproduced the full output as a <strong><a href="./deep-research-example.html">worked example</a></strong>. The report is impressive, well-structured, and reads like the work of a knowledgeable historian. Whether every citation in it actually exists is a question we leave to the reader.</p>
+<p>To illustrate what deep research output actually looks like — and why verification is essential — we ran the marine insurance prompt from the examples above through Gemini Deep Research and reproduced the full output as a <strong><a href="./deep-research-example.html">worked example</a></strong>. The report is impressive, well-structured, and reads like the work of a knowledgeable historian. The detailed verification above shows what happens when you check.</p>
 </section>
 <section id="the-bottom-line" class="level2">
 <h2 class="anchored" data-anchor-id="the-bottom-line">The Bottom Line</h2>
-<p>Deep research tools are the most impressive and the most dangerous GenAI application for historians. They have improved considerably — fabrication rates are lower, historiographic synthesis is more sophisticated, and the best reports are genuinely useful starting points. But they can still fill your bibliography with sources that do not exist and your notes with summaries that misrepresent the scholarship. The improvement makes vigilance harder to sustain, not less necessary. The tool does the searching. The verification, the reading, and the thinking are yours.</p>
+<p>Deep research tools can make genuine contributions to historical research. They can also fabricate an entire scholarly consensus out of distorted numbers and garbled citations. Both outputs look equally authoritative. The difference is not visible in the format, the tone, or the footnotes. It is only visible when you do what historians are trained to do: go to the source and check.</p>
+<p>The question is always the same: <em>Interesting, I wonder if that is true.</em></p>
 
 
 </section>
@@ -390,7 +455,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>Blevins, “Generative AI and History in 2025.”<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Cameron Blevins, “Generative AI and History in 2025,” December 19, 2025, <a href="https://cblevins.github.io/posts/gen-ai-history-2025/" class="uri">https://cblevins.github.io/posts/gen-ai-history-2025/</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
