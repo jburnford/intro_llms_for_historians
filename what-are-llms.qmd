@@ -11,9 +11,29 @@ Understanding this distinction matters. It explains both why these tools are use
 
 ## How They Work (Without the Jargon)
 
+### Step one: learning from text
+
 Imagine you had read every book, article, and webpage published in English (and many other languages) up to a certain date. You would develop a powerful sense of what kinds of sentences follow other sentences --- what arguments historians tend to make about the Atlantic slave trade, what a colonial office list looks like, how a French land grant is typically structured.
 
-An LLM has something like that statistical sense, but without understanding. It does not *know* that the Treaty of Paris was signed in 1763 the way you know it. It has learned that in texts about the Seven Years' War, the phrase "Treaty of Paris" is very often followed by "1763." This is a crucial distinction --- though as Cameron Blevins has argued, dismissing these tools as mere "autocomplete on steroids" is no longer tenable.^[Cameron Blevins, "Generative AI and History in 2025," December 19, 2025, <https://cblevins.github.io/posts/gen-ai-history-2025/>.]  The gap between what these models produce and what a knowledgeable human would write has narrowed considerably since 2024, and understanding *how* they work is essential for knowing when to trust them and when not to.
+An LLM has something like that statistical sense, but without understanding. It does not *know* that the Treaty of Paris was signed in 1763 the way you know it. It has learned that in texts about the Seven Years' War, the phrase "Treaty of Paris" is very often followed by "1763." This initial training --- called *pre-training* --- produces a "base model" that is good at predicting text but not particularly good at being helpful.
+
+### Step two: learning from feedback
+
+The dramatic improvements in LLM performance since 2024 are not mainly the result of reading more text. They come from a second phase of training that uses *reinforcement learning*: the same family of techniques that taught AI systems to beat humans at Go and Atari video games. The core idea is simple: the model tries something, gets a signal about whether it worked, and adjusts.
+
+In practice, this takes several forms:
+
+- **Human feedback**: People rate model responses (thumbs up, thumbs down, or choosing the better of two answers). The model learns to produce the kinds of responses humans prefer. This is often called RLHF (reinforcement learning from human feedback).
+- **Automated feedback**: In domains like coding or mathematics, the model can get direct feedback from the world. Did the code run? Did it pass the tests? Did the proof check out? This tight feedback loop is one reason LLMs have improved so rapidly at programming tasks.
+- **AI-generated feedback**: Models are increasingly trained using evaluations from other AI systems, scaling the feedback process far beyond what human reviewers alone could provide.
+
+The leading AI labs (OpenAI, Anthropic, Google, Meta) disclose relatively little about exactly how they train their models. The specific mix of techniques, the volume of human feedback, and the details of the reinforcement learning process are closely guarded. What is clear from the outside is that the combination of massive text training *plus* extensive reinforcement learning produces models that behave very differently from the base models trained on text alone.
+
+### Why this matters: the "emergent properties" debate
+
+As these models have scaled up, they have developed capabilities that were not explicitly programmed and that their creators did not always anticipate. Models trained to predict text turned out to be able to translate languages, write code, solve logic puzzles, and pass professional exams. Whether these abilities represent genuine "emergent properties" --- qualitatively new capabilities that arise from scale --- or are better explained as sophisticated pattern matching is one of the most active debates in AI research.^[For an accessible overview of this debate, see Jason Wei et al., "Emergent Abilities of Large Language Models," *Transactions on Machine Learning Research*, 2022, <https://openreview.net/forum?id=yzkSU5zdwD>.]
+
+For historians, the practical takeaway is this: dismissing these tools as mere "autocomplete on steroids" is no longer tenable, as Cameron Blevins has argued.^[Cameron Blevins, "Generative AI and History in 2025," December 19, 2025, <https://cblevins.github.io/posts/gen-ai-history-2025/>.]  The gap between what these models produce and what a knowledgeable human would write has narrowed considerably. But the question of whether the models *understand* what they are doing or are performing an extraordinarily convincing imitation remains genuinely unresolved. Understanding this uncertainty is essential for knowing when to trust them and when not to.
 
 When the pattern is strong and well-represented in the training data, the model produces accurate, useful output. When the pattern is weak, ambiguous, or absent, the model can produce confident-sounding nonsense --- and may not signal the difference.
 
