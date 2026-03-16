@@ -237,7 +237,8 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Provide as much context as you can: the document type, date, language, and any distinctive features (e.g., “this writer uses the long s”).</li>
 <li>Process one page at a time for best results.</li>
-<li>For large-scale transcription projects (hundreds of pages), specialized OCR tools like Transkribus may be more efficient. LLMs are best for small batches or particularly difficult pages.</li>
+<li>For large-scale transcription projects (hundreds of pages), consider using a model’s API rather than the web interface. As Mark Humphries has demonstrated, Gemini 3 via the API achieves character error rates of under 1% on English-language handwritten documents — comparable to expert human typists and dramatically better than specialized HTR tools like Transkribus, at roughly one cent per page.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> The web interface versions of these models often use different (weaker) models than the API, so results may vary depending on how you access the tool.</li>
+<li>Note that transcription accuracy varies significantly across models. As of late 2025, Google’s Gemini leads on handwriting recognition, well ahead of Claude and ChatGPT on this specific task. Model capabilities change rapidly, so check current benchmarks if accuracy is critical for your project.</li>
 </ul>
 </section>
 </section>
@@ -361,7 +362,13 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Mark Humphries, “Gemini 3 Solves Handwriting Recognition and It’s a Bitter Lesson,” <em>Generative History</em> (Substack), November 25, 2025, <a href="https://generativehistory.substack.com/p/gemini-3-solves-handwriting-recognition" class="uri">https://generativehistory.substack.com/p/gemini-3-solves-handwriting-recognition</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

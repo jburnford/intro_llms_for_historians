@@ -150,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#the-short-version" id="toc-the-short-version" class="nav-link active" data-scroll-target="#the-short-version">The Short Version</a></li>
   <li><a href="#how-they-work-without-the-jargon" id="toc-how-they-work-without-the-jargon" class="nav-link" data-scroll-target="#how-they-work-without-the-jargon">How They Work (Without the Jargon)</a></li>
   <li><a href="#what-they-are-good-at" id="toc-what-they-are-good-at" class="nav-link" data-scroll-target="#what-they-are-good-at">What They Are Good At</a></li>
-  <li><a href="#what-they-are-bad-at" id="toc-what-they-are-bad-at" class="nav-link" data-scroll-target="#what-they-are-bad-at">What They Are Bad At</a></li>
+  <li><a href="#where-they-struggle" id="toc-where-they-struggle" class="nav-link" data-scroll-target="#where-they-struggle">Where They Struggle</a></li>
   <li><a href="#the-key-habit-verify-everything" id="toc-the-key-habit-verify-everything" class="nav-link" data-scroll-target="#the-key-habit-verify-everything">The Key Habit: Verify Everything</a></li>
   <li><a href="#a-note-on-training-data" id="toc-a-note-on-training-data" class="nav-link" data-scroll-target="#a-note-on-training-data">A Note on Training Data</a></li>
   </ul>
@@ -187,14 +187,14 @@ ul.task-list li input[type="checkbox"] {
 <section id="how-they-work-without-the-jargon" class="level2">
 <h2 class="anchored" data-anchor-id="how-they-work-without-the-jargon">How They Work (Without the Jargon)</h2>
 <p>Imagine you had read every book, article, and webpage published in English (and many other languages) up to a certain date. You would develop a powerful sense of what kinds of sentences follow other sentences — what arguments historians tend to make about the Atlantic slave trade, what a colonial office list looks like, how a French land grant is typically structured.</p>
-<p>An LLM has something like that statistical sense, but without understanding. It does not <em>know</em> that the Treaty of Paris was signed in 1763 the way you know it. It has learned that in texts about the Seven Years’ War, the phrase “Treaty of Paris” is very often followed by “1763.” This is a crucial distinction.</p>
-<p>When the pattern is strong and well-represented in the training data, the model produces accurate, useful output. When the pattern is weak, ambiguous, or absent, the model produces confident-sounding nonsense. It does not know the difference.</p>
+<p>An LLM has something like that statistical sense, but without understanding. It does not <em>know</em> that the Treaty of Paris was signed in 1763 the way you know it. It has learned that in texts about the Seven Years’ War, the phrase “Treaty of Paris” is very often followed by “1763.” This is a crucial distinction — though as Cameron Blevins has argued, dismissing these tools as mere “autocomplete on steroids” is no longer tenable.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> The gap between what these models produce and what a knowledgeable human would write has narrowed considerably since 2024, and understanding <em>how</em> they work is essential for knowing when to trust them and when not to.</p>
+<p>When the pattern is strong and well-represented in the training data, the model produces accurate, useful output. When the pattern is weak, ambiguous, or absent, the model can produce confident-sounding nonsense — and may not signal the difference.</p>
 </section>
 <section id="what-they-are-good-at" class="level2">
 <h2 class="anchored" data-anchor-id="what-they-are-good-at">What They Are Good At</h2>
 <p>LLMs excel at tasks where pattern recognition is the core skill:</p>
 <ul>
-<li><strong>Transcription assistance</strong>: Recognizing words in difficult handwriting or degraded print, especially when given context about the document’s era and language.</li>
+<li><strong>Transcription assistance</strong>: Recognizing words in difficult handwriting or degraded print. The best current models now achieve accuracy comparable to expert human typists on English-language handwriting — a breakthrough that Mark Humphries has called “the bitter lesson” for the specialized HTR community.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></li>
 <li><strong>Translation</strong>: Producing serviceable rough translations, particularly for well-represented languages (French, Spanish, German, Latin).</li>
 <li><strong>Summarization</strong>: Condensing long texts into shorter summaries (useful for triage, not for close reading).</li>
 <li><strong>Code generation</strong>: Writing scripts in Python, R, or other languages for data tasks — often faster and more reliably than a historian learning to code from scratch.</li>
@@ -202,15 +202,14 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Reformatting and structuring</strong>: Converting data between formats, extracting structured information from unstructured text.</li>
 </ul>
 </section>
-<section id="what-they-are-bad-at" class="level2">
-<h2 class="anchored" data-anchor-id="what-they-are-bad-at">What They Are Bad At</h2>
-<p>LLMs fail predictably in areas that require knowledge they do not have or reasoning they cannot do:</p>
+<section id="where-they-struggle" class="level2">
+<h2 class="anchored" data-anchor-id="where-they-struggle">Where They Struggle</h2>
+<p>LLMs have improved substantially since 2024, but they still fail in characteristic ways:</p>
 <ul>
-<li><strong>Factual accuracy</strong>: They <em>hallucinate</em> — generating plausible-sounding but false claims, including fabricated citations, invented dates, and non-existent sources. This is not a bug that will be fixed; it is an inherent feature of how the technology works.</li>
+<li><strong>Factual accuracy</strong>: They <em>hallucinate</em> — generating plausible-sounding but false claims, including fabricated citations, invented dates, and non-existent sources. Hallucinations have become less frequent in the latest models, but this actually makes them <em>more</em> dangerous: when most output is accurate, it is easier to let your guard down and miss the one fabricated source that slips through.</li>
 <li><strong>Archival research</strong>: They cannot access unpublished sources, manuscript collections, or anything not in their training data. They have no way to visit an archive.</li>
-<li><strong>Interpretation and argument</strong>: They can mimic the form of a historical argument but cannot actually weigh evidence, assess significance, or make the judgments that constitute historical analysis.</li>
-<li><strong>Counting and arithmetic</strong>: Paradoxically, language models are unreliable at basic math and counting tasks.</li>
-<li><strong>Knowing what they do not know</strong>: They do not flag uncertainty. A fabricated citation is presented with the same confidence as a real one.</li>
+<li><strong>Interpretation and argument</strong>: Current models are surprisingly capable at synthesis and interpretation — they can identify historiographic debates, weigh competing claims, and construct plausible arguments. But the <em>responsibility</em> for evaluating whether an interpretation is sound, whether the evidence is sufficient, and whether the argument holds up still rests with the historian. The models are getting better at the form <em>and</em> substance of argument, but they do not know your sources the way you do.</li>
+<li><strong>Knowing what they do not know</strong>: They do not reliably flag uncertainty. A fabricated citation may be presented with the same confidence as a real one, though some models (notably Claude) are better than others at acknowledging gaps.</li>
 </ul>
 </section>
 <section id="the-key-habit-verify-everything" class="level2">
@@ -237,7 +236,14 @@ ul.task-list li input[type="checkbox"] {
 
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Cameron Blevins, “Generative AI and History in 2025,” December 19, 2025, <a href="https://cblevins.github.io/posts/gen-ai-history-2025/" class="uri">https://cblevins.github.io/posts/gen-ai-history-2025/</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Mark Humphries, “Gemini 3 Solves Handwriting Recognition and It’s a Bitter Lesson,” <em>Generative History</em> (Substack), November 25, 2025, <a href="https://generativehistory.substack.com/p/gemini-3-solves-handwriting-recognition" class="uri">https://generativehistory.substack.com/p/gemini-3-solves-handwriting-recognition</a>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
