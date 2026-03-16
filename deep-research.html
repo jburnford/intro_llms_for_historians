@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Deep Research Tools – GenAI for Historians: A Practical Introduction</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-5cee4c14d6ae2ae54d05c3ac90f01e34.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">GenAI for Historians: A Practical Introduction</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./what-are-llms.html"> 
+<span class="menu-text">What Are LLMs?</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./getting-started.html"> 
+<span class="menu-text">Getting Started</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./research-tasks.html"> 
+<span class="menu-text">Research Tasks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./deep-research.html" aria-current="page"> 
+<span class="menu-text">Deep Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./case-studies.html"> 
+<span class="menu-text">Case Studies</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./copy-editing.html"> 
+<span class="menu-text">Copy Editing</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./going-further.html"> 
+<span class="menu-text">Going Further</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./limitations.html"> 
+<span class="menu-text">Limitations</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-are-deep-research-tools" id="toc-what-are-deep-research-tools" class="nav-link active" data-scroll-target="#what-are-deep-research-tools">What Are Deep Research Tools?</a></li>
+  <li><a href="#what-they-do-well" id="toc-what-they-do-well" class="nav-link" data-scroll-target="#what-they-do-well">What They Do Well</a>
+  <ul class="collapse">
+  <li><a href="#rapid-orientation-in-an-unfamiliar-field" id="toc-rapid-orientation-in-an-unfamiliar-field" class="nav-link" data-scroll-target="#rapid-orientation-in-an-unfamiliar-field">Rapid Orientation in an Unfamiliar Field</a></li>
+  <li><a href="#finding-recent-work" id="toc-finding-recent-work" class="nav-link" data-scroll-target="#finding-recent-work">Finding Recent Work</a></li>
+  <li><a href="#identifying-connections-across-fields" id="toc-identifying-connections-across-fields" class="nav-link" data-scroll-target="#identifying-connections-across-fields">Identifying Connections Across Fields</a></li>
+  <li><a href="#producing-working-bibliographies" id="toc-producing-working-bibliographies" class="nav-link" data-scroll-target="#producing-working-bibliographies">Producing Working Bibliographies</a></li>
+  </ul></li>
+  <li><a href="#where-they-fail-and-why-it-matters-more-here" id="toc-where-they-fail-and-why-it-matters-more-here" class="nav-link" data-scroll-target="#where-they-fail-and-why-it-matters-more-here">Where They Fail — and Why It Matters More Here</a>
+  <ul class="collapse">
+  <li><a href="#mixed-real-and-fabricated-citations" id="toc-mixed-real-and-fabricated-citations" class="nav-link" data-scroll-target="#mixed-real-and-fabricated-citations">Mixed Real and Fabricated Citations</a></li>
+  <li><a href="#confident-mischaracterization" id="toc-confident-mischaracterization" class="nav-link" data-scroll-target="#confident-mischaracterization">Confident Mischaracterization</a></li>
+  <li><a href="#historiographic-flattening" id="toc-historiographic-flattening" class="nav-link" data-scroll-target="#historiographic-flattening">Historiographic Flattening</a></li>
+  <li><a href="#source-quality-blindness" id="toc-source-quality-blindness" class="nav-link" data-scroll-target="#source-quality-blindness">Source Quality Blindness</a></li>
+  </ul></li>
+  <li><a href="#a-practical-workflow" id="toc-a-practical-workflow" class="nav-link" data-scroll-target="#a-practical-workflow">A Practical Workflow</a>
+  <ul class="collapse">
+  <li><a href="#step-1-generate" id="toc-step-1-generate" class="nav-link" data-scroll-target="#step-1-generate">Step 1: Generate</a></li>
+  <li><a href="#step-2-verify-every-citation" id="toc-step-2-verify-every-citation" class="nav-link" data-scroll-target="#step-2-verify-every-citation">Step 2: Verify Every Citation</a></li>
+  <li><a href="#step-3-check-summaries-against-originals" id="toc-step-3-check-summaries-against-originals" class="nav-link" data-scroll-target="#step-3-check-summaries-against-originals">Step 3: Check Summaries Against Originals</a></li>
+  <li><a href="#step-4-fill-the-gaps" id="toc-step-4-fill-the-gaps" class="nav-link" data-scroll-target="#step-4-fill-the-gaps">Step 4: Fill the Gaps</a></li>
+  <li><a href="#step-5-read" id="toc-step-5-read" class="nav-link" data-scroll-target="#step-5-read">Step 5: Read</a></li>
+  </ul></li>
+  <li><a href="#comparing-the-tools" id="toc-comparing-the-tools" class="nav-link" data-scroll-target="#comparing-the-tools">Comparing the Tools</a>
+  <ul class="collapse">
+  <li><a href="#a-note-on-gemini-and-the-limits-of-knowledge" id="toc-a-note-on-gemini-and-the-limits-of-knowledge" class="nav-link" data-scroll-target="#a-note-on-gemini-and-the-limits-of-knowledge">A Note on Gemini and the Limits of Knowledge</a></li>
+  <li><a href="#a-note-on-claude-and-the-limits-of-training-data" id="toc-a-note-on-claude-and-the-limits-of-training-data" class="nav-link" data-scroll-target="#a-note-on-claude-and-the-limits-of-training-data">A Note on Claude and the Limits of Training Data</a></li>
+  </ul></li>
+  <li><a href="#when-deep-research-tools-are-most-useful" id="toc-when-deep-research-tools-are-most-useful" class="nav-link" data-scroll-target="#when-deep-research-tools-are-most-useful">When Deep Research Tools Are Most Useful</a></li>
+  <li><a href="#when-they-are-not-useful" id="toc-when-they-are-not-useful" class="nav-link" data-scroll-target="#when-they-are-not-useful">When They Are Not Useful</a></li>
+  <li><a href="#the-bottom-line" id="toc-the-bottom-line" class="nav-link" data-scroll-target="#the-bottom-line">The Bottom Line</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Deep Research Tools</h1>
+<p class="subtitle lead">Automated literature review and its pitfalls</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="what-are-deep-research-tools" class="level2">
+<h2 class="anchored" data-anchor-id="what-are-deep-research-tools">What Are Deep Research Tools?</h2>
+<p>Several GenAI products now offer a “deep research” or “research” mode that goes beyond a simple chatbot response. Instead of answering your question from memory, these tools search the web, read multiple sources, synthesize what they find, and produce a structured report — often with citations and footnotes.</p>
+<p>The major options as of early 2026:</p>
+<ul>
+<li><strong>Gemini Deep Research</strong> (Google) — available with Gemini Advanced ($20/month). Searches the web, reads pages, and produces multi-page reports with source links.</li>
+<li><strong>ChatGPT Deep Research</strong> (OpenAI) — available with ChatGPT Plus and Pro. Similar approach: extended web browsing, synthesis, and structured output.</li>
+<li><strong>Perplexity</strong> (<a href="https://perplexity.ai">perplexity.ai</a>) — available in a free tier with limits, and a Pro tier (~$20/month). Designed from the ground up as a research tool. Every claim is linked to a source. The free tier is a good starting point.</li>
+<li><strong>Claude with web search</strong> (Anthropic) — Claude Pro can search the web when asked. Less automated than the dedicated deep research tools, but the underlying model is strong on synthesis and nuance.</li>
+</ul>
+<p>These tools represent a genuine step forward from the basic chatbot experience described in earlier sections. They can produce results in minutes that would take hours of manual searching. They are also where GenAI’s limitations become most consequential for historians.</p>
+</section>
+<section id="what-they-do-well" class="level2">
+<h2 class="anchored" data-anchor-id="what-they-do-well">What They Do Well</h2>
+<section id="rapid-orientation-in-an-unfamiliar-field" class="level3">
+<h3 class="anchored" data-anchor-id="rapid-orientation-in-an-unfamiliar-field">Rapid Orientation in an Unfamiliar Field</h3>
+<p>If you are beginning a project in a historiography you do not know, a deep research tool can produce a useful map of the terrain in fifteen minutes. Ask:</p>
+<blockquote class="blockquote">
+<p>I am a historian beginning a research project on the role of marine insurance in the British Atlantic slave trade, roughly 1700–1807. Please search for the key secondary literature and major scholarly debates. I am interested in work published since 2000, particularly at the intersection of financial history and the history of slavery. Provide full bibliographic details for each source and a brief summary of its argument.</p>
+</blockquote>
+<p>The result will typically be a structured report identifying major scholars, key monographs and articles, and the main lines of debate. This is genuinely useful as a starting point — comparable to asking a knowledgeable colleague for reading suggestions, but faster and more systematic.</p>
+</section>
+<section id="finding-recent-work" class="level3">
+<h3 class="anchored" data-anchor-id="finding-recent-work">Finding Recent Work</h3>
+<p>Deep research tools that search the web can surface recent publications that may not yet appear in standard bibliographic databases. For fast-moving fields or recent special issues, this is a real advantage over traditional database searching.</p>
+</section>
+<section id="identifying-connections-across-fields" class="level3">
+<h3 class="anchored" data-anchor-id="identifying-connections-across-fields">Identifying Connections Across Fields</h3>
+<p>Because these tools search broadly, they sometimes surface relevant work in adjacent fields that a historian searching within disciplinary databases might miss — economics journals, legal history, historical geography, environmental science.</p>
+</section>
+<section id="producing-working-bibliographies" class="level3">
+<h3 class="anchored" data-anchor-id="producing-working-bibliographies">Producing Working Bibliographies</h3>
+<p>The best deep research reports include enough bibliographic detail that you can quickly verify each source in your library catalogue or JSTOR. This makes them useful as a triage tool: generate a long list, verify what exists, and then decide what to read.</p>
+</section>
+</section>
+<section id="where-they-fail-and-why-it-matters-more-here" class="level2">
+<h2 class="anchored" data-anchor-id="where-they-fail-and-why-it-matters-more-here">Where They Fail — and Why It Matters More Here</h2>
+<p>The limitations described in the <a href="./limitations.html">Limitations</a> section apply to deep research tools with particular force, because the output <em>looks</em> more authoritative. A chatbot response that gets something wrong is easy to spot — it reads like a casual answer. A deep research report with footnotes, structured sections, and scholarly language is much harder to evaluate critically. The very features that make these tools useful also make their failures more dangerous.</p>
+<section id="mixed-real-and-fabricated-citations" class="level3">
+<h3 class="anchored" data-anchor-id="mixed-real-and-fabricated-citations">Mixed Real and Fabricated Citations</h3>
+<p>This is the central problem. Deep research reports typically contain a mixture of:</p>
+<ul>
+<li><strong>Real sources</strong>, correctly cited and accurately summarized.</li>
+<li><strong>Real sources</strong>, cited but inaccurately summarized or mischaracterized.</li>
+<li><strong>Fabricated sources</strong> that do not exist, presented with plausible-sounding titles, authors, journal names, and dates.</li>
+</ul>
+<p>The fabricated sources are not flagged. They appear in the same footnote format as the real ones. The ratio varies — some reports are largely accurate, others contain multiple fabrications — but you cannot tell in advance which kind you have received.</p>
+<p><strong>This means every single citation in a deep research report must be independently verified.</strong> This is not a suggestion; it is a requirement. A historian who cites a source from a deep research report without checking that it exists risks citing a work that was never published.</p>
+</section>
+<section id="confident-mischaracterization" class="level3">
+<h3 class="anchored" data-anchor-id="confident-mischaracterization">Confident Mischaracterization</h3>
+<p>Even when a source is real, the tool may misrepresent its argument. A nuanced article that complicates a received narrative may be summarized as if it simply confirms it. A book that is primarily about one topic may be cited for a claim it makes only in passing. The tool does not distinguish between a work’s central thesis and an incidental observation.</p>
+</section>
+<section id="historiographic-flattening" class="level3">
+<h3 class="anchored" data-anchor-id="historiographic-flattening">Historiographic Flattening</h3>
+<p>Deep research tools tend to present scholarly debates as settled when they are not, or to smooth over genuine disagreements. A report on the “Williams thesis” might present it as either confirmed or refuted, when the actual historiographic situation is far more complicated. The tools do not handle ambiguity, ongoing debate, or productive disagreement well.</p>
+</section>
+<section id="source-quality-blindness" class="level3">
+<h3 class="anchored" data-anchor-id="source-quality-blindness">Source Quality Blindness</h3>
+<p>These tools do not distinguish between a peer-reviewed article in <em>Past &amp; Present</em> and a blog post. They weight sources by accessibility and relevance to the query, not by scholarly authority. A deep research report may cite high-quality scholarship alongside popular histories, journalism, or Wikipedia summaries without distinguishing between them.</p>
+</section>
+</section>
+<section id="a-practical-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="a-practical-workflow">A Practical Workflow</h2>
+<p>Given these strengths and limitations, here is a workflow that gets the most value from deep research tools while managing the risks:</p>
+<section id="step-1-generate" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-generate">Step 1: Generate</h3>
+<p>Run a deep research query on your topic. Be specific about what you want:</p>
+<blockquote class="blockquote">
+<p>Search for peer-reviewed scholarship published since 2010 on [your topic]. Focus on [specific aspects]. Provide full bibliographic details (author, title, journal/publisher, date, volume, pages) for each source.</p>
+</blockquote>
+</section>
+<section id="step-2-verify-every-citation" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-verify-every-citation">Step 2: Verify Every Citation</h3>
+<p>Go through the report’s citations one by one:</p>
+<ul>
+<li>Search for each title in your library catalogue, Google Scholar, JSTOR, or WorldCat.</li>
+<li>If a source does not appear in any database, it probably does not exist. Remove it.</li>
+<li>If a source exists, check that the author, date, and publication details match.</li>
+</ul>
+<p>This step is non-negotiable. Budget time for it.</p>
+</section>
+<section id="step-3-check-summaries-against-originals" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-check-summaries-against-originals">Step 3: Check Summaries Against Originals</h3>
+<p>For sources you plan to use, read at least the abstract and introduction yourself. Verify that the tool’s summary accurately reflects the work’s argument. Do not rely on the tool’s characterization.</p>
+</section>
+<section id="step-4-fill-the-gaps" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-fill-the-gaps">Step 4: Fill the Gaps</h3>
+<p>Deep research reports are biased toward digitally accessible, English-language sources. After verifying what the tool found, search manually for:</p>
+<ul>
+<li>Work in other languages relevant to your topic.</li>
+<li>Older foundational texts that may not be well-represented online.</li>
+<li>Archival sources and primary source collections (which these tools cannot access).</li>
+<li>Recent work that may not yet be indexed.</li>
+</ul>
+</section>
+<section id="step-5-read" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-read">Step 5: Read</h3>
+<p>There is no substitute for this. The deep research report tells you what might be worth reading. The reading itself is your job.</p>
+</section>
+</section>
+<section id="comparing-the-tools" class="level2">
+<h2 class="anchored" data-anchor-id="comparing-the-tools">Comparing the Tools</h2>
+<p>Each deep research tool has different strengths. Based on early 2026 capabilities:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 37%">
+<col style="width: 41%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tool</th>
+<th>Strengths</th>
+<th>Weaknesses</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Perplexity</strong></td>
+<td>Source links for every claim; free tier available; good for quick factual queries</td>
+<td>Can be shallow on historiographic nuance; free tier has limits</td>
+</tr>
+<tr class="even">
+<td><strong>Gemini Deep Research</strong></td>
+<td>Excellent on well-documented historiography; thorough multi-page reports</td>
+<td>Degrades badly at the edges of knowledge (see below)</td>
+</tr>
+<tr class="odd">
+<td><strong>ChatGPT Deep Research</strong></td>
+<td>Strong synthesis; good at identifying scholarly debates</td>
+<td>Citation accuracy varies; can hallucinate convincingly</td>
+</tr>
+<tr class="even">
+<td><strong>Claude (web search)</strong></td>
+<td>More cautious; better at flagging uncertainty and acknowledging gaps</td>
+<td>Weaker on historiography; less automated; requires more guidance</td>
+</tr>
+</tbody>
+</table>
+<p>These assessments will change as the tools improve. The verification workflow remains the same regardless of which tool you use.</p>
+<section id="a-note-on-gemini-and-the-limits-of-knowledge" class="level3">
+<h3 class="anchored" data-anchor-id="a-note-on-gemini-and-the-limits-of-knowledge">A Note on Gemini and the Limits of Knowledge</h3>
+<p>Gemini Deep Research deserves special mention because it illustrates a pattern that applies to all these tools but is particularly visible here. When you ask Gemini about a well-established historiographic debate — the Williams thesis, the standard of living debate, the “great divergence” — it is genuinely impressive. It identifies the key scholars, maps the lines of argument, and produces reports that a graduate student would find useful.</p>
+<p>The problem emerges when you push toward questions at the frontier of historical knowledge — topics where the primary sources are thin, not digitized, or simply do not exist. When Gemini cannot find strong evidence, it does not say so. Instead, it answers the question anyway, drawing on whatever it can find: sources from the wrong decade, tangentially related evidence, or speculative claims from weak secondary sources presented with the same confidence as established scholarship. The report reads just as polished and authoritative as one about a well-documented topic. The difference is invisible unless you already know enough to spot it.</p>
+<p>This is the fundamental trap of deep research tools: <strong>they are most useful when you know the least about a topic, and least reliable in exactly that situation.</strong> When you are entering an unfamiliar field — the very moment you most need guidance — you are also least equipped to evaluate what the tool gives you. The verification workflow described above is the only safeguard.</p>
+</section>
+<section id="a-note-on-claude-and-the-limits-of-training-data" class="level3">
+<h3 class="anchored" data-anchor-id="a-note-on-claude-and-the-limits-of-training-data">A Note on Claude and the Limits of Training Data</h3>
+<p>Claude presents roughly the opposite trade-off from Gemini. Because Anthropic likely had less access to paywalled academic journals and monographs in its training data, Claude is noticeably weaker on established historiography — it may miss key works or be vague where Gemini is specific. On the other hand, Claude is better at recognizing and communicating its own uncertainty. When it cannot find strong evidence for a claim, it is more likely to say so rather than filling the gap with weak or mismatched sources.</p>
+<p>This is a genuine advantage, but it is not absolute. Claude will still sometimes present uncertain claims with more confidence than they deserve. The difference is one of degree: you are somewhat less likely to receive a confident answer built on evidence from the wrong decade, and somewhat more likely to receive an honest “I am not sure about this.” For a historian, a tool that says “I don’t know” is often more useful than one that gives you a plausible-sounding wrong answer — but you should still verify everything regardless of which tool you use.</p>
+</section>
+</section>
+<section id="when-deep-research-tools-are-most-useful" class="level2">
+<h2 class="anchored" data-anchor-id="when-deep-research-tools-are-most-useful">When Deep Research Tools Are Most Useful</h2>
+<ul>
+<li><strong>Entering a new field.</strong> You are starting a project outside your usual area and need a map of the literature.</li>
+<li><strong>Checking for recent work.</strong> You have not searched a particular topic in a year or two and want to see what has been published.</li>
+<li><strong>Interdisciplinary questions.</strong> Your project touches on economics, law, environmental science, or another field, and you want to find relevant work outside history journals.</li>
+<li><strong>Generating leads, not conclusions.</strong> You treat the output as a list of things to check, not as a finished literature review.</li>
+</ul>
+</section>
+<section id="when-they-are-not-useful" class="level2">
+<h2 class="anchored" data-anchor-id="when-they-are-not-useful">When They Are Not Useful</h2>
+<ul>
+<li><strong>Your own specialty.</strong> You almost certainly know the literature better than the tool does. It may surface the occasional overlooked article, but the risk of fabricated or mischaracterized sources is not worth the time for a field you already command.</li>
+<li><strong>Archival research.</strong> These tools cannot access unpublished sources, manuscript collections, or finding aids.</li>
+<li><strong>Historiographic argument.</strong> A literature review in a thesis or article must reflect <em>your</em> reading and <em>your</em> interpretation of the field. A deep research report is a starting point for that work, not a substitute for it.</li>
+</ul>
+</section>
+<section id="the-bottom-line" class="level2">
+<h2 class="anchored" data-anchor-id="the-bottom-line">The Bottom Line</h2>
+<p>Deep research tools are the most impressive and the most dangerous GenAI application for historians. They can save you hours of initial searching. They can also fill your bibliography with sources that do not exist and your notes with summaries that misrepresent the scholarship. The tool does the searching. The verification, the reading, and the thinking are yours.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/jburnford\.github\.io\/intro_llms_for_historians\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Limitations and Risks – GenAI for Historians: A Practical Introduction</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-5cee4c14d6ae2ae54d05c3ac90f01e34.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">GenAI for Historians: A Practical Introduction</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./what-are-llms.html"> 
+<span class="menu-text">What Are LLMs?</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./getting-started.html"> 
+<span class="menu-text">Getting Started</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./research-tasks.html"> 
+<span class="menu-text">Research Tasks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./deep-research.html"> 
+<span class="menu-text">Deep Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./case-studies.html"> 
+<span class="menu-text">Case Studies</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./copy-editing.html"> 
+<span class="menu-text">Copy Editing</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./going-further.html"> 
+<span class="menu-text">Going Further</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./limitations.html" aria-current="page"> 
+<span class="menu-text">Limitations</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#why-this-section-matters" id="toc-why-this-section-matters" class="nav-link active" data-scroll-target="#why-this-section-matters">Why This Section Matters</a></li>
+  <li><a href="#hallucination" id="toc-hallucination" class="nav-link" data-scroll-target="#hallucination">Hallucination</a>
+  <ul class="collapse">
+  <li><a href="#what-to-do-about-it" id="toc-what-to-do-about-it" class="nav-link" data-scroll-target="#what-to-do-about-it">What to Do About It</a></li>
+  </ul></li>
+  <li><a href="#bias-and-representation" id="toc-bias-and-representation" class="nav-link" data-scroll-target="#bias-and-representation">Bias and Representation</a>
+  <ul class="collapse">
+  <li><a href="#what-to-do-about-it-1" id="toc-what-to-do-about-it-1" class="nav-link" data-scroll-target="#what-to-do-about-it-1">What to Do About It</a></li>
+  </ul></li>
+  <li><a href="#the-illusion-of-understanding" id="toc-the-illusion-of-understanding" class="nav-link" data-scroll-target="#the-illusion-of-understanding">The Illusion of Understanding</a></li>
+  <li><a href="#privacy-and-intellectual-property" id="toc-privacy-and-intellectual-property" class="nav-link" data-scroll-target="#privacy-and-intellectual-property">Privacy and Intellectual Property</a>
+  <ul class="collapse">
+  <li><a href="#your-data" id="toc-your-data" class="nav-link" data-scroll-target="#your-data">Your Data</a></li>
+  <li><a href="#the-models-knowledge" id="toc-the-models-knowledge" class="nav-link" data-scroll-target="#the-models-knowledge">The Model’s “Knowledge”</a></li>
+  </ul></li>
+  <li><a href="#over-reliance" id="toc-over-reliance" class="nav-link" data-scroll-target="#over-reliance">Over-Reliance</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#the-bottom-line" id="toc-the-bottom-line" class="nav-link" data-scroll-target="#the-bottom-line">The Bottom Line</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Limitations and Risks</h1>
+<p class="subtitle lead">What GenAI gets wrong and why it matters</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="why-this-section-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-section-matters">Why This Section Matters</h2>
+<p>The preceding pages describe what GenAI tools can do. This section describes what they cannot do, what they do badly, and where using them can lead you astray. For a historian, understanding the failure modes is not optional — it is the difference between a useful tool and a liability.</p>
+</section>
+<section id="hallucination" class="level2">
+<h2 class="anchored" data-anchor-id="hallucination">Hallucination</h2>
+<p>This is the most important limitation. LLMs generate text that is statistically plausible, not text that is true. They will:</p>
+<ul>
+<li><strong>Invent citations.</strong> They produce author names, titles, journal names, volume numbers, and page ranges that look entirely real but correspond to no actual publication. This is not rare; it happens routinely.</li>
+<li><strong>Fabricate historical details.</strong> They may generate plausible-sounding dates, names, or events that did not occur, especially for obscure topics.</li>
+<li><strong>Blend real and false information seamlessly.</strong> A paragraph might contain three accurate claims and one fabricated one, with no difference in tone or confidence.</li>
+</ul>
+<section id="what-to-do-about-it" class="level3">
+<h3 class="anchored" data-anchor-id="what-to-do-about-it">What to Do About It</h3>
+<ul>
+<li><strong>Verify every factual claim</strong> against a source you trust.</li>
+<li><strong>Verify every citation</strong> in a library catalogue, JSTOR, or Google Scholar.</li>
+<li><strong>Never cite an LLM as a source</strong> in scholarly work. It is not a source; it is a text-generation engine.</li>
+<li><strong>Be especially cautious</strong> about topics that are obscure, recent, or poorly represented in English-language digital text.</li>
+</ul>
+</section>
+</section>
+<section id="bias-and-representation" class="level2">
+<h2 class="anchored" data-anchor-id="bias-and-representation">Bias and Representation</h2>
+<p>LLMs reflect the biases of their training data. For historians, this has specific implications:</p>
+<ul>
+<li><strong>Anglophone and Western bias.</strong> The models know more about the history of Britain and the United States than about the history of, say, the Swahili coast or Central Asia. Responses about less-represented topics will be thinner, more generic, and more likely to contain errors.</li>
+<li><strong>Historiographic lag.</strong> The training data reflects the published literature, which means the models tend to reproduce older historiographic framings. They may default to nationalist narratives, Great Man history, or other interpretive frameworks that the discipline has moved beyond.</li>
+<li><strong>Erasure and euphemism.</strong> Some models are tuned to avoid controversial topics, which can result in euphemistic or evasive language about slavery, colonialism, genocide, and other subjects that historians must discuss directly.</li>
+</ul>
+<section id="what-to-do-about-it-1" class="level3">
+<h3 class="anchored" data-anchor-id="what-to-do-about-it-1">What to Do About It</h3>
+<ul>
+<li>Treat LLM output as you would an encyclopedia entry: a starting point that reflects a particular perspective, not a neutral authority.</li>
+<li>Be alert to gaps — what the model does <em>not</em> say can be as revealing as what it does.</li>
+<li>If you notice the model using euphemistic language about sensitive historical topics, push back explicitly in your prompt: “Please use direct, scholarly language. Do not euphemize.”</li>
+</ul>
+</section>
+</section>
+<section id="the-illusion-of-understanding" class="level2">
+<h2 class="anchored" data-anchor-id="the-illusion-of-understanding">The Illusion of Understanding</h2>
+<p>LLMs produce text that reads as if it were written by someone who understands the topic. This is misleading. The model does not understand; it predicts. The practical consequence is that:</p>
+<ul>
+<li>It cannot distinguish between a strong argument and a weak one.</li>
+<li>It cannot judge the reliability of a source.</li>
+<li>It cannot weigh conflicting evidence.</li>
+<li>It cannot tell you when a question is more complex than it appears.</li>
+</ul>
+<p>These are the tasks that define historical practice. They cannot be delegated to an LLM.</p>
+</section>
+<section id="privacy-and-intellectual-property" class="level2">
+<h2 class="anchored" data-anchor-id="privacy-and-intellectual-property">Privacy and Intellectual Property</h2>
+<section id="your-data" class="level3">
+<h3 class="anchored" data-anchor-id="your-data">Your Data</h3>
+<p>When you paste text into a web-based chatbot, that text is transmitted to the company’s servers. Consider:</p>
+<ul>
+<li><strong>Unpublished research.</strong> If you paste a chapter draft into ChatGPT, that text has left your control. Most services state that they do not use paid-tier conversations for training, but policies vary and change.</li>
+<li><strong>Sensitive data.</strong> Records involving living people, embargoed materials, or data covered by research ethics agreements should not be pasted into commercial LLM tools without careful consideration.</li>
+<li><strong>Student work.</strong> If you are using GenAI tools to evaluate student submissions, be aware that you may be sharing student work with a third-party service.</li>
+</ul>
+</section>
+<section id="the-models-knowledge" class="level3">
+<h3 class="anchored" data-anchor-id="the-models-knowledge">The Model’s “Knowledge”</h3>
+<p>LLMs were trained on text scraped from the internet, including copyrighted material. The legal and ethical status of this training is unresolved and actively litigated. This is worth being aware of, though it does not directly affect most research use cases.</p>
+</section>
+</section>
+<section id="over-reliance" class="level2">
+<h2 class="anchored" data-anchor-id="over-reliance">Over-Reliance</h2>
+<p>The subtlest risk is not that the tool will fail dramatically but that it will work well enough to change your behaviour. Historians who use LLMs for translation may gradually do less of their own translation practice. Historians who use LLMs for literature discovery may search databases less thoroughly. Historians who use LLMs for coding may understand their own scripts less deeply.</p>
+<p>None of these are inevitable outcomes, but they are real risks. The best safeguard is intentionality: decide in advance what you want to learn and what you want to delegate, and revisit that decision periodically.</p>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<table class="table-striped caption-top table">
+<caption>Summary of limitations and mitigations</caption>
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Risk</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hallucinated citations</td>
+<td>Verify every reference in a catalogue or database</td>
+</tr>
+<tr class="even">
+<td>Fabricated facts</td>
+<td>Check all claims against trusted sources</td>
+</tr>
+<tr class="odd">
+<td>Bias and gaps</td>
+<td>Treat output as a starting point, not an authority</td>
+</tr>
+<tr class="even">
+<td>Privacy concerns</td>
+<td>Do not paste sensitive or unpublished material into free-tier tools</td>
+</tr>
+<tr class="odd">
+<td>Over-reliance</td>
+<td>Decide consciously what to delegate; maintain your own skills</td>
+</tr>
+<tr class="even">
+<td>Illusion of understanding</td>
+<td>Reserve interpretation, judgment, and argument for yourself</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="the-bottom-line" class="level2">
+<h2 class="anchored" data-anchor-id="the-bottom-line">The Bottom Line</h2>
+<p>These tools are useful. They are also unreliable, biased, and incapable of the interpretive work that defines our discipline. Using them well means using them for what they are good at (mechanical tasks, pattern recognition, draft editing) while keeping the intellectual work — the reading, the thinking, the arguing — firmly in your own hands.</p>
+<p>That is not a limitation of the technology. It is the point.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/jburnford\.github\.io\/intro_llms_for_historians\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

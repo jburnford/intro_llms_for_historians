@@ -1,0 +1,436 @@
+[
+  {
+    "objectID": "going-further.html",
+    "href": "going-further.html",
+    "title": "Going Further",
+    "section": "",
+    "text": "For many historians, the free tiers of ChatGPT and Google Gemini will be sufficient for occasional use: a few transcription sessions, some translation help, the odd coding question. If you use these tools a few times a week for modest tasks, you may never need to pay for anything."
+  },
+  {
+    "objectID": "going-further.html#when-free-is-enough",
+    "href": "going-further.html#when-free-is-enough",
+    "title": "Going Further",
+    "section": "",
+    "text": "For many historians, the free tiers of ChatGPT and Google Gemini will be sufficient for occasional use: a few transcription sessions, some translation help, the odd coding question. If you use these tools a few times a week for modest tasks, you may never need to pay for anything."
+  },
+  {
+    "objectID": "going-further.html#when-free-is-not-enough",
+    "href": "going-further.html#when-free-is-not-enough",
+    "title": "Going Further",
+    "section": "When Free Is Not Enough",
+    "text": "When Free Is Not Enough\nYou are likely to hit the limits of free tools if you:\n\nProcess large volumes of documents. Free tiers have daily usage caps. A sustained transcription or translation project will exhaust them quickly.\nWork with long documents. Free models often have smaller context windows — they can only process a limited amount of text at once. If you need to feed in a 30-page chapter or a long set of notes, you may need a paid tier.\nNeed the most capable models. The best-performing models are typically reserved for paid subscribers. The difference is noticeable for complex tasks like nuanced translation, sophisticated code generation, or working with messy data.\nWant to upload files. Some free tiers restrict file uploads (PDFs, images, spreadsheets). Paid tiers generally allow this."
+  },
+  {
+    "objectID": "going-further.html#paid-options",
+    "href": "going-further.html#paid-options",
+    "title": "Going Further",
+    "section": "Paid Options",
+    "text": "Paid Options\nPrices and capabilities change frequently. The following is accurate as of early 2026 but should be verified before subscribing.\n\nChatGPT Plus (~$20 USD/month)\n\nAccess to the most capable OpenAI models\nHigher usage limits\nFile uploads (PDFs, images, spreadsheets)\nCustom instructions that persist across conversations\nWeb browsing and image generation\n\nBest for: General-purpose use across transcription, translation, and writing tasks. The most widely used option, with the largest ecosystem of guides and tutorials.\n\n\nClaude Pro (~$20 USD/month)\n\nAccess to Anthropic’s Claude models (Sonnet, Opus)\nLarger context window — Claude can process significantly longer documents in a single conversation (up to ~150 pages of text)\nFile uploads, including large PDFs\nCareful, detailed responses; tends to be more cautious about stating things it is unsure of\n\nBest for: Working with long documents, detailed transcription, and tasks where you value accuracy and caution over speed. Claude’s longer context window is a meaningful advantage for historians working with multi-page sources.\n\n\nGoogle Gemini Advanced (~$20 USD/month, bundled with Google One AI Premium)\n\nAccess to Google’s most capable models\nIntegration with Google Workspace (Docs, Sheets, Gmail)\nLarge context window\n\nBest for: Historians already embedded in the Google ecosystem who want AI assistance across their existing workflow.\n\n\nClaude Code (Subscription or usage-based)\nClaude Code is a different kind of tool. It runs in your computer’s terminal (command line) rather than in a web browser, and it can read, write, and edit files on your computer directly. It is designed for extended, multi-step tasks rather than quick questions.\nWhat it can do that a chatbot cannot:\n\nRead an entire project directory — your chapter drafts, your data files, your scripts — and work with them as a whole.\nWrite and run code directly on your machine, testing it and fixing errors automatically.\nEdit your files in place, with your review and approval.\nMaintain context across long work sessions.\n\nWhy a historian might want this:\n\nBuilding and maintaining a database (e.g., loading census data into Neo4j, cleaning a large spreadsheet)\nProcessing a batch of digitized documents\nWriting and debugging data analysis scripts\nProofreading a multi-chapter manuscript with consistent style guidelines\n\nClaude Code is the most powerful option discussed in this guide but also the one with the steepest learning curve. It requires basic comfort with the command line. For historians doing computationally intensive research, the investment in learning it can pay off substantially."
+  },
+  {
+    "objectID": "going-further.html#do-you-need-any-of-this",
+    "href": "going-further.html#do-you-need-any-of-this",
+    "title": "Going Further",
+    "section": "Do You Need Any of This?",
+    "text": "Do You Need Any of This?\nHonestly — maybe not. If you are writing a traditional monograph based on archival research, and your sources are in languages you read fluently, and you do not work with large datasets, the free tier of ChatGPT or Gemini may serve you well for the occasional task. The paid tools are most valuable for researchers whose work involves:\n\nLarge-scale document processing\nSources in multiple languages\nComputational methods (databases, text analysis, mapping)\nLong and complex writing projects\n\nStart with the free tools. If you find yourself bumping against their limits regularly, a $20/month subscription is a modest investment for a professional research tool."
+  },
+  {
+    "objectID": "going-further.html#a-note-on-privacy",
+    "href": "going-further.html#a-note-on-privacy",
+    "title": "Going Further",
+    "section": "A Note on Privacy",
+    "text": "A Note on Privacy\nWhen you use a web-based LLM, the text you provide is sent to the company’s servers. For most research tasks this is not a concern, but be aware:\n\nDo not paste unpublished, embargoed, or confidential material into a free-tier chatbot without understanding the service’s data policy.\nMost paid tiers offer options to opt out of having your conversations used for model training. Check the settings.\nIf you are working with sensitive data (e.g., records involving living individuals), consult your institution’s research ethics guidelines."
+  },
+  {
+    "objectID": "research-tasks.html",
+    "href": "research-tasks.html",
+    "title": "Research Tasks",
+    "section": "",
+    "text": "This section walks through specific research tasks where GenAI tools have proven useful to working historians. Each subsection includes sample prompts you can adapt. The emphasis throughout is on using the tool to accelerate mechanical work while keeping the interpretive judgment in your hands."
+  },
+  {
+    "objectID": "research-tasks.html#overview",
+    "href": "research-tasks.html#overview",
+    "title": "Research Tasks",
+    "section": "",
+    "text": "This section walks through specific research tasks where GenAI tools have proven useful to working historians. Each subsection includes sample prompts you can adapt. The emphasis throughout is on using the tool to accelerate mechanical work while keeping the interpretive judgment in your hands."
+  },
+  {
+    "objectID": "research-tasks.html#transcription",
+    "href": "research-tasks.html#transcription",
+    "title": "Research Tasks",
+    "section": "Transcription",
+    "text": "Transcription\n\nThe Use Case\nYou have digitized images of manuscripts, printed documents, or typescripts that need to be converted to searchable, editable text. Traditional OCR (optical character recognition) struggles with handwriting, damaged pages, and pre-twentieth-century typefaces. LLMs with vision capabilities (ChatGPT, Claude, Gemini) can often do better because they use context — they understand that a colonial dispatch is likely to contain certain words and phrases, which helps them read ambiguous characters.\n\n\nHow to Do It\n\nUpload an image of the document page to the chat interface. Most current tools accept image files (JPG, PNG) and PDFs.\nProvide context in your prompt:\n\n\nThis is a page from a handwritten letter written by a Hudson’s Bay Company factor at York Factory, circa 1820. Please transcribe the text as accurately as possible. Preserve original spelling, capitalization, and punctuation. Where you are uncertain about a word, mark it with [?].\n\n\nReview the output against the original image. Correct errors and ask follow-up questions:\n\n\nIn line 7, you transcribed “provisions” — I think the original reads “previsions.” Can you look at that word again?\n\n\n\nTips\n\nProvide as much context as you can: the document type, date, language, and any distinctive features (e.g., “this writer uses the long s”).\nProcess one page at a time for best results.\nFor large-scale transcription projects (hundreds of pages), specialized OCR tools like Transkribus may be more efficient. LLMs are best for small batches or particularly difficult pages."
+  },
+  {
+    "objectID": "research-tasks.html#translation",
+    "href": "research-tasks.html#translation",
+    "title": "Research Tasks",
+    "section": "Translation",
+    "text": "Translation\n\nThe Use Case\nYou are working with primary sources in a language you can read with difficulty, or a language where you need to process many documents quickly. You do not need a publication-quality translation — you need a working draft that gets you close enough to assess the source’s relevance and content.\n\n\nHow to Do It\n\nPlease translate the following passage from 18th-century French into English. This is from a colonial administrator’s report on trade in the Antilles. Preserve the meaning as closely as possible; I do not need an elegant literary translation. Flag any terms that are ambiguous or that you are uncertain about.\n[paste the French text here]\n\n\n\nTips\n\nAlways compare the translation against the original for key passages you plan to cite.\nLLMs handle French, Spanish, German, Dutch, and Latin well. Performance degrades for less-represented languages and for heavily abbreviated or formulaic text (e.g., notarial records).\nFor period-specific vocabulary, tell the model the era: “This is 17th-century legal French; habitant here means settler-farmer, not inhabitant.”\nIf you plan to quote a translated passage in a publication, have the translation verified independently. LLM translation is a research aid, not a citable source."
+  },
+  {
+    "objectID": "research-tasks.html#literature-discovery",
+    "href": "research-tasks.html#literature-discovery",
+    "title": "Research Tasks",
+    "section": "Literature Discovery",
+    "text": "Literature Discovery\n\nThe Use Case\nYou are beginning a new project or entering an unfamiliar historiography and want to identify key works, major debates, and starting points for reading.\n\n\nHow to Do It\n\nI am starting a research project on the role of insurance in the British slave trade, roughly 1700–1807. Can you identify the key secondary works I should read? I am particularly interested in the intersection of financial history and the history of slavery.\n\n\n\nThe Critical Caveat\nLLMs frequently hallucinate citations. They generate titles, authors, and publication details that look correct but do not correspond to any real publication. This is one of the most dangerous failure modes for historians.\nRules for using LLM-generated reading lists:\n\nTreat every citation as a suggestion to verify, not a confirmed reference.\nSearch for each title in your library catalogue, JSTOR, or Google Scholar before adding it to your bibliography.\nIf a title does not turn up in any database, it probably does not exist.\nThe model is better at identifying well-known works than obscure articles. Use it for orientation, not for comprehensive literature review.\n\n\n\nTips\n\nAsk for the bibliographic details explicitly: “Please include the full title, author, publisher, and date for each work.”\nCross-reference with review essays, Oxford Bibliographies, or historiographic surveys for the field.\nConsider this a complement to, not a replacement for, searching databases yourself."
+  },
+  {
+    "objectID": "research-tasks.html#coding-and-data-management",
+    "href": "research-tasks.html#coding-and-data-management",
+    "title": "Research Tasks",
+    "section": "Coding and Data Management",
+    "text": "Coding and Data Management\n\nThe Use Case\nYou have data — a spreadsheet of census records, a collection of digitized documents, a database of shipping records — and you need to clean, transform, analyse, or visualize it. You are not a programmer, or you are a beginning programmer who gets stuck on syntax.\nThis is one of the areas where LLMs provide the most dramatic productivity gains for historians. Tasks that might take a week to learn from scratch can often be accomplished in an afternoon with LLM assistance.\n\n\nHow to Do It\n\nI have a CSV file with 428 rows of data about Saskatchewan settlements from the 1921 census. The columns include settlement name, founding year, population, railway company, and year of railway arrival. Some cells contain multiple values separated by semicolons (e.g., a settlement served by two railway companies). I want to write a Python script that:\n\nReads the CSV file\nSplits the multi-value cells into separate rows\nCreates a summary table showing, for each railway company, how many settlements it served and the average population of those settlements\nExports the result to a new CSV file\n\nPlease write the script and explain each step so I can understand what it does.\n\n\n\nTips\n\nBe specific about your data: describe the columns, the format, any irregularities.\nAsk the model to explain the code, not just write it. Understanding what the script does allows you to modify it later and catch errors.\nAlways test the code on your actual data. The model may make assumptions about your file structure that are not correct.\nStart with small, well-defined tasks. Once you are comfortable, you can tackle larger data projects.\nIf the first attempt does not work, paste the error message back into the conversation. The model is usually good at diagnosing and fixing its own mistakes.\n\n\n\nWhat This Looks Like in Practice\nA historian building a database of plantation estates might use an LLM to:\n\nWrite a script that scrapes structured data from a website\nClean inconsistent date formats across thousands of records\nGenerate Cypher queries to load data into a Neo4j graph database\nCreate visualizations of temporal patterns (e.g., settlement founding dates by decade)\n\nNone of this requires the historian to become a software engineer. It requires them to describe clearly what they want and to verify that the output is correct — skills that transfer directly from historical method."
+  },
+  {
+    "objectID": "research-tasks.html#organizing-and-structuring-notes",
+    "href": "research-tasks.html#organizing-and-structuring-notes",
+    "title": "Research Tasks",
+    "section": "Organizing and Structuring Notes",
+    "text": "Organizing and Structuring Notes\n\nThe Use Case\nYou have extensive research notes, archival transcriptions, or document summaries and want to organize them by theme, date, or topic.\n\n\nHow to Do It\n\nI have transcribed notes from 30 letters written by colonial administrators in Jamaica between 1815 and 1834. Each note is a paragraph summarizing the letter’s contents with the date and author. I am going to paste all 30 summaries below. Please organize them chronologically and identify the major recurring themes across the correspondence.\n\n\n\nTips\n\nThis works best when you have already done the intellectual work of reading and summarizing. The LLM organizes your notes; it does not generate understanding for you.\nUseful for conference paper preparation, chapter outlining, or identifying gaps in your research."
+  },
+  {
+    "objectID": "deep-research.html",
+    "href": "deep-research.html",
+    "title": "Deep Research Tools",
+    "section": "",
+    "text": "Several GenAI products now offer a “deep research” or “research” mode that goes beyond a simple chatbot response. Instead of answering your question from memory, these tools search the web, read multiple sources, synthesize what they find, and produce a structured report — often with citations and footnotes.\nThe major options as of early 2026:\n\nGemini Deep Research (Google) — available with Gemini Advanced ($20/month). Searches the web, reads pages, and produces multi-page reports with source links.\nChatGPT Deep Research (OpenAI) — available with ChatGPT Plus and Pro. Similar approach: extended web browsing, synthesis, and structured output.\nPerplexity (perplexity.ai) — available in a free tier with limits, and a Pro tier (~$20/month). Designed from the ground up as a research tool. Every claim is linked to a source. The free tier is a good starting point.\nClaude with web search (Anthropic) — Claude Pro can search the web when asked. Less automated than the dedicated deep research tools, but the underlying model is strong on synthesis and nuance.\n\nThese tools represent a genuine step forward from the basic chatbot experience described in earlier sections. They can produce results in minutes that would take hours of manual searching. They are also where GenAI’s limitations become most consequential for historians."
+  },
+  {
+    "objectID": "deep-research.html#what-are-deep-research-tools",
+    "href": "deep-research.html#what-are-deep-research-tools",
+    "title": "Deep Research Tools",
+    "section": "",
+    "text": "Several GenAI products now offer a “deep research” or “research” mode that goes beyond a simple chatbot response. Instead of answering your question from memory, these tools search the web, read multiple sources, synthesize what they find, and produce a structured report — often with citations and footnotes.\nThe major options as of early 2026:\n\nGemini Deep Research (Google) — available with Gemini Advanced ($20/month). Searches the web, reads pages, and produces multi-page reports with source links.\nChatGPT Deep Research (OpenAI) — available with ChatGPT Plus and Pro. Similar approach: extended web browsing, synthesis, and structured output.\nPerplexity (perplexity.ai) — available in a free tier with limits, and a Pro tier (~$20/month). Designed from the ground up as a research tool. Every claim is linked to a source. The free tier is a good starting point.\nClaude with web search (Anthropic) — Claude Pro can search the web when asked. Less automated than the dedicated deep research tools, but the underlying model is strong on synthesis and nuance.\n\nThese tools represent a genuine step forward from the basic chatbot experience described in earlier sections. They can produce results in minutes that would take hours of manual searching. They are also where GenAI’s limitations become most consequential for historians."
+  },
+  {
+    "objectID": "deep-research.html#what-they-do-well",
+    "href": "deep-research.html#what-they-do-well",
+    "title": "Deep Research Tools",
+    "section": "What They Do Well",
+    "text": "What They Do Well\n\nRapid Orientation in an Unfamiliar Field\nIf you are beginning a project in a historiography you do not know, a deep research tool can produce a useful map of the terrain in fifteen minutes. Ask:\n\nI am a historian beginning a research project on the role of marine insurance in the British Atlantic slave trade, roughly 1700–1807. Please search for the key secondary literature and major scholarly debates. I am interested in work published since 2000, particularly at the intersection of financial history and the history of slavery. Provide full bibliographic details for each source and a brief summary of its argument.\n\nThe result will typically be a structured report identifying major scholars, key monographs and articles, and the main lines of debate. This is genuinely useful as a starting point — comparable to asking a knowledgeable colleague for reading suggestions, but faster and more systematic.\n\n\nFinding Recent Work\nDeep research tools that search the web can surface recent publications that may not yet appear in standard bibliographic databases. For fast-moving fields or recent special issues, this is a real advantage over traditional database searching.\n\n\nIdentifying Connections Across Fields\nBecause these tools search broadly, they sometimes surface relevant work in adjacent fields that a historian searching within disciplinary databases might miss — economics journals, legal history, historical geography, environmental science.\n\n\nProducing Working Bibliographies\nThe best deep research reports include enough bibliographic detail that you can quickly verify each source in your library catalogue or JSTOR. This makes them useful as a triage tool: generate a long list, verify what exists, and then decide what to read."
+  },
+  {
+    "objectID": "deep-research.html#where-they-fail-and-why-it-matters-more-here",
+    "href": "deep-research.html#where-they-fail-and-why-it-matters-more-here",
+    "title": "Deep Research Tools",
+    "section": "Where They Fail — and Why It Matters More Here",
+    "text": "Where They Fail — and Why It Matters More Here\nThe limitations described in the Limitations section apply to deep research tools with particular force, because the output looks more authoritative. A chatbot response that gets something wrong is easy to spot — it reads like a casual answer. A deep research report with footnotes, structured sections, and scholarly language is much harder to evaluate critically. The very features that make these tools useful also make their failures more dangerous.\n\nMixed Real and Fabricated Citations\nThis is the central problem. Deep research reports typically contain a mixture of:\n\nReal sources, correctly cited and accurately summarized.\nReal sources, cited but inaccurately summarized or mischaracterized.\nFabricated sources that do not exist, presented with plausible-sounding titles, authors, journal names, and dates.\n\nThe fabricated sources are not flagged. They appear in the same footnote format as the real ones. The ratio varies — some reports are largely accurate, others contain multiple fabrications — but you cannot tell in advance which kind you have received.\nThis means every single citation in a deep research report must be independently verified. This is not a suggestion; it is a requirement. A historian who cites a source from a deep research report without checking that it exists risks citing a work that was never published.\n\n\nConfident Mischaracterization\nEven when a source is real, the tool may misrepresent its argument. A nuanced article that complicates a received narrative may be summarized as if it simply confirms it. A book that is primarily about one topic may be cited for a claim it makes only in passing. The tool does not distinguish between a work’s central thesis and an incidental observation.\n\n\nHistoriographic Flattening\nDeep research tools tend to present scholarly debates as settled when they are not, or to smooth over genuine disagreements. A report on the “Williams thesis” might present it as either confirmed or refuted, when the actual historiographic situation is far more complicated. The tools do not handle ambiguity, ongoing debate, or productive disagreement well.\n\n\nSource Quality Blindness\nThese tools do not distinguish between a peer-reviewed article in Past & Present and a blog post. They weight sources by accessibility and relevance to the query, not by scholarly authority. A deep research report may cite high-quality scholarship alongside popular histories, journalism, or Wikipedia summaries without distinguishing between them."
+  },
+  {
+    "objectID": "deep-research.html#a-practical-workflow",
+    "href": "deep-research.html#a-practical-workflow",
+    "title": "Deep Research Tools",
+    "section": "A Practical Workflow",
+    "text": "A Practical Workflow\nGiven these strengths and limitations, here is a workflow that gets the most value from deep research tools while managing the risks:\n\nStep 1: Generate\nRun a deep research query on your topic. Be specific about what you want:\n\nSearch for peer-reviewed scholarship published since 2010 on [your topic]. Focus on [specific aspects]. Provide full bibliographic details (author, title, journal/publisher, date, volume, pages) for each source.\n\n\n\nStep 2: Verify Every Citation\nGo through the report’s citations one by one:\n\nSearch for each title in your library catalogue, Google Scholar, JSTOR, or WorldCat.\nIf a source does not appear in any database, it probably does not exist. Remove it.\nIf a source exists, check that the author, date, and publication details match.\n\nThis step is non-negotiable. Budget time for it.\n\n\nStep 3: Check Summaries Against Originals\nFor sources you plan to use, read at least the abstract and introduction yourself. Verify that the tool’s summary accurately reflects the work’s argument. Do not rely on the tool’s characterization.\n\n\nStep 4: Fill the Gaps\nDeep research reports are biased toward digitally accessible, English-language sources. After verifying what the tool found, search manually for:\n\nWork in other languages relevant to your topic.\nOlder foundational texts that may not be well-represented online.\nArchival sources and primary source collections (which these tools cannot access).\nRecent work that may not yet be indexed.\n\n\n\nStep 5: Read\nThere is no substitute for this. The deep research report tells you what might be worth reading. The reading itself is your job."
+  },
+  {
+    "objectID": "deep-research.html#comparing-the-tools",
+    "href": "deep-research.html#comparing-the-tools",
+    "title": "Deep Research Tools",
+    "section": "Comparing the Tools",
+    "text": "Comparing the Tools\nEach deep research tool has different strengths. Based on early 2026 capabilities:\n\n\n\n\n\n\n\n\nTool\nStrengths\nWeaknesses\n\n\n\n\nPerplexity\nSource links for every claim; free tier available; good for quick factual queries\nCan be shallow on historiographic nuance; free tier has limits\n\n\nGemini Deep Research\nExcellent on well-documented historiography; thorough multi-page reports\nDegrades badly at the edges of knowledge (see below)\n\n\nChatGPT Deep Research\nStrong synthesis; good at identifying scholarly debates\nCitation accuracy varies; can hallucinate convincingly\n\n\nClaude (web search)\nMore cautious; better at flagging uncertainty and acknowledging gaps\nWeaker on historiography; less automated; requires more guidance\n\n\n\nThese assessments will change as the tools improve. The verification workflow remains the same regardless of which tool you use.\n\nA Note on Gemini and the Limits of Knowledge\nGemini Deep Research deserves special mention because it illustrates a pattern that applies to all these tools but is particularly visible here. When you ask Gemini about a well-established historiographic debate — the Williams thesis, the standard of living debate, the “great divergence” — it is genuinely impressive. It identifies the key scholars, maps the lines of argument, and produces reports that a graduate student would find useful.\nThe problem emerges when you push toward questions at the frontier of historical knowledge — topics where the primary sources are thin, not digitized, or simply do not exist. When Gemini cannot find strong evidence, it does not say so. Instead, it answers the question anyway, drawing on whatever it can find: sources from the wrong decade, tangentially related evidence, or speculative claims from weak secondary sources presented with the same confidence as established scholarship. The report reads just as polished and authoritative as one about a well-documented topic. The difference is invisible unless you already know enough to spot it.\nThis is the fundamental trap of deep research tools: they are most useful when you know the least about a topic, and least reliable in exactly that situation. When you are entering an unfamiliar field — the very moment you most need guidance — you are also least equipped to evaluate what the tool gives you. The verification workflow described above is the only safeguard.\n\n\nA Note on Claude and the Limits of Training Data\nClaude presents roughly the opposite trade-off from Gemini. Because Anthropic likely had less access to paywalled academic journals and monographs in its training data, Claude is noticeably weaker on established historiography — it may miss key works or be vague where Gemini is specific. On the other hand, Claude is better at recognizing and communicating its own uncertainty. When it cannot find strong evidence for a claim, it is more likely to say so rather than filling the gap with weak or mismatched sources.\nThis is a genuine advantage, but it is not absolute. Claude will still sometimes present uncertain claims with more confidence than they deserve. The difference is one of degree: you are somewhat less likely to receive a confident answer built on evidence from the wrong decade, and somewhat more likely to receive an honest “I am not sure about this.” For a historian, a tool that says “I don’t know” is often more useful than one that gives you a plausible-sounding wrong answer — but you should still verify everything regardless of which tool you use."
+  },
+  {
+    "objectID": "deep-research.html#when-deep-research-tools-are-most-useful",
+    "href": "deep-research.html#when-deep-research-tools-are-most-useful",
+    "title": "Deep Research Tools",
+    "section": "When Deep Research Tools Are Most Useful",
+    "text": "When Deep Research Tools Are Most Useful\n\nEntering a new field. You are starting a project outside your usual area and need a map of the literature.\nChecking for recent work. You have not searched a particular topic in a year or two and want to see what has been published.\nInterdisciplinary questions. Your project touches on economics, law, environmental science, or another field, and you want to find relevant work outside history journals.\nGenerating leads, not conclusions. You treat the output as a list of things to check, not as a finished literature review."
+  },
+  {
+    "objectID": "deep-research.html#when-they-are-not-useful",
+    "href": "deep-research.html#when-they-are-not-useful",
+    "title": "Deep Research Tools",
+    "section": "When They Are Not Useful",
+    "text": "When They Are Not Useful\n\nYour own specialty. You almost certainly know the literature better than the tool does. It may surface the occasional overlooked article, but the risk of fabricated or mischaracterized sources is not worth the time for a field you already command.\nArchival research. These tools cannot access unpublished sources, manuscript collections, or finding aids.\nHistoriographic argument. A literature review in a thesis or article must reflect your reading and your interpretation of the field. A deep research report is a starting point for that work, not a substitute for it."
+  },
+  {
+    "objectID": "deep-research.html#the-bottom-line",
+    "href": "deep-research.html#the-bottom-line",
+    "title": "Deep Research Tools",
+    "section": "The Bottom Line",
+    "text": "The Bottom Line\nDeep research tools are the most impressive and the most dangerous GenAI application for historians. They can save you hours of initial searching. They can also fill your bibliography with sources that do not exist and your notes with summaries that misrepresent the scholarship. The tool does the searching. The verification, the reading, and the thinking are yours."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "GenAI for Historians",
+    "section": "",
+    "text": "This guide is for historians — faculty and graduate students — who are curious about generative AI tools but have not yet used them, or who have tried them briefly and want to understand what they can realistically do for historical research. No technical background is assumed. You do not need to know how to code, and you do not need to spend any money to get started."
+  },
+  {
+    "objectID": "index.html#who-this-guide-is-for",
+    "href": "index.html#who-this-guide-is-for",
+    "title": "GenAI for Historians",
+    "section": "",
+    "text": "This guide is for historians — faculty and graduate students — who are curious about generative AI tools but have not yet used them, or who have tried them briefly and want to understand what they can realistically do for historical research. No technical background is assumed. You do not need to know how to code, and you do not need to spend any money to get started."
+  },
+  {
+    "objectID": "index.html#what-this-guide-is-not",
+    "href": "index.html#what-this-guide-is-not",
+    "title": "GenAI for Historians",
+    "section": "What This Guide Is Not",
+    "text": "What This Guide Is Not\nThis is not an argument that you should use these tools. It is not a technology manifesto or a prediction about the future of the discipline. Some historians will find GenAI useful for specific research tasks. Others will try it and decide it does not suit their workflow. Both are reasonable outcomes.\nThe goal is simply to give you enough hands-on experience to make an informed judgment."
+  },
+  {
+    "objectID": "index.html#how-it-is-organized",
+    "href": "index.html#how-it-is-organized",
+    "title": "GenAI for Historians",
+    "section": "How It Is Organized",
+    "text": "How It Is Organized\nThe guide moves from free, low-commitment starting points to more advanced (and more expensive) tools:\n\nWhat Are LLMs? — A brief, non-technical explanation of how these tools work, what they are good at, and why they make mistakes. Understanding the basics helps you use them more effectively and spot their failures.\nGetting Started — How to begin with freely available tools (ChatGPT, Google Gemini) today, with no account setup beyond an email address. Includes a first exercise you can try in ten minutes.\nResearch Tasks — Concrete examples of how historians are using GenAI for transcription, translation, literature discovery, and coding. Each section includes sample prompts you can adapt to your own work.\nDeep Research Tools — Several products now offer automated literature review: they search the web, read sources, and produce structured reports with citations. These are powerful and impressive — and they are also where GenAI’s tendency to hallucinate becomes most dangerous. This section explains what they do well and how to avoid being misled.\nCase Studies — Two projects built by a historian using these tools: re-OCR’ing and building a searchable knowledge graph of 8,128 Royal Society articles (1665–1869), and transcribing and visualizing an archival collection of Joseph Banks’ correspondence on the British leather trade. Neither required advanced programming skills.\nCopy Editing — Using GenAI to proofread and polish your own drafted prose — what it does well, where it over-corrects, and how to stay in control of your voice.\nGoing Further — When free tools hit their limits and paid subscriptions become worthwhile. An honest look at costs, capabilities, and what the more advanced tools (Claude Pro, ChatGPT Plus, Claude Code) actually offer.\nLimitations — What these tools get wrong, how to recognize it, and what you should never trust them to do unsupervised. This section is as important as any of the others."
+  },
+  {
+    "objectID": "index.html#a-note-on-tools-and-vendors",
+    "href": "index.html#a-note-on-tools-and-vendors",
+    "title": "GenAI for Historians",
+    "section": "A Note on Tools and Vendors",
+    "text": "A Note on Tools and Vendors\nThis guide mentions specific products by name (ChatGPT, Claude, Gemini) because it is impossible to give practical advice without doing so. Naming a tool is not an endorsement. The landscape is changing rapidly, and the specific products available when you read this may differ from those available when it was written. The underlying skills — writing effective prompts, verifying outputs, knowing when to trust and when to doubt — transfer across tools."
+  },
+  {
+    "objectID": "index.html#getting-started",
+    "href": "index.html#getting-started",
+    "title": "GenAI for Historians",
+    "section": "Getting Started",
+    "text": "Getting Started\nIf you have fifteen minutes and want to try something right now, go to Getting Started."
+  },
+  {
+    "objectID": "limitations.html",
+    "href": "limitations.html",
+    "title": "Limitations and Risks",
+    "section": "",
+    "text": "The preceding pages describe what GenAI tools can do. This section describes what they cannot do, what they do badly, and where using them can lead you astray. For a historian, understanding the failure modes is not optional — it is the difference between a useful tool and a liability."
+  },
+  {
+    "objectID": "limitations.html#why-this-section-matters",
+    "href": "limitations.html#why-this-section-matters",
+    "title": "Limitations and Risks",
+    "section": "",
+    "text": "The preceding pages describe what GenAI tools can do. This section describes what they cannot do, what they do badly, and where using them can lead you astray. For a historian, understanding the failure modes is not optional — it is the difference between a useful tool and a liability."
+  },
+  {
+    "objectID": "limitations.html#hallucination",
+    "href": "limitations.html#hallucination",
+    "title": "Limitations and Risks",
+    "section": "Hallucination",
+    "text": "Hallucination\nThis is the most important limitation. LLMs generate text that is statistically plausible, not text that is true. They will:\n\nInvent citations. They produce author names, titles, journal names, volume numbers, and page ranges that look entirely real but correspond to no actual publication. This is not rare; it happens routinely.\nFabricate historical details. They may generate plausible-sounding dates, names, or events that did not occur, especially for obscure topics.\nBlend real and false information seamlessly. A paragraph might contain three accurate claims and one fabricated one, with no difference in tone or confidence.\n\n\nWhat to Do About It\n\nVerify every factual claim against a source you trust.\nVerify every citation in a library catalogue, JSTOR, or Google Scholar.\nNever cite an LLM as a source in scholarly work. It is not a source; it is a text-generation engine.\nBe especially cautious about topics that are obscure, recent, or poorly represented in English-language digital text."
+  },
+  {
+    "objectID": "limitations.html#bias-and-representation",
+    "href": "limitations.html#bias-and-representation",
+    "title": "Limitations and Risks",
+    "section": "Bias and Representation",
+    "text": "Bias and Representation\nLLMs reflect the biases of their training data. For historians, this has specific implications:\n\nAnglophone and Western bias. The models know more about the history of Britain and the United States than about the history of, say, the Swahili coast or Central Asia. Responses about less-represented topics will be thinner, more generic, and more likely to contain errors.\nHistoriographic lag. The training data reflects the published literature, which means the models tend to reproduce older historiographic framings. They may default to nationalist narratives, Great Man history, or other interpretive frameworks that the discipline has moved beyond.\nErasure and euphemism. Some models are tuned to avoid controversial topics, which can result in euphemistic or evasive language about slavery, colonialism, genocide, and other subjects that historians must discuss directly.\n\n\nWhat to Do About It\n\nTreat LLM output as you would an encyclopedia entry: a starting point that reflects a particular perspective, not a neutral authority.\nBe alert to gaps — what the model does not say can be as revealing as what it does.\nIf you notice the model using euphemistic language about sensitive historical topics, push back explicitly in your prompt: “Please use direct, scholarly language. Do not euphemize.”"
+  },
+  {
+    "objectID": "limitations.html#the-illusion-of-understanding",
+    "href": "limitations.html#the-illusion-of-understanding",
+    "title": "Limitations and Risks",
+    "section": "The Illusion of Understanding",
+    "text": "The Illusion of Understanding\nLLMs produce text that reads as if it were written by someone who understands the topic. This is misleading. The model does not understand; it predicts. The practical consequence is that:\n\nIt cannot distinguish between a strong argument and a weak one.\nIt cannot judge the reliability of a source.\nIt cannot weigh conflicting evidence.\nIt cannot tell you when a question is more complex than it appears.\n\nThese are the tasks that define historical practice. They cannot be delegated to an LLM."
+  },
+  {
+    "objectID": "limitations.html#privacy-and-intellectual-property",
+    "href": "limitations.html#privacy-and-intellectual-property",
+    "title": "Limitations and Risks",
+    "section": "Privacy and Intellectual Property",
+    "text": "Privacy and Intellectual Property\n\nYour Data\nWhen you paste text into a web-based chatbot, that text is transmitted to the company’s servers. Consider:\n\nUnpublished research. If you paste a chapter draft into ChatGPT, that text has left your control. Most services state that they do not use paid-tier conversations for training, but policies vary and change.\nSensitive data. Records involving living people, embargoed materials, or data covered by research ethics agreements should not be pasted into commercial LLM tools without careful consideration.\nStudent work. If you are using GenAI tools to evaluate student submissions, be aware that you may be sharing student work with a third-party service.\n\n\n\nThe Model’s “Knowledge”\nLLMs were trained on text scraped from the internet, including copyrighted material. The legal and ethical status of this training is unresolved and actively litigated. This is worth being aware of, though it does not directly affect most research use cases."
+  },
+  {
+    "objectID": "limitations.html#over-reliance",
+    "href": "limitations.html#over-reliance",
+    "title": "Limitations and Risks",
+    "section": "Over-Reliance",
+    "text": "Over-Reliance\nThe subtlest risk is not that the tool will fail dramatically but that it will work well enough to change your behaviour. Historians who use LLMs for translation may gradually do less of their own translation practice. Historians who use LLMs for literature discovery may search databases less thoroughly. Historians who use LLMs for coding may understand their own scripts less deeply.\nNone of these are inevitable outcomes, but they are real risks. The best safeguard is intentionality: decide in advance what you want to learn and what you want to delegate, and revisit that decision periodically."
+  },
+  {
+    "objectID": "limitations.html#summary",
+    "href": "limitations.html#summary",
+    "title": "Limitations and Risks",
+    "section": "Summary",
+    "text": "Summary\n\nSummary of limitations and mitigations\n\n\n\n\n\n\nRisk\nMitigation\n\n\n\n\nHallucinated citations\nVerify every reference in a catalogue or database\n\n\nFabricated facts\nCheck all claims against trusted sources\n\n\nBias and gaps\nTreat output as a starting point, not an authority\n\n\nPrivacy concerns\nDo not paste sensitive or unpublished material into free-tier tools\n\n\nOver-reliance\nDecide consciously what to delegate; maintain your own skills\n\n\nIllusion of understanding\nReserve interpretation, judgment, and argument for yourself"
+  },
+  {
+    "objectID": "limitations.html#the-bottom-line",
+    "href": "limitations.html#the-bottom-line",
+    "title": "Limitations and Risks",
+    "section": "The Bottom Line",
+    "text": "The Bottom Line\nThese tools are useful. They are also unreliable, biased, and incapable of the interpretive work that defines our discipline. Using them well means using them for what they are good at (mechanical tasks, pattern recognition, draft editing) while keeping the intellectual work — the reading, the thinking, the arguing — firmly in your own hands.\nThat is not a limitation of the technology. It is the point."
+  },
+  {
+    "objectID": "copy-editing.html",
+    "href": "copy-editing.html",
+    "title": "Copy Editing",
+    "section": "",
+    "text": "There is a difference between asking an LLM to write for you and asking it to edit what you have already written. This guide is about the latter. The assumption is that you have drafted your own prose — the arguments, the structure, the evidence are yours — and you want help catching errors, tightening sentences, and improving clarity.\nThis is not meaningfully different from asking a colleague to read a draft, or from using Grammarly, or from working with a copy editor. The tool is more capable than a spell-checker and less capable than a good human editor. It is useful precisely in that middle range."
+  },
+  {
+    "objectID": "copy-editing.html#the-distinction-that-matters",
+    "href": "copy-editing.html#the-distinction-that-matters",
+    "title": "Copy Editing",
+    "section": "",
+    "text": "There is a difference between asking an LLM to write for you and asking it to edit what you have already written. This guide is about the latter. The assumption is that you have drafted your own prose — the arguments, the structure, the evidence are yours — and you want help catching errors, tightening sentences, and improving clarity.\nThis is not meaningfully different from asking a colleague to read a draft, or from using Grammarly, or from working with a copy editor. The tool is more capable than a spell-checker and less capable than a good human editor. It is useful precisely in that middle range."
+  },
+  {
+    "objectID": "copy-editing.html#how-to-do-it",
+    "href": "copy-editing.html#how-to-do-it",
+    "title": "Copy Editing",
+    "section": "How to Do It",
+    "text": "How to Do It\n\nBasic Proofreading\nPaste a section of your draft and ask:\n\nPlease proofread the following passage for spelling, grammar, and punctuation errors. Do not change the content, argument, or voice — only flag mechanical errors. List each error with the original text and the suggested correction.\n\nThis produces a list of corrections you can accept or reject individually, rather than a rewritten passage that you have to compare line by line.\n\n\nClarity and Flow\n\nPlease read the following passage and suggest improvements to clarity and readability. Do not change the argument or the evidence. Focus on sentence structure, word choice, and flow. Present your suggestions as a list of specific changes, not a rewritten version.\n\n\n\nConsistency Checking\n\nI am writing a chapter that uses the following terms: “enslaved person” (not “slave”), “slaveholder” (not “slave owner”), and “plantation” (not “estate” except when referring to legal documents). Please check the following passage for consistency with these preferences and flag any deviations.\n\n\n\nCitation and Footnote Review\n\nPlease check the following passage for any footnotes that appear to reference the wrong source, or for claims that are made without a supporting footnote. I have pasted the passage with its footnotes below."
+  },
+  {
+    "objectID": "copy-editing.html#staying-in-control",
+    "href": "copy-editing.html#staying-in-control",
+    "title": "Copy Editing",
+    "section": "Staying in Control",
+    "text": "Staying in Control\nThe key risk with AI-assisted editing is that the tool may “improve” your prose in ways that change your meaning or flatten your voice. A few guidelines:\n\nAlways review changes individually. Do not accept a batch rewrite. Ask for a list of specific suggestions, not a new version of the paragraph.\nReject stylistic changes that do not suit you. LLMs tend toward a generic, slightly formal tone. If the model suggests replacing your phrasing with something blander, keep yours.\nWatch for meaning drift. The model may tighten a sentence in a way that subtly changes what you are saying. Read each suggestion against your intended meaning.\nDo not let it restructure your argument. If you ask for “clarity” suggestions and the model proposes reordering your paragraphs, that is an intellectual decision, not a copy-editing one. Make those choices yourself."
+  },
+  {
+    "objectID": "copy-editing.html#what-it-does-well",
+    "href": "copy-editing.html#what-it-does-well",
+    "title": "Copy Editing",
+    "section": "What It Does Well",
+    "text": "What It Does Well\n\nCatching typos and grammatical errors, including subtle ones (subject-verb agreement across long sentences, misplaced modifiers)\nIdentifying repetitive word choice\nFlagging inconsistent formatting (dates, capitalization, hyphenation)\nSpotting missing articles or prepositions that a spell-checker would miss"
+  },
+  {
+    "objectID": "copy-editing.html#what-it-does-poorly",
+    "href": "copy-editing.html#what-it-does-poorly",
+    "title": "Copy Editing",
+    "section": "What It Does Poorly",
+    "text": "What It Does Poorly\n\nRecognizing intentional stylistic choices (sentence fragments for emphasis, deliberate repetition, rhetorical structure)\nUnderstanding disciplinary conventions (Chicago-style footnotes, the use of the historical present, block quotation formatting)\nKnowing when not to change something"
+  },
+  {
+    "objectID": "copy-editing.html#a-practical-workflow",
+    "href": "copy-editing.html#a-practical-workflow",
+    "title": "Copy Editing",
+    "section": "A Practical Workflow",
+    "text": "A Practical Workflow\n\nWrite your draft yourself. Do not use GenAI for initial drafting.\nRevise your draft yourself. Get the argument and structure where you want them.\nRun a proofreading pass with the LLM, asking for a list of mechanical errors.\nAccept or reject each suggestion individually.\nOptionally, run a clarity pass — again reviewing each suggestion against your original intent.\nRead the final version yourself. You are responsible for every word.\n\nThis workflow keeps you in the author’s seat throughout. The LLM functions as a very fast, very patient proofreader — nothing more."
+  },
+  {
+    "objectID": "getting-started.html",
+    "href": "getting-started.html",
+    "title": "Getting Started",
+    "section": "",
+    "text": "You can begin with either of these free options. Both require only an email address to create an account:\n\nChatGPT (chatgpt.com) — Made by OpenAI. The free tier gives you access to the GPT-4o model with some usage limits. This is probably the most widely used LLM.\nGoogle Gemini (gemini.google.com) — Made by Google. Free with a Google account. Comparable capability to ChatGPT for most tasks.\n\nBoth tools work in a web browser. You type a message, the model responds, and you can continue the conversation. There is nothing to install.\nFor this guide, the examples use ChatGPT, but the prompts work in any tool with minor adjustments."
+  },
+  {
+    "objectID": "getting-started.html#choose-a-tool",
+    "href": "getting-started.html#choose-a-tool",
+    "title": "Getting Started",
+    "section": "",
+    "text": "You can begin with either of these free options. Both require only an email address to create an account:\n\nChatGPT (chatgpt.com) — Made by OpenAI. The free tier gives you access to the GPT-4o model with some usage limits. This is probably the most widely used LLM.\nGoogle Gemini (gemini.google.com) — Made by Google. Free with a Google account. Comparable capability to ChatGPT for most tasks.\n\nBoth tools work in a web browser. You type a message, the model responds, and you can continue the conversation. There is nothing to install.\nFor this guide, the examples use ChatGPT, but the prompts work in any tool with minor adjustments."
+  },
+  {
+    "objectID": "getting-started.html#your-first-conversation",
+    "href": "getting-started.html#your-first-conversation",
+    "title": "Getting Started",
+    "section": "Your First Conversation",
+    "text": "Your First Conversation\nOpen one of the tools above and try the following prompt. Copy and paste it, or adapt it to a topic you know well:\n\nI am a historian studying the development of the western Canadian grain trade in the early twentieth century. Can you give me a brief overview of the major developments between 1900 and 1930, focusing on the role of grain elevators and the Winnipeg Grain Exchange?\n\nRead the response. Some of it will be accurate. Some of it may be vague or slightly wrong. Notice:\n\nDoes it cite specific sources? (Probably not, or if it does, check whether they exist.)\nDoes it capture the broad outlines correctly?\nWhere does it feel generic — like a textbook summary rather than a historian’s analysis?\n\nThis is a useful calibration exercise. You now have a sense of what the tool knows and does not know about a topic you understand."
+  },
+  {
+    "objectID": "getting-started.html#a-more-useful-exercise-transcription",
+    "href": "getting-started.html#a-more-useful-exercise-transcription",
+    "title": "Getting Started",
+    "section": "A More Useful Exercise: Transcription",
+    "text": "A More Useful Exercise: Transcription\nLLMs are often more useful for concrete tasks than for open-ended questions. Try this:\n\nFind a page from a digitized historical document — a handwritten letter, a printed government report with difficult typography, or a census page. If you have a PDF on your computer, many LLM tools now allow you to upload images or documents directly.\nUpload or paste the text and ask:\n\n\nPlease transcribe the text in this image as accurately as possible. This is a [type of document] from [approximate date and context]. Preserve the original spelling and punctuation.\n\n\nCompare the output against the original. Where does it succeed? Where does it struggle?\n\nFor printed text in good condition, LLMs are often very accurate. For handwriting, the results are more variable but can still be a useful first pass that you then correct."
+  },
+  {
+    "objectID": "getting-started.html#understanding-the-conversation-model",
+    "href": "getting-started.html#understanding-the-conversation-model",
+    "title": "Getting Started",
+    "section": "Understanding the Conversation Model",
+    "text": "Understanding the Conversation Model\nA few things are worth knowing about how these tools work in practice:\nContext window. The model can only “remember” a certain amount of text within a single conversation. If your conversation becomes very long, the model may lose track of things you said earlier. For long tasks, it can help to start a new conversation and restate the key context.\nSystem prompts and instructions. You can begin a conversation by telling the model what role you want it to play or what constraints to follow. For example:\n\nYou are helping me transcribe 19th-century French colonial correspondence. The documents are from the Archives nationales d’outre-mer. Please preserve the original French text and flag any words you are uncertain about with [?].\n\nThis kind of framing improves results significantly.\nFollow-up questions. You can refine the model’s output by asking follow-up questions in the same conversation:\n\nThat transcription looks mostly right, but I think the word you read as “commerce” in line 3 is actually “commode.” Can you look at that section again?\n\nThe model will adjust. This iterative back-and-forth is often more productive than trying to get a perfect result on the first try."
+  },
+  {
+    "objectID": "getting-started.html#what-you-have-learned",
+    "href": "getting-started.html#what-you-have-learned",
+    "title": "Getting Started",
+    "section": "What You Have Learned",
+    "text": "What You Have Learned\nAfter fifteen minutes with a free tool, you should have a sense of:\n\nHow the conversational interface works\nWhat kind of output the model produces for topics you know\nHow transcription assistance works in practice\nThe importance of checking everything\n\nThe next section, Research Tasks, walks through specific applications in more detail."
+  },
+  {
+    "objectID": "case-studies.html",
+    "href": "case-studies.html",
+    "title": "Case Studies",
+    "section": "",
+    "text": "The earlier sections of this guide describe individual tasks — transcription, translation, coding, copy editing. But the real power of GenAI tools emerges when you combine them into a sustained research workflow. The two projects described here were built by a historian, not a computer scientist, using the kinds of tools discussed in this guide. Neither required advanced programming skills at the outset. Both started with a straightforward question and grew as the tools made each next step feasible.\nThe point is not that every historian should build a knowledge graph. It is that these tools lower the barrier to computational research methods enough that projects which once required a dedicated digital humanities team can now be undertaken by a single researcher with a clear question and a willingness to learn."
+  },
+  {
+    "objectID": "case-studies.html#why-case-studies",
+    "href": "case-studies.html#why-case-studies",
+    "title": "Case Studies",
+    "section": "",
+    "text": "The earlier sections of this guide describe individual tasks — transcription, translation, coding, copy editing. But the real power of GenAI tools emerges when you combine them into a sustained research workflow. The two projects described here were built by a historian, not a computer scientist, using the kinds of tools discussed in this guide. Neither required advanced programming skills at the outset. Both started with a straightforward question and grew as the tools made each next step feasible.\nThe point is not that every historian should build a knowledge graph. It is that these tools lower the barrier to computational research methods enough that projects which once required a dedicated digital humanities team can now be undertaken by a single researcher with a clear question and a willingness to learn."
+  },
+  {
+    "objectID": "case-studies.html#case-study-1-the-philosophical-transactions-of-the-royal-society-16651869",
+    "href": "case-studies.html#case-study-1-the-philosophical-transactions-of-the-royal-society-16651869",
+    "title": "Case Studies",
+    "section": "Case Study 1: The Philosophical Transactions of the Royal Society (1665–1869)",
+    "text": "Case Study 1: The Philosophical Transactions of the Royal Society (1665–1869)\n\nThe Question\nThe Philosophical Transactions is the world’s first and longest-running scientific journal, published continuously since 1665. Its 8,128 articles and 106,829 pages document over two centuries of scientific thought in Britain and beyond — from Newton’s optics to Darwin’s early papers, from earthquake reports to experiments on air pressure. The full run is digitized and available through JSTOR’s Early Journal Content on the Internet Archive. But how do you actually use 200 years of scientific literature as a historical source? You cannot read 107,000 pages. Keyword search misses vocabulary drift (“electrical fluid” for electricity, “natural philosophy” for science). And the connections between articles — the people, the places, the specimens, the ideas — are invisible in a flat text archive.\n\n\nWhat Was Built\nThe project proceeded in stages, each one made possible by GenAI tools:\nStage 1: Re-OCR the entire collection. The existing digitizations had mediocre OCR, particularly for early volumes with long-s typography and Latin text. Using OLMoCR (an AI-powered OCR system) running on H100 GPUs at a university cluster, all 8,128 articles were re-processed. The result: 197 MB of clean, searchable text, with language detection (English, Latin, French) and table identification. Processing took roughly a day of cluster time.\nStage 2: Extract entities. Using an LLM (Gemini), the project extracted people, places, and scientific taxa (species names) mentioned across the entire corpus. The result: over 86,000 entity mentions — 36,824 people, 32,527 places, and 17,122 scientific taxa — linked back to the specific articles and pages where they appear.\nStage 3: Build a knowledge graph. The extracted entities were assembled into a network: nodes for people, places, taxa, and articles, with edges representing co-occurrence (who is mentioned alongside whom) and document membership (which entities appear in which article). The graph contains 94,601 nodes and over a million edges. A temporal layer links articles to years, decades, and centuries, enabling queries like “show me all articles about electricity published between 1740 and 1760.”\nStage 4: Create searchable embeddings. Every page of every article was converted into a numerical vector (an “embedding”) that captures its semantic content. This enables similarity search: you can ask for pages that are about a topic, not just pages that contain a specific word. The vector index holds 92,786 page embeddings.\nStage 5: Build a query interface. The knowledge graph and vector index were combined into a GraphRAG (Graph Retrieval-Augmented Generation) system. A researcher types a natural language question. The system searches the graph for relevant entities and the vector index for semantically similar pages, retrieves the actual text of the most relevant articles, and uses an LLM to synthesize a response grounded in the primary sources, with full citations.\nStage 6: Publish the archive. All 8,128 articles were published as a browsable, searchable static website with downloadable Markdown and JSON files for every article.\n\n\nWhat It Looks Like in Practice\nA historian studying Joseph Banks’ influence on botanical exploration types:\n\nWhat role did Joseph Banks play in directing botanical research through the Royal Society?\n\nThe system searches the entity graph for Banks, finds the 1,599 pages that mention him, retrieves the most relevant articles, and generates a synthesized response drawing on dozens of primary sources — with clickable citations to each article. The entire process takes about 20 seconds.\nA historian of electricity types:\n\nHow did understandings of electricity change between 1700 and 1800?\n\nThe system finds articles discussing electrical phenomena across the century, accounts for vocabulary change (it knows that “electrical fluid,” “Leyden jar,” and “galvanism” are all relevant), and produces a narrative overview grounded in the actual articles, not in the LLM’s general knowledge.\n\n\nThe Tools Used\n\n\n\n\n\n\n\n\nTask\nTool\nDifficulty\n\n\n\n\nOCR processing\nOLMoCR on university GPU cluster\nModerate (required cluster access)\n\n\nEntity extraction\nGemini API (LLM)\nLow (write a prompt, run a script)\n\n\nKnowledge graph\nNetworkX (Python library)\nLow-moderate (LLM wrote most of the code)\n\n\nVector embeddings\nNVIDIA NV-Embed-v2\nModerate (requires GPU)\n\n\nQuery system\nPython + Gemini API\nLow (LLM assisted with code)\n\n\nStatic website\nJekyll + Pagefind\nLow\n\n\nDeployment\nModal.com (serverless)\nLow-moderate\n\n\n\nThe historian who built this project is not a software engineer. Most of the Python code was written with LLM assistance — describing what was needed, reviewing what the LLM produced, testing it on the data, and iterating. The skills required were: a clear research question, the ability to describe data clearly, and the patience to verify that each stage worked correctly before moving to the next.\n\n\nWhat It Made Possible\nThe project has already supported research on ecological constraints in early modern science, the economic botany of the British Empire, and the history of tanning materials — topics that would have required months of manual searching to investigate across a corpus this large. The GraphRAG system does not replace close reading. It tells the historian which articles to read closely, and it surfaces connections between articles that no individual reader would notice across 8,128 documents.\nThe entire archive is publicly accessible, and the query interface costs roughly three cents per query to operate."
+  },
+  {
+    "objectID": "case-studies.html#case-study-2-the-banks-archive-transcribing-and-visualizing-an-archival-collection",
+    "href": "case-studies.html#case-study-2-the-banks-archive-transcribing-and-visualizing-an-archival-collection",
+    "title": "Case Studies",
+    "section": "Case Study 2: The Banks Archive — Transcribing and Visualizing an Archival Collection",
+    "text": "Case Study 2: The Banks Archive — Transcribing and Visualizing an Archival Collection\n\nThe Question\nSir Joseph Banks (1743–1820) was president of the Royal Society for over 40 years and one of the most connected figures in British science. His correspondence — thousands of letters spanning botany, exploration, colonial administration, and industrial development — is scattered across archives worldwide. One collection at the Sutro Library in San Francisco contains letters focused on a specific episode: the British leather trade crisis of the late eighteenth century, when oak bark shortages threatened the tanning industry and Banks mobilized his scientific network to find botanical alternatives from across the Empire.\nThe letters were digitized but not transcribed. Handwritten correspondence from the 1790s is not searchable. The question was: could GenAI tools turn a collection of page images into a searchable, queryable, visualizable research resource?\n\n\nWhat Was Built\nStage 1: Image processing and transcription. The digitized letter images were preprocessed (rotation correction, contrast enhancement) and then transcribed using an LLM with vision capabilities. The model was given context about the collection — the era, the handwriting conventions, the subject matter — which significantly improved accuracy. The result: 181 transcribed documents, ready for analysis.\nStage 2: Entity extraction and knowledge graph. Using the same LLM-assisted approach as the Royal Society project, the transcriptions were processed to extract people, places, commodities, and institutions. These were loaded into a Neo4j knowledge graph with 3,200 nodes and 5,300 relationships. The graph captures who wrote to whom, what commodities were discussed, which institutions were involved, and when.\nStage 3: Enrichment from linked data. The knowledge graph was enriched by connecting its entities to external databases:\n\nWikidata: Biographical data for 76 identified correspondents (birth/death dates, occupations, institutional affiliations).\nVIAF (Virtual International Authority File): 735 published works linked to people in the network.\nGBIF (Global Biodiversity Information Facility): 215 botanical specimens collected by members of Banks’ network, with geographic coordinates.\nHistorical trade data: 129 records of British tannin imports from 1800–1844, showing the commercial impact of the botanical alternatives Banks’ network identified.\n\nStage 4: Interactive visualizations. Five interactive visualizations were generated from the knowledge graph:\n\nA timeline-network showing the leather crisis unfolding from 1773 to 1810, with Banks’ correspondence network layered on top — revealing how scientific knowledge, commercial interests, and parliamentary reform intersected.\nA correspondence network mapping the top 120 correspondents as a force-directed graph, showing the structure of Banks’ intellectual community.\nA correspondence flow diagram (Sankey) showing who wrote to Banks and who Banks wrote to, organized by decade, revealing asymmetries in the network.\nA topic-commodity-place flow showing what was discussed, what materials were mentioned, and where they came from, across decades.\nA temporal network anchoring people to the years of their correspondence, showing how the network evolved over time.\n\n\n\nWhat It Looks Like in Practice\nA historian studying the relationship between science and commerce in the late eighteenth century can now:\n\nSearch the transcribed letters for any mention of a specific commodity (cutch, valonia, oak bark) and see every letter that discusses it, with dates and correspondents.\nVisualize Banks’ network of correspondents on the leather question and identify who the key intermediaries were between scientific institutions and commercial interests.\nTrace how knowledge about a specific tanning material (say, Indian cutch) moved from botanical collectors in Bengal through Banks’ correspondence to commercial adoption in London, with dates at every step.\nCross-reference the correspondence with actual import data to see whether Banks’ advocacy had measurable commercial effects.\n\nNone of this was possible before the letters were transcribed. The transcription alone — turning page images into searchable text — transformed the collection from an archival curiosity into a usable research resource.\n\n\nThe Tools Used\n\n\n\n\n\n\n\n\nTask\nTool\nDifficulty\n\n\n\n\nImage preprocessing\nPython (rotation, contrast)\nLow (LLM wrote the scripts)\n\n\nTranscription\nLLM with vision (Gemini)\nLow (upload images, provide context)\n\n\nEntity extraction\nLLM (Gemini API)\nLow\n\n\nKnowledge graph\nNeo4j + Python\nModerate (LLM assisted with Cypher queries)\n\n\nLinked data enrichment\nWikidata, VIAF, GBIF APIs\nLow-moderate (LLM wrote API scripts)\n\n\nVector embeddings\nGemini embeddings (3072-dim)\nLow\n\n\nVisualizations\nD3.js, vis.js (generated by Python scripts)\nModerate (LLM wrote visualization code)\n\n\n\n\n\nWhat It Made Possible\nThe project turned an untranscribed archival collection into a research infrastructure. The visualizations revealed structural features of Banks’ network that are invisible in the letters themselves — particularly the role of intermediary figures who connected scientific, commercial, and governmental spheres. The trade data integration showed that the botanical alternatives Banks’ network identified did enter British commerce at scale, a finding that would have required painstaking manual cross-referencing without the knowledge graph."
+  },
+  {
+    "objectID": "case-studies.html#what-these-projects-have-in-common",
+    "href": "case-studies.html#what-these-projects-have-in-common",
+    "title": "Case Studies",
+    "section": "What These Projects Have in Common",
+    "text": "What These Projects Have in Common\nBoth projects share a pattern that is worth highlighting:\n\nThe historian drove the research questions. The tools did not generate the questions; they made it feasible to pursue questions that would otherwise have been impractical.\nGenAI was used for mechanical tasks, not interpretation. Transcription, entity extraction, code generation, data transformation — these are the tasks the tools handled. The analysis, the arguments, and the historical judgments remained with the researcher.\nEach stage was built incrementally. Neither project was planned as a monolith. The historian started with a simple task (transcribe some letters; re-OCR some articles), verified the results, and then asked: “What can I do with this now?” Each stage suggested the next.\nThe LLM wrote most of the code. The researcher described what was needed, the LLM produced Python scripts, and the researcher tested and refined them. This is the coding workflow described in the Research Tasks section, applied at scale.\nVerification was constant. Transcriptions were checked against originals. Extracted entities were reviewed. Code was tested on real data. The tools accelerated the work; they did not eliminate the need for critical judgment.\nThe results are open and reusable. Both projects produced publicly accessible resources — a searchable archive, interactive visualizations, downloadable data — that other researchers can build on.\n\n\nWhat Was Actually Hard\nIt would be misleading to suggest these projects were effortless. The genuinely difficult parts were:\n\nGetting access to compute resources for large-scale OCR and embedding generation (university cluster access, or paid cloud GPU time).\nData cleaning — historical data is messy, inconsistent, and full of edge cases that no tool handles automatically.\nVerification at scale — checking thousands of transcriptions and entity extractions for accuracy is time-consuming even when the error rate is low.\nLearning enough about the tools to describe what you want effectively. The LLM writes better code when you can describe your data clearly.\n\nWhat was not hard, and would have been prohibitively hard five years ago: the transcription itself, the entity extraction, the code generation, the visualization, and the construction of a queryable knowledge graph. These are the tasks that GenAI tools have made accessible to historians working without dedicated technical support."
+  },
+  {
+    "objectID": "what-are-llms.html",
+    "href": "what-are-llms.html",
+    "title": "What Are Large Language Models?",
+    "section": "",
+    "text": "Large language models (LLMs) are software systems trained on enormous quantities of text. When you type a prompt, the model generates a response by predicting what text is most likely to follow, drawing on patterns learned during training. The result often reads like it was written by a knowledgeable human — but the process behind it is fundamentally different from human thought.\nUnderstanding this distinction matters. It explains both why these tools are useful and why they fail in characteristic ways."
+  },
+  {
+    "objectID": "what-are-llms.html#the-short-version",
+    "href": "what-are-llms.html#the-short-version",
+    "title": "What Are Large Language Models?",
+    "section": "",
+    "text": "Large language models (LLMs) are software systems trained on enormous quantities of text. When you type a prompt, the model generates a response by predicting what text is most likely to follow, drawing on patterns learned during training. The result often reads like it was written by a knowledgeable human — but the process behind it is fundamentally different from human thought.\nUnderstanding this distinction matters. It explains both why these tools are useful and why they fail in characteristic ways."
+  },
+  {
+    "objectID": "what-are-llms.html#how-they-work-without-the-jargon",
+    "href": "what-are-llms.html#how-they-work-without-the-jargon",
+    "title": "What Are Large Language Models?",
+    "section": "How They Work (Without the Jargon)",
+    "text": "How They Work (Without the Jargon)\nImagine you had read every book, article, and webpage published in English (and many other languages) up to a certain date. You would develop a powerful sense of what kinds of sentences follow other sentences — what arguments historians tend to make about the Atlantic slave trade, what a colonial office list looks like, how a French land grant is typically structured.\nAn LLM has something like that statistical sense, but without understanding. It does not know that the Treaty of Paris was signed in 1763 the way you know it. It has learned that in texts about the Seven Years’ War, the phrase “Treaty of Paris” is very often followed by “1763.” This is a crucial distinction.\nWhen the pattern is strong and well-represented in the training data, the model produces accurate, useful output. When the pattern is weak, ambiguous, or absent, the model produces confident-sounding nonsense. It does not know the difference."
+  },
+  {
+    "objectID": "what-are-llms.html#what-they-are-good-at",
+    "href": "what-are-llms.html#what-they-are-good-at",
+    "title": "What Are Large Language Models?",
+    "section": "What They Are Good At",
+    "text": "What They Are Good At\nLLMs excel at tasks where pattern recognition is the core skill:\n\nTranscription assistance: Recognizing words in difficult handwriting or degraded print, especially when given context about the document’s era and language.\nTranslation: Producing serviceable rough translations, particularly for well-represented languages (French, Spanish, German, Latin).\nSummarization: Condensing long texts into shorter summaries (useful for triage, not for close reading).\nCode generation: Writing scripts in Python, R, or other languages for data tasks — often faster and more reliably than a historian learning to code from scratch.\nEditing and proofreading: Catching typos, grammar errors, and inconsistencies in your drafted text.\nReformatting and structuring: Converting data between formats, extracting structured information from unstructured text."
+  },
+  {
+    "objectID": "what-are-llms.html#what-they-are-bad-at",
+    "href": "what-are-llms.html#what-they-are-bad-at",
+    "title": "What Are Large Language Models?",
+    "section": "What They Are Bad At",
+    "text": "What They Are Bad At\nLLMs fail predictably in areas that require knowledge they do not have or reasoning they cannot do:\n\nFactual accuracy: They hallucinate — generating plausible-sounding but false claims, including fabricated citations, invented dates, and non-existent sources. This is not a bug that will be fixed; it is an inherent feature of how the technology works.\nArchival research: They cannot access unpublished sources, manuscript collections, or anything not in their training data. They have no way to visit an archive.\nInterpretation and argument: They can mimic the form of a historical argument but cannot actually weigh evidence, assess significance, or make the judgments that constitute historical analysis.\nCounting and arithmetic: Paradoxically, language models are unreliable at basic math and counting tasks.\nKnowing what they do not know: They do not flag uncertainty. A fabricated citation is presented with the same confidence as a real one."
+  },
+  {
+    "objectID": "what-are-llms.html#the-key-habit-verify-everything",
+    "href": "what-are-llms.html#the-key-habit-verify-everything",
+    "title": "What Are Large Language Models?",
+    "section": "The Key Habit: Verify Everything",
+    "text": "The Key Habit: Verify Everything\nThe single most important skill in using these tools is verification. Never trust an LLM’s output without checking it against a source you control. This applies especially to:\n\nCitations and bibliographic references (check that the book or article actually exists)\nDates, names, and factual claims\nTranslations (compare against the original, or a second source)\nCode (test it; does it actually do what you asked?)\n\nIf this sounds exhausting, it is worth noting that historians already verify sources as a matter of professional practice. The habit transfers directly. The difference is that with an LLM, you must verify the tool as well as the source."
+  },
+  {
+    "objectID": "what-are-llms.html#a-note-on-training-data",
+    "href": "what-are-llms.html#a-note-on-training-data",
+    "title": "What Are Large Language Models?",
+    "section": "A Note on Training Data",
+    "text": "A Note on Training Data\nLLMs are trained on text that existed up to a certain date (the “knowledge cutoff”). They do not have access to the internet in real time unless specifically designed to search the web (some tools offer this as a feature). They reflect the biases, gaps, and emphases of their training data. For historians, this means:\n\nThey know more about topics that are well-represented in English-language digital text.\nThey know less about topics that are primarily documented in archives, rare books, or languages with less digital presence.\nThey can reproduce historiographic biases present in the literature they were trained on.\n\nNone of this is disqualifying, but it means you should treat LLM output the way you would treat any secondary source: as a starting point that requires critical evaluation, not as an authority."
+  }
+]
