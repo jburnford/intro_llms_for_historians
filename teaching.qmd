@@ -37,7 +37,9 @@ None of this means prohibition is impossible. It means that prohibition enforced
 
 ## The Problem with AI Detection Tools
 
-This deserves its own section because faculty may be under the impression that detection tools are a viable safeguard. They are not.
+This deserves its own section because faculty may be under the impression that detection tools are a viable safeguard. They are not --- and at the University of Saskatchewan, **no AI detection tool has been approved for use**. The university's [Academic Integrity office](https://academic-integrity.usask.ca/gen-ai.php) explicitly warns that these tools are biased against non-native English writers, produce false positives and false negatives, and can be bypassed through simple techniques. It further advises that instructors should not submit student work to third-party detection tools without permission, as doing so may constitute copyright infringement. Students who believe their work has been submitted to an unapproved detection tool without consent are directed to report this to their Associate Dean.
+
+This is not merely a matter of institutional policy. It means that **AI detector output cannot serve as evidence in a misconduct proceeding at this university.** Faculty who rely on detection tools to identify AI use are building on a foundation that will not hold up if challenged.
 
 ### False Positives
 
@@ -91,22 +93,34 @@ Rather than evaluating only the final product, require evidence of the writing p
 -   **Research logs.** Have students maintain logs of sources consulted, search strategies used, and how their argument developed. These are difficult to fabricate convincingly because they require the kind of specific, idiosyncratic detail that GenAI does not produce well.
 -   **Reflective annotations.** Ask students to annotate their own drafts, explaining why they made specific argumentative choices, where they struggled, and what they would change.
 
-### Google Docs Version History
+### Version History as a Writing Process Record
 
-Google Docs automatically saves a timestamped record of every addition, deletion, and edit. If you require students to compose their work in a shared Google Doc (with the instructor added as a viewer), the version history provides an evidence trail of the writing process.
+Some word processors maintain a timestamped record of every addition, deletion, and edit made to a document. Google Docs is the best-known example, and version history tracking is widely used in K--12 and at other universities as a way to observe the writing process. The idea is straightforward: if you can see *how* a document was written, you can distinguish between text that was composed incrementally (with pauses, false starts, and revisions) and text that was pasted in as a finished block.
 
-**What it reveals:**
+**What version history reveals:**
 
 -   **Typing patterns.** Genuine student writing shows incremental word-by-word and sentence-by-sentence additions, with pauses, deletions, false starts, and revisions.
 -   **Copy-paste events.** AI-assisted work often appears as large blocks of text pasted in whole, with minimal subsequent editing. This is visible in the revision history.
 -   **Time spent.** Total editing time and the number of sessions are logged. A 3,000-word essay that appears fully formed in a single 20-minute session is a different object than one built over five sessions across two weeks.
 -   **Editing trajectory.** You can see whether ideas evolved organically or appeared fully formed.
 
-**Tools that enhance this:** Browser extensions like Revision History (used by over 200,000 teachers) provide video replay of the writing process and highlight large paste/deletion events. Draftback offers similar functionality.
+Browser extensions like Revision History and Draftback enhance this further by providing video replay of the writing process.
 
-**Limitations:** A determined student could type AI-generated text character by character, though this is time-consuming enough to be largely self-defeating. Students who draft in another application and paste will be visible in the history, which itself becomes a point of conversation.
+::: {.callout-warning}
+## Check Your Institution's Approved Software
 
-**Implementation:** State in your syllabus that all written work must be composed in a shared Google Doc. Explain that you may review the version history. This is transparent, does not rely on detection software, and provides a basis for conversation rather than accusation.
+**Before adopting any version-history approach, verify that the tools you plan to use are approved by your institution's IT services.** At many universities, Google Docs is not an approved platform for coursework, and third-party browser extensions like Revision History are almost certainly not vetted or supported.
+
+This matters most in the context of academic integrity. If you use version history evidence to support a misconduct finding and the student challenges the decision, your case may be undermined if the evidence was gathered through unapproved software. IT policies exist in part to ensure that institutional processes --- including disciplinary ones --- rest on defensible foundations.
+
+Faculty routinely use unapproved tools for their own convenience, and in most contexts the risk is low. But a misconduct proceeding is not most contexts. If you plan to use version history as part of your assessment or integrity strategy, confirm with your IT department that the platform is approved for student use, and ensure the tool's data handling complies with your institution's privacy policies.
+
+At the University of Saskatchewan, for example, Google Docs is not on the [approved learning technology list](https://teaching.usask.ca/learning-technology/tool-sorting-lists/tools-by-type.php), while Microsoft 365 is fully supported and integrated. Word's built-in version history offers similar functionality within the approved ecosystem. Canvas, USask's LMS, may also provide relevant tracking depending on how assignments are configured.
+:::
+
+**Limitations even with approved tools:** A determined student could type AI-generated text character by character, though this is time-consuming enough to be largely self-defeating. Students who draft in another application and paste will be visible in the history, which itself becomes a point of conversation.
+
+**Implementation:** If you adopt this approach with an approved tool, state in your syllabus that all written work must be composed in the specified platform. Explain that you may review the version history. This is transparent, does not rely on detection software, and provides a basis for conversation rather than accusation.
 
 ### Assignment Design That Resists GenAI
 
