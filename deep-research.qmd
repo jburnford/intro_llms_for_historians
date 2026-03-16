@@ -7,7 +7,7 @@ subtitle: "Automated literature review and its pitfalls"
 
 Several GenAI products now offer a "deep research" or "research" mode that goes beyond a simple chatbot response. Instead of answering your question from memory, these tools search the web, read multiple sources, synthesize what they find, and produce a structured report --- often with citations and footnotes.
 
-The major options as of early 2026:
+The major options as of mid-2026:
 
 - **Gemini Deep Research** (Google) --- available with Gemini Advanced ($20/month). Searches the web, reads pages, and produces multi-page reports with source links.
 - **ChatGPT Deep Research** (OpenAI) --- available with ChatGPT Plus and Pro. Similar approach: extended web browsing, synthesis, and structured output.
@@ -50,7 +50,7 @@ This is the central problem. Deep research reports typically contain a mixture o
 - **Real sources**, cited but inaccurately summarized or mischaracterized.
 - **Fabricated sources** that do not exist, presented with plausible-sounding titles, authors, journal names, and dates.
 
-The fabricated sources are not flagged. They appear in the same footnote format as the real ones. The ratio varies --- some reports are largely accurate, others contain multiple fabrications --- but you cannot tell in advance which kind you have received.
+The fabricated sources are not flagged. They appear in the same footnote format as the real ones. The ratio has improved --- current models fabricate less frequently than their 2024 predecessors --- but this makes the problem harder, not easier. When most citations check out, the temptation to stop verifying is strong. The one fabrication you miss is the one that ends up in your footnotes.
 
 **This means every single citation in a deep research report must be independently verified.** This is not a suggestion; it is a requirement. A historian who cites a source from a deep research report without checking that it exists risks citing a work that was never published.
 
@@ -60,7 +60,7 @@ Even when a source is real, the tool may misrepresent its argument. A nuanced ar
 
 ### Historiographic Flattening
 
-Deep research tools tend to present scholarly debates as settled when they are not, or to smooth over genuine disagreements. A report on the "Williams thesis" might present it as either confirmed or refuted, when the actual historiographic situation is far more complicated. The tools do not handle ambiguity, ongoing debate, or productive disagreement well.
+Deep research tools tend to present scholarly debates as settled when they are not, or to smooth over genuine disagreements. A report on the "Williams thesis" might present it as either confirmed or refuted, when the actual historiographic situation is far more complicated. That said, the best current models have improved markedly at handling historiographic nuance. Cameron Blevins tested ChatGPT's deep research mode on American Western history in late 2025 and found it produced a "remarkably accurate" synthesis that demonstrated sophisticated understanding of major historiographic frameworks.^[Blevins, "Generative AI and History in 2025."] The tools are getting better at this --- but "better" is not "reliable," and historiographic flattening remains a risk, particularly for less well-documented debates.
 
 ### Source Quality Blindness
 
@@ -105,7 +105,7 @@ There is no substitute for this. The deep research report tells you what might b
 
 ## Comparing the Tools
 
-Each deep research tool has different strengths. Based on early 2026 capabilities:
+Each deep research tool has different strengths. Based on mid-2026 capabilities (these change rapidly --- verify before relying on this comparison):
 
 | Tool | Strengths | Weaknesses |
 |------|-----------|------------|
@@ -149,4 +149,4 @@ To illustrate what deep research output actually looks like --- and why verifica
 
 ## The Bottom Line
 
-Deep research tools are the most impressive and the most dangerous GenAI application for historians. They can save you hours of initial searching. They can also fill your bibliography with sources that do not exist and your notes with summaries that misrepresent the scholarship. The tool does the searching. The verification, the reading, and the thinking are yours.
+Deep research tools are the most impressive and the most dangerous GenAI application for historians. They have improved considerably --- fabrication rates are lower, historiographic synthesis is more sophisticated, and the best reports are genuinely useful starting points. But they can still fill your bibliography with sources that do not exist and your notes with summaries that misrepresent the scholarship. The improvement makes vigilance harder to sustain, not less necessary. The tool does the searching. The verification, the reading, and the thinking are yours.

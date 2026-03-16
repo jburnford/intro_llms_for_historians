@@ -13,30 +13,29 @@ Understanding this distinction matters. It explains both why these tools are use
 
 Imagine you had read every book, article, and webpage published in English (and many other languages) up to a certain date. You would develop a powerful sense of what kinds of sentences follow other sentences --- what arguments historians tend to make about the Atlantic slave trade, what a colonial office list looks like, how a French land grant is typically structured.
 
-An LLM has something like that statistical sense, but without understanding. It does not *know* that the Treaty of Paris was signed in 1763 the way you know it. It has learned that in texts about the Seven Years' War, the phrase "Treaty of Paris" is very often followed by "1763." This is a crucial distinction.
+An LLM has something like that statistical sense, but without understanding. It does not *know* that the Treaty of Paris was signed in 1763 the way you know it. It has learned that in texts about the Seven Years' War, the phrase "Treaty of Paris" is very often followed by "1763." This is a crucial distinction --- though as Cameron Blevins has argued, dismissing these tools as mere "autocomplete on steroids" is no longer tenable.^[Cameron Blevins, "Generative AI and History in 2025," December 19, 2025, <https://cblevins.github.io/posts/gen-ai-history-2025/>.]  The gap between what these models produce and what a knowledgeable human would write has narrowed considerably since 2024, and understanding *how* they work is essential for knowing when to trust them and when not to.
 
-When the pattern is strong and well-represented in the training data, the model produces accurate, useful output. When the pattern is weak, ambiguous, or absent, the model produces confident-sounding nonsense. It does not know the difference.
+When the pattern is strong and well-represented in the training data, the model produces accurate, useful output. When the pattern is weak, ambiguous, or absent, the model can produce confident-sounding nonsense --- and may not signal the difference.
 
 ## What They Are Good At
 
 LLMs excel at tasks where pattern recognition is the core skill:
 
-- **Transcription assistance**: Recognizing words in difficult handwriting or degraded print, especially when given context about the document's era and language.
+- **Transcription assistance**: Recognizing words in difficult handwriting or degraded print. The best current models now achieve accuracy comparable to expert human typists on English-language handwriting --- a breakthrough that Mark Humphries has called "the bitter lesson" for the specialized HTR community.^[Mark Humphries, "Gemini 3 Solves Handwriting Recognition and It's a Bitter Lesson," *Generative History* (Substack), November 25, 2025, <https://generativehistory.substack.com/p/gemini-3-solves-handwriting-recognition>.]
 - **Translation**: Producing serviceable rough translations, particularly for well-represented languages (French, Spanish, German, Latin).
 - **Summarization**: Condensing long texts into shorter summaries (useful for triage, not for close reading).
 - **Code generation**: Writing scripts in Python, R, or other languages for data tasks --- often faster and more reliably than a historian learning to code from scratch.
 - **Editing and proofreading**: Catching typos, grammar errors, and inconsistencies in your drafted text.
 - **Reformatting and structuring**: Converting data between formats, extracting structured information from unstructured text.
 
-## What They Are Bad At
+## Where They Struggle
 
-LLMs fail predictably in areas that require knowledge they do not have or reasoning they cannot do:
+LLMs have improved substantially since 2024, but they still fail in characteristic ways:
 
-- **Factual accuracy**: They *hallucinate* --- generating plausible-sounding but false claims, including fabricated citations, invented dates, and non-existent sources. This is not a bug that will be fixed; it is an inherent feature of how the technology works.
+- **Factual accuracy**: They *hallucinate* --- generating plausible-sounding but false claims, including fabricated citations, invented dates, and non-existent sources. Hallucinations have become less frequent in the latest models, but this actually makes them *more* dangerous: when most output is accurate, it is easier to let your guard down and miss the one fabricated source that slips through.
 - **Archival research**: They cannot access unpublished sources, manuscript collections, or anything not in their training data. They have no way to visit an archive.
-- **Interpretation and argument**: They can mimic the form of a historical argument but cannot actually weigh evidence, assess significance, or make the judgments that constitute historical analysis.
-- **Counting and arithmetic**: Paradoxically, language models are unreliable at basic math and counting tasks.
-- **Knowing what they do not know**: They do not flag uncertainty. A fabricated citation is presented with the same confidence as a real one.
+- **Interpretation and argument**: Current models are surprisingly capable at synthesis and interpretation --- they can identify historiographic debates, weigh competing claims, and construct plausible arguments. But the *responsibility* for evaluating whether an interpretation is sound, whether the evidence is sufficient, and whether the argument holds up still rests with the historian. The models are getting better at the form *and* substance of argument, but they do not know your sources the way you do.
+- **Knowing what they do not know**: They do not reliably flag uncertainty. A fabricated citation may be presented with the same confidence as a real one, though some models (notably Claude) are better than others at acknowledging gaps.
 
 ## The Key Habit: Verify Everything
 

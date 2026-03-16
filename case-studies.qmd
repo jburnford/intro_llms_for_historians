@@ -133,7 +133,7 @@ Both projects share a pattern that is worth highlighting:
 
 1. **The historian drove the research questions.** The tools did not generate the questions; they made it feasible to pursue questions that would otherwise have been impractical.
 
-2. **GenAI was used for mechanical tasks, not interpretation.** Transcription, entity extraction, code generation, data transformation --- these are the tasks the tools handled. The analysis, the arguments, and the historical judgements remained with the researcher.
+2. **The historian retained responsibility for interpretation.** Transcription, entity extraction, code generation, data transformation --- these are the tasks the tools handled most directly. Current models are increasingly capable of synthesis and interpretive work, but in these projects the analysis, the arguments, and the historical judgements remained with the researcher.
 
 3. **Each stage was built incrementally.** Neither project was planned as a monolith. The historian started with a simple task (transcribe some letters; re-OCR some articles), verified the results, and then asked: "What can I do with this now?" Each stage suggested the next.
 

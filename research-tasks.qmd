@@ -29,7 +29,8 @@ You have digitized images of manuscripts, printed documents, or typescripts that
 
 - Provide as much context as you can: the document type, date, language, and any distinctive features (e.g., "this writer uses the long s").
 - Process one page at a time for best results.
-- For large-scale transcription projects (hundreds of pages), specialized OCR tools like Transkribus may be more efficient. LLMs are best for small batches or particularly difficult pages.
+- For large-scale transcription projects (hundreds of pages), consider using a model's API rather than the web interface. As Mark Humphries has demonstrated, Gemini 3 via the API achieves character error rates of under 1% on English-language handwritten documents --- comparable to expert human typists and dramatically better than specialized HTR tools like Transkribus, at roughly one cent per page.^[Mark Humphries, "Gemini 3 Solves Handwriting Recognition and It's a Bitter Lesson," *Generative History* (Substack), November 25, 2025, <https://generativehistory.substack.com/p/gemini-3-solves-handwriting-recognition>.] The web interface versions of these models often use different (weaker) models than the API, so results may vary depending on how you access the tool.
+- Note that transcription accuracy varies significantly across models. As of late 2025, Google's Gemini leads on handwriting recognition, well ahead of Claude and ChatGPT on this specific task. Model capabilities change rapidly, so check current benchmarks if accuracy is critical for your project.
 
 ## Translation
 

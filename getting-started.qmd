@@ -40,7 +40,7 @@ LLMs are often more useful for concrete tasks than for open-ended questions. Try
 
 3. Compare the output against the original. Where does it succeed? Where does it struggle?
 
-For printed text in good condition, LLMs are often very accurate. For handwriting, the results are more variable but can still be a useful first pass that you then correct.
+For printed text in good condition, LLMs are often very accurate. For handwriting, the best models (particularly Gemini 3 via the API) now achieve accuracy comparable to expert human typists on English-language documents.^[See Mark Humphries, "Gemini 3 Solves Handwriting Recognition and It's a Bitter Lesson," *Generative History* (Substack), November 25, 2025.] Results vary by model, language, and document condition, but the gap between LLM transcription and human transcription has narrowed dramatically.
 
 ## Understanding the Conversation Model
 

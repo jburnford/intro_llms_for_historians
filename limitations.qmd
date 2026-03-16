@@ -11,9 +11,11 @@ The preceding pages describe what GenAI tools can do. This section describes wha
 
 This is the most important limitation. LLMs generate text that is statistically plausible, not text that is true. They will:
 
-- **Invent citations.** They produce author names, titles, journal names, volume numbers, and page ranges that look entirely real but correspond to no actual publication. This is not rare; it happens routinely.
+- **Invent citations.** They produce author names, titles, journal names, volume numbers, and page ranges that look entirely real but correspond to no actual publication.
 - **Fabricate historical details.** They may generate plausible-sounding dates, names, or events that did not occur, especially for obscure topics.
 - **Blend real and false information seamlessly.** A paragraph might contain three accurate claims and one fabricated one, with no difference in tone or confidence.
+
+The frequency of hallucinations has decreased significantly in the latest generation of models (2025--2026). This is genuine progress --- but it creates a new danger. When earlier models hallucinated frequently, historians learned to check everything. When most output is accurate, complacency is the risk: you verify the first few citations, they all check out, and you stop looking. The one fabrication slips through. **Reduced hallucination rates make verification more important, not less**, because the cost of the errors you miss is higher when your guard is down.
 
 ### What to Do About It
 
@@ -38,14 +40,9 @@ LLMs reflect the biases of their training data. For historians, this has specifi
 
 ## The Illusion of Understanding
 
-LLMs produce text that reads as if it were written by someone who understands the topic. This is misleading. The model does not understand; it predicts. The practical consequence is that:
+LLMs produce text that reads as if it were written by someone who understands the topic. Whether the model truly "understands" is a philosophical question that remains unresolved, but the practical consequence matters: current models can, in many cases, distinguish stronger arguments from weaker ones, identify relevant evidence, and construct plausible interpretations. They have become surprisingly good at synthesis and historiographic analysis.
 
-- It cannot distinguish between a strong argument and a weak one.
-- It cannot judge the reliability of a source.
-- It cannot weigh conflicting evidence.
-- It cannot tell you when a question is more complex than it appears.
-
-These are the tasks that define historical practice. They cannot be delegated to an LLM.
+The danger has shifted. The risk is no longer that the model produces obviously shallow output --- it often does not. The risk is that the output is *good enough* to be persuasive but subtly wrong in ways that require deep domain knowledge to catch: a mischaracterized argument, evidence from the wrong context, a framing that flattens genuine historiographic debate. The tasks that define historical practice --- weighing evidence, assessing significance, judging competing interpretations --- can be *assisted* by LLMs but cannot be *delegated* to them. The historian remains responsible for the argument.
 
 ## Privacy and Intellectual Property
 
@@ -71,17 +68,17 @@ None of these are inevitable outcomes, but they are real risks. The best safegua
 
 | Risk | Mitigation |
 |------|------------|
-| Hallucinated citations | Verify every reference in a catalogue or database |
+| Hallucinated citations | Verify every reference --- especially when most check out |
 | Fabricated facts | Check all claims against trusted sources |
 | Bias and gaps | Treat output as a starting point, not an authority |
 | Privacy concerns | Do not paste sensitive or unpublished material into free-tier tools |
 | Over-reliance | Decide consciously what to delegate; maintain your own skills |
-| Illusion of understanding | Reserve interpretation, judgement, and argument for yourself |
+| Persuasive but subtly wrong analysis | The historian evaluates and takes responsibility for all arguments |
 
 : Summary of limitations and mitigations {.striped}
 
 ## The Bottom Line
 
-These tools are useful. They are also unreliable, biased, and incapable of the interpretive work that defines our discipline. Using them well means using them for what they are good at (mechanical tasks, pattern recognition, draft editing) while keeping the intellectual work --- the reading, the thinking, the arguing --- firmly in your own hands.
+These tools are useful --- and considerably more capable than they were even a year ago. They can now assist with genuinely intellectual tasks: synthesis, interpretation, historiographic analysis, argument construction. But "assist" is the operative word. The historian evaluates the output, takes responsibility for the argument, and decides what holds up. The tools have moved beyond mere mechanical assistance, but the judgement --- the reading, the thinking, the weighing of evidence --- remains yours.
 
-That is not a limitation of the technology. It is the point.
+That is not a limitation of the technology. It is the nature of the discipline.
