@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>LLMs and Teaching – GenAI for Historians: A Practical Introduction</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-5cee4c14d6ae2ae54d05c3ac90f01e34.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">GenAI for Historians: A Practical Introduction</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./what-are-llms.html"> 
+<span class="menu-text">What Are LLMs?</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./getting-started.html"> 
+<span class="menu-text">Getting Started</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./research-tasks.html"> 
+<span class="menu-text">Research Tasks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./deep-research.html"> 
+<span class="menu-text">Deep Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./case-studies.html"> 
+<span class="menu-text">Case Studies</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./teaching.html" aria-current="page"> 
+<span class="menu-text">Teaching</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./copy-editing.html"> 
+<span class="menu-text">Copy Editing</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./going-further.html"> 
+<span class="menu-text">Going Further</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./limitations.html"> 
+<span class="menu-text">Limitations</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-situation-in-2026" id="toc-the-situation-in-2026" class="nav-link active" data-scroll-target="#the-situation-in-2026">The Situation in 2026</a></li>
+  <li><a href="#why-prohibition-is-difficult" id="toc-why-prohibition-is-difficult" class="nav-link" data-scroll-target="#why-prohibition-is-difficult">Why Prohibition Is Difficult</a></li>
+  <li><a href="#the-problem-with-ai-detection-tools" id="toc-the-problem-with-ai-detection-tools" class="nav-link" data-scroll-target="#the-problem-with-ai-detection-tools">The Problem with AI Detection Tools</a>
+  <ul class="collapse">
+  <li><a href="#false-positives" id="toc-false-positives" class="nav-link" data-scroll-target="#false-positives">False Positives</a></li>
+  <li><a href="#bias-against-non-native-english-speakers" id="toc-bias-against-non-native-english-speakers" class="nav-link" data-scroll-target="#bias-against-non-native-english-speakers">Bias Against Non-Native English Speakers</a></li>
+  <li><a href="#bias-against-neurodivergent-students" id="toc-bias-against-neurodivergent-students" class="nav-link" data-scroll-target="#bias-against-neurodivergent-students">Bias Against Neurodivergent Students</a></li>
+  <li><a href="#the-institutional-response" id="toc-the-institutional-response" class="nav-link" data-scroll-target="#the-institutional-response">The Institutional Response</a></li>
+  </ul></li>
+  <li><a href="#best-practices-for-prohibition" id="toc-best-practices-for-prohibition" class="nav-link" data-scroll-target="#best-practices-for-prohibition">Best Practices for Prohibition</a>
+  <ul class="collapse">
+  <li><a href="#in-class-writing" id="toc-in-class-writing" class="nav-link" data-scroll-target="#in-class-writing">In-Class Writing</a></li>
+  <li><a href="#process-based-assessment" id="toc-process-based-assessment" class="nav-link" data-scroll-target="#process-based-assessment">Process-Based Assessment</a></li>
+  <li><a href="#google-docs-version-history" id="toc-google-docs-version-history" class="nav-link" data-scroll-target="#google-docs-version-history">Google Docs Version History</a></li>
+  <li><a href="#assignment-design-that-resists-genai" id="toc-assignment-design-that-resists-genai" class="nav-link" data-scroll-target="#assignment-design-that-resists-genai">Assignment Design That Resists GenAI</a></li>
+  <li><a href="#oral-verification" id="toc-oral-verification" class="nav-link" data-scroll-target="#oral-verification">Oral Verification</a></li>
+  </ul></li>
+  <li><a href="#moving-beyond-prohibition" id="toc-moving-beyond-prohibition" class="nav-link" data-scroll-target="#moving-beyond-prohibition">Moving Beyond Prohibition</a>
+  <ul class="collapse">
+  <li><a href="#the-ownership-model" id="toc-the-ownership-model" class="nav-link" data-scroll-target="#the-ownership-model">The Ownership Model</a></li>
+  <li><a href="#disclosure-requirements" id="toc-disclosure-requirements" class="nav-link" data-scroll-target="#disclosure-requirements">Disclosure Requirements</a></li>
+  <li><a href="#ai-as-object-of-study" id="toc-ai-as-object-of-study" class="nav-link" data-scroll-target="#ai-as-object-of-study">AI as Object of Study</a></li>
+  </ul></li>
+  <li><a href="#what-we-know-works" id="toc-what-we-know-works" class="nav-link" data-scroll-target="#what-we-know-works">What We Know Works</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading">Further Reading</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">LLMs and Teaching</h1>
+<p class="subtitle lead">Prohibition, detection, and alternatives</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="the-situation-in-2026" class="level2">
+<h2 class="anchored" data-anchor-id="the-situation-in-2026">The Situation in 2026</h2>
+<p>Three years after ChatGPT’s release, the evidence is clear: most university students use GenAI tools regularly, regardless of course policies. Surveys across multiple countries and institutions consistently find usage rates above 80%. A 2025 study at Middlebury College found that over 80% of students used GenAI for coursework — one of the fastest technology adoption rates ever documented in higher education. A UK survey the same year put the figure at 92% of undergraduates using AI in some aspect of academic work.</p>
+<p>This does not mean every student is using GenAI to cheat. Most use it for legitimate tasks — explaining concepts, brainstorming, grammar checking. But it does mean that prohibition, as a policy, exists in tension with the reality of student behaviour. Faculty who choose prohibition need to understand both why it is worth attempting and why it is difficult to enforce, so they can design their courses accordingly.</p>
+<p>This section is addressed to faculty in all positions on the spectrum: those who want to prohibit GenAI use, those who want to permit it cautiously, and those still deciding. The goal is practical advice grounded in what we have learned since 2023.</p>
+<hr>
+</section>
+<section id="why-prohibition-is-difficult" class="level2">
+<h2 class="anchored" data-anchor-id="why-prohibition-is-difficult">Why Prohibition Is Difficult</h2>
+<p>Prohibition is a legitimate pedagogical choice, particularly in courses designed to develop foundational writing and research skills. But it faces several structural challenges:</p>
+<p><strong>Ubiquitous access.</strong> GenAI tools are free, require only a web browser, and are increasingly integrated into the software students already use — word processors, search engines, email clients, and phones. There is no way to prevent access outside the classroom, and increasingly little way to prevent it inside the classroom.</p>
+<p><strong>Unreliable detection.</strong> AI detection tools (Turnitin’s AI detector, GPTZero, Originality.ai, and others) do not work reliably enough to serve as evidence of misconduct. Independent testing has found false positive rates far higher than vendors claim, and the tools are systematically biased against non-native English speakers and neurodivergent students. A growing number of universities — including Vanderbilt, Johns Hopkins, UCLA, the University of Waterloo, Michigan State, and the University of Pittsburgh — have disabled Turnitin’s AI detection feature entirely. Several students have successfully sued or settled after false accusations based on AI detector output.</p>
+<p><strong>Evasion tools.</strong> A thriving industry of “humanizer” tools (Undetectable.ai, StealthWriter, StealthGPT, and many others) rewrites AI-generated text to evade detection software. These tools are cheap or free, easy to use, and specifically marketed to students. Turnitin announced “AI bypasser detection” in August 2025, but this creates an arms race that detection is unlikely to win. The existence of these tools means that even if detection software were accurate — which it is not — determined students could circumvent it.</p>
+<p><strong>Chilling effect.</strong> Surveys find that roughly half of students report being afraid to use AI in any capacity for fear of false accusations, even in courses where some use is permitted. This punishes cautious, honest students while doing little to deter deliberate misuse.</p>
+<p>None of this means prohibition is impossible. It means that prohibition enforced primarily through detection is a losing strategy. Effective prohibition requires a different approach.</p>
+<hr>
+</section>
+<section id="the-problem-with-ai-detection-tools" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem-with-ai-detection-tools">The Problem with AI Detection Tools</h2>
+<p>This deserves its own section because faculty may be under the impression that detection tools are a viable safeguard. They are not.</p>
+<section id="false-positives" class="level3">
+<h3 class="anchored" data-anchor-id="false-positives">False Positives</h3>
+<p>AI detection tools work by measuring statistical features of text — perplexity (how surprising the word choices are) and burstiness (how much sentence length and structure vary). Human writing tends to be more variable; AI-generated text tends to be more uniform. But these are tendencies, not rules, and the overlap is large.</p>
+<p>Independent research has documented:</p>
+<ul>
+<li>False positive rates between 5% and 20% on general student submissions, far higher than the &lt;1% vendors claim.</li>
+<li>A <em>Washington Post</em> test that produced a 50% false positive rate on certain content using Turnitin’s detector.</li>
+<li>Accuracy that drops to 80–85% when text has been lightly paraphrased or edited — which is how most students actually use GenAI.</li>
+</ul>
+</section>
+<section id="bias-against-non-native-english-speakers" class="level3">
+<h3 class="anchored" data-anchor-id="bias-against-non-native-english-speakers">Bias Against Non-Native English Speakers</h3>
+<p>This is the most serious problem. A widely cited 2023 study found that AI detectors <strong>misclassified over 61% of essays by non-native English speakers as AI-generated</strong>, while achieving near-perfect accuracy on native English speaker essays. A follow-up found that 97% of TOEFL essays were flagged by at least one detector.</p>
+<p>The reason is structural: detectors penalize simpler vocabulary, shorter sentences, and more formulaic structures — precisely the features of competent second-language academic writing. This is not a bug that can be patched; it is inherent to how the technology works.</p>
+<p>In 2025, multiple institutions reported cases of international students accused of AI cheating based on detector output that was later shown to be wrong. A 2025 study found that Black students were disproportionately accused, with 20% reporting false accusations compared to 7% of white students.</p>
+</section>
+<section id="bias-against-neurodivergent-students" class="level3">
+<h3 class="anchored" data-anchor-id="bias-against-neurodivergent-students">Bias Against Neurodivergent Students</h3>
+<p>Students on the autism spectrum often produce writing that is highly structured, literal, and consistent in tone — features that overlap with the statistical signatures detectors associate with AI. Students with ADHD who write in focused bursts can produce similar patterns. Documented cases include students falsely accused who had to disclose their diagnoses to clear their names.</p>
+</section>
+<section id="the-institutional-response" class="level3">
+<h3 class="anchored" data-anchor-id="the-institutional-response">The Institutional Response</h3>
+<p>The American Historical Association published its <em>Guiding Principles for Artificial Intelligence in History Education</em> in August 2025, reflecting a two-year process of consultation. The AHA emphasizes that GenAI “can produce material that appears polished and credible, but assessing their outputs demands critical skills that the models themselves can neither teach nor foster.” The framing is disciplinary rather than technological: the question is what historical training requires, not what detection tools can do.</p>
+<p>A growing consensus among teaching and learning centres holds that detection-based enforcement is unsustainable. As <em>Inside Higher Ed</em> reported in December 2025: “You can’t AI-proof the classroom, experts say. Get creative instead.”</p>
+<hr>
+</section>
+</section>
+<section id="best-practices-for-prohibition" class="level2">
+<h2 class="anchored" data-anchor-id="best-practices-for-prohibition">Best Practices for Prohibition</h2>
+<p>If you choose to prohibit GenAI use in your courses — and there are good reasons to do so, especially in first-year writing courses — the following practices are more effective than relying on detection software.</p>
+<section id="in-class-writing" class="level3">
+<h3 class="anchored" data-anchor-id="in-class-writing">In-Class Writing</h3>
+<p>The most straightforward safeguard is supervised writing. If a significant assessment takes place in the classroom, GenAI cannot be used. Options include:</p>
+<ul>
+<li>In-class essay exams (open-book or closed-book).</li>
+<li>Supervised writing sessions where students work on drafts during class time.</li>
+<li>In-class primary source analysis exercises.</li>
+</ul>
+<p><strong>Limitations:</strong> In-class writing tests speed as well as understanding, disadvantages students who need accommodations, and cannot be the sole assessment method for courses with substantial research components.</p>
+</section>
+<section id="process-based-assessment" class="level3">
+<h3 class="anchored" data-anchor-id="process-based-assessment">Process-Based Assessment</h3>
+<p>Rather than evaluating only the final product, require evidence of the writing process:</p>
+<ul>
+<li><strong>Staged submissions.</strong> Require an annotated outline, a rough draft, and a revised draft at intervals across the term. Each stage should show genuine evolution — new ideas appearing, arguments being restructured, evidence being added or reconsidered.</li>
+<li><strong>Research logs.</strong> Have students maintain logs of sources consulted, search strategies used, and how their argument developed. These are difficult to fabricate convincingly because they require the kind of specific, idiosyncratic detail that GenAI does not produce well.</li>
+<li><strong>Reflective annotations.</strong> Ask students to annotate their own drafts, explaining why they made specific argumentative choices, where they struggled, and what they would change.</li>
+</ul>
+</section>
+<section id="google-docs-version-history" class="level3">
+<h3 class="anchored" data-anchor-id="google-docs-version-history">Google Docs Version History</h3>
+<p>Google Docs automatically saves a timestamped record of every addition, deletion, and edit. If you require students to compose their work in a shared Google Doc (with the instructor added as a viewer), the version history provides an evidence trail of the writing process.</p>
+<p><strong>What it reveals:</strong></p>
+<ul>
+<li><strong>Typing patterns.</strong> Genuine student writing shows incremental word-by-word and sentence-by-sentence additions, with pauses, deletions, false starts, and revisions.</li>
+<li><strong>Copy-paste events.</strong> AI-assisted work often appears as large blocks of text pasted in whole, with minimal subsequent editing. This is visible in the revision history.</li>
+<li><strong>Time spent.</strong> Total editing time and the number of sessions are logged. A 3,000-word essay that appears fully formed in a single 20-minute session is a different object than one built over five sessions across two weeks.</li>
+<li><strong>Editing trajectory.</strong> You can see whether ideas evolved organically or appeared fully formed.</li>
+</ul>
+<p><strong>Tools that enhance this:</strong> Browser extensions like Revision History (used by over 200,000 teachers) provide video replay of the writing process and highlight large paste/deletion events. Draftback offers similar functionality.</p>
+<p><strong>Limitations:</strong> A determined student could type AI-generated text character by character, though this is time-consuming enough to be largely self-defeating. Students who draft in another application and paste will be visible in the history, which itself becomes a point of conversation.</p>
+<p><strong>Implementation:</strong> State in your syllabus that all written work must be composed in a shared Google Doc. Explain that you may review the version history. This is transparent, does not rely on detection software, and provides a basis for conversation rather than accusation.</p>
+</section>
+<section id="assignment-design-that-resists-genai" class="level3">
+<h3 class="anchored" data-anchor-id="assignment-design-that-resists-genai">Assignment Design That Resists GenAI</h3>
+<p>Some assignments are harder to complete with GenAI than others. For history courses:</p>
+<ul>
+<li><strong>Specific primary source analysis.</strong> Require analysis of particular pages or passages from specific archival collections, especially unpublished or poorly digitized materials unlikely to be in LLM training data. “Analyse folios 12–15 of the York Factory post journal for 1821” is harder to outsource than “Discuss the fur trade in western Canada.”</li>
+<li><strong>Personal engagement with sources.</strong> Ask students to reflect on their experience navigating a finding aid, visiting an archive, or encountering a physical document. “Describe what surprised you about the condition of the original manuscript” cannot be answered by a tool that has never seen the manuscript.</li>
+<li><strong>Course-specific content.</strong> Require engagement with specific in-class discussions, guest lectures, or seminar debates. “How does Thompson’s argument about the moral economy relate to the point raised in seminar about the Saskatchewan wheat pools?” ties the assignment to a conversation the student had to be present for.</li>
+<li><strong>Local and obscure topics.</strong> LLMs perform poorly on topics that are underrepresented in their training data. Saskatchewan local history, small-town newspapers, and understudied archival collections are natural territory for assignments that GenAI cannot handle well.</li>
+<li><strong>Multi-source synthesis.</strong> Require students to connect three or four specific primary sources in ways that demand genuine analytical work. The more specific and idiosyncratic the sources, the harder the task is to outsource.</li>
+</ul>
+</section>
+<section id="oral-verification" class="level3">
+<h3 class="anchored" data-anchor-id="oral-verification">Oral Verification</h3>
+<p>A short oral conversation about a written assignment is the single most effective safeguard against work a student does not understand. This can take several forms:</p>
+<ul>
+<li><strong>Oral exam on a research paper</strong> (15–20 minutes). The student discusses their argument, evidence, and research process. The grade reflects demonstrated understanding, not performance anxiety. One model already in use: “If you do the work yourself and write your paper, this will be a low-stress discussion of your evidence and arguments.”</li>
+<li><strong>Brief follow-up conversations</strong> (5–10 minutes). After returning a graded assignment, meet individually with students to discuss their work. This need not be framed as verification; it can be framed as feedback.</li>
+<li><strong>In-class presentations.</strong> Students present their research to the class and field questions. This is standard seminar pedagogy and serves double duty as GenAI verification.</li>
+</ul>
+<p><strong>Resource implications:</strong> Oral verification is time-intensive. A 15-minute conversation with each student in a class of 30 requires 7.5 hours of faculty time. This is feasible for seminars and upper-level courses but challenging for large lecture sections without TA support.</p>
+<hr>
+</section>
+</section>
+<section id="moving-beyond-prohibition" class="level2">
+<h2 class="anchored" data-anchor-id="moving-beyond-prohibition">Moving Beyond Prohibition</h2>
+<p>Some faculty will conclude that prohibition, while legitimate, is not the right approach for their courses — particularly at the upper-undergraduate or graduate level. The following practices allow GenAI use while maintaining rigorous standards.</p>
+<section id="the-ownership-model" class="level3">
+<h3 class="anchored" data-anchor-id="the-ownership-model">The Ownership Model</h3>
+<p>The most effective framework centres on <strong>ownership</strong>: students are intellectually responsible for every word they submit, regardless of how it was produced. GenAI may be used for specific tasks (literature review, transcription, copy editing, testing ideas), but the student must be able to explain, defend, and contextualize every claim in their work.</p>
+<p>Under this model:</p>
+<ul>
+<li>The syllabus specifies what GenAI use is permitted and what is not.</li>
+<li>Students disclose any GenAI use.</li>
+<li>An oral component (exam, defence, follow-up conversation) verifies understanding.</li>
+<li>Work that the student cannot defend does not receive credit.</li>
+<li>Students are advised that completing the core writing themselves is the safest approach.</li>
+</ul>
+<p>This shifts the enforcement mechanism from “did you use AI?” (which cannot be reliably determined) to “do you understand your own work?” (which can be tested directly through conversation).</p>
+</section>
+<section id="disclosure-requirements" class="level3">
+<h3 class="anchored" data-anchor-id="disclosure-requirements">Disclosure Requirements</h3>
+<p>Where GenAI use is permitted, require disclosure. This normalizes transparency and makes concealment — rather than use — the integrity violation.</p>
+<ul>
+<li>State in the syllabus exactly what must be disclosed and how.</li>
+<li>Provide examples: “I used ChatGPT to identify relevant secondary literature, then verified each citation in JSTOR” or “I used Claude to help debug a Python script for data cleaning.”</li>
+<li>Distinguish between incidental use (spell-check, grammar tools) and substantive use (drafting, research, analysis).</li>
+</ul>
+</section>
+<section id="ai-as-object-of-study" class="level3">
+<h3 class="anchored" data-anchor-id="ai-as-object-of-study">AI as Object of Study</h3>
+<p>One approach that serves both pedagogy and AI literacy: make GenAI output something students analyse critically rather than something they produce with.</p>
+<ul>
+<li><strong>Fact-checking exercises.</strong> Have students ask an LLM to summarize a historical debate, then identify what it gets wrong, what perspectives it omits, and what sources it fabricates. This teaches source criticism applied to a new kind of text.</li>
+<li><strong>Comparative analysis.</strong> Students write their own analysis of a primary source, then generate an LLM analysis of the same source, then write a critical comparison. Where does the LLM miss nuance? Where does it hallucinate context? What does it do well?</li>
+<li><strong>Historiographic audit.</strong> Ask an LLM to produce a reading list on a topic the student knows well. Have them evaluate it: which sources are real? Which are fabricated? Which are accurately characterized? This is a powerful exercise in bibliographic literacy.</li>
+</ul>
+<p>These assignments cannot be completed <em>by</em> GenAI because the task is to evaluate GenAI’s limitations. They teach the critical skills students need whether or not they use these tools in their own research.</p>
+<hr>
+</section>
+</section>
+<section id="what-we-know-works" class="level2">
+<h2 class="anchored" data-anchor-id="what-we-know-works">What We Know Works</h2>
+<p>After three years of institutional experimentation, a rough consensus is emerging:</p>
+<ol type="1">
+<li><p><strong>Detection tools are not the answer.</strong> They produce too many false positives, are biased against vulnerable student populations, and are defeated by freely available evasion tools. Multiple institutions have disabled them. Do not build your integrity strategy around detection.</p></li>
+<li><p><strong>Assessment design is the answer.</strong> Assignments that require demonstrated understanding — through oral components, process documentation, in-class work, or engagement with specific and idiosyncratic sources — are more robust than any technological fix.</p></li>
+<li><p><strong>Clarity is essential.</strong> Students report confusion about what is permitted. Every syllabus should state the course’s GenAI policy explicitly, including what is allowed, what is prohibited, and what must be disclosed.</p></li>
+<li><p><strong>Instructor autonomy matters.</strong> Different courses have different goals. A first-year writing course and a fourth-year research seminar warrant different policies. Faculty should be supported in making the choice that serves their students and their pedagogy.</p></li>
+<li><p><strong>The conversation is ongoing.</strong> No policy adopted today will be the right policy in three years. Build in review mechanisms and be willing to adjust.</p></li>
+</ol>
+<hr>
+</section>
+<section id="further-reading" class="level2">
+<h2 class="anchored" data-anchor-id="further-reading">Further Reading</h2>
+<ul>
+<li>American Historical Association, <a href="https://www.historians.org/resource/guiding-principles-for-artificial-intelligence-in-history-education/"><em>Guiding Principles for Artificial Intelligence in History Education</em></a> (August 2025).</li>
+<li>Liang, W., et al.&nbsp;“GPT Detectors Are Biased Against Non-Native English Writers.” <em>Patterns</em> 4, no. 7 (2023). <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10382961/">PMC</a>.</li>
+<li><em>Inside Higher Ed</em>, <a href="https://www.insidehighered.com/news/faculty-issues/learning-assessment/2025/12/16/you-cant-ai-proof-classroom-experts-say-get">“You Can’t AI-Proof the Classroom, Experts Say. Get Creative Instead”</a> (December 2025).</li>
+<li>NBC News, <a href="https://www.nbcnews.com/tech/internet/college-students-ai-cheating-detectors-humanizers-rcna253878">“To Avoid Accusations of AI Cheating, College Students Are Turning to AI”</a> (2025).</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/jburnford\.github\.io\/intro_llms_for_historians\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -154,46 +154,95 @@
     "text": "The Bottom Line\nDeep research tools are the most impressive and the most dangerous GenAI application for historians. They can save you hours of initial searching. They can also fill your bibliography with sources that do not exist and your notes with summaries that misrepresent the scholarship. The tool does the searching. The verification, the reading, and the thinking are yours."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "GenAI for Historians",
+    "objectID": "getting-started.html",
+    "href": "getting-started.html",
+    "title": "Getting Started",
     "section": "",
-    "text": "This guide is for historians — faculty and graduate students — who are curious about generative AI tools but have not yet used them, or who have tried them briefly and want to understand what they can realistically do for historical research. No technical background is assumed. You do not need to know how to code, and you do not need to spend any money to get started."
+    "text": "You can begin with either of these free options. Both require only an email address to create an account:\n\nChatGPT (chatgpt.com) — Made by OpenAI. The free tier gives you access to the GPT-4o model with some usage limits. This is probably the most widely used LLM.\nGoogle Gemini (gemini.google.com) — Made by Google. Free with a Google account. Comparable capability to ChatGPT for most tasks.\n\nBoth tools work in a web browser. You type a message, the model responds, and you can continue the conversation. There is nothing to install.\nFor this guide, the examples use ChatGPT, but the prompts work in any tool with minor adjustments."
   },
   {
-    "objectID": "index.html#who-this-guide-is-for",
-    "href": "index.html#who-this-guide-is-for",
-    "title": "GenAI for Historians",
+    "objectID": "getting-started.html#choose-a-tool",
+    "href": "getting-started.html#choose-a-tool",
+    "title": "Getting Started",
     "section": "",
-    "text": "This guide is for historians — faculty and graduate students — who are curious about generative AI tools but have not yet used them, or who have tried them briefly and want to understand what they can realistically do for historical research. No technical background is assumed. You do not need to know how to code, and you do not need to spend any money to get started."
+    "text": "You can begin with either of these free options. Both require only an email address to create an account:\n\nChatGPT (chatgpt.com) — Made by OpenAI. The free tier gives you access to the GPT-4o model with some usage limits. This is probably the most widely used LLM.\nGoogle Gemini (gemini.google.com) — Made by Google. Free with a Google account. Comparable capability to ChatGPT for most tasks.\n\nBoth tools work in a web browser. You type a message, the model responds, and you can continue the conversation. There is nothing to install.\nFor this guide, the examples use ChatGPT, but the prompts work in any tool with minor adjustments."
   },
   {
-    "objectID": "index.html#what-this-guide-is-not",
-    "href": "index.html#what-this-guide-is-not",
-    "title": "GenAI for Historians",
-    "section": "What This Guide Is Not",
-    "text": "What This Guide Is Not\nThis is not an argument that you should use these tools. It is not a technology manifesto or a prediction about the future of the discipline. Some historians will find GenAI useful for specific research tasks. Others will try it and decide it does not suit their workflow. Both are reasonable outcomes.\nThe goal is simply to give you enough hands-on experience to make an informed judgment."
+    "objectID": "getting-started.html#your-first-conversation",
+    "href": "getting-started.html#your-first-conversation",
+    "title": "Getting Started",
+    "section": "Your First Conversation",
+    "text": "Your First Conversation\nOpen one of the tools above and try the following prompt. Copy and paste it, or adapt it to a topic you know well:\n\nI am a historian studying the development of the western Canadian grain trade in the early twentieth century. Can you give me a brief overview of the major developments between 1900 and 1930, focusing on the role of grain elevators and the Winnipeg Grain Exchange?\n\nRead the response. Some of it will be accurate. Some of it may be vague or slightly wrong. Notice:\n\nDoes it cite specific sources? (Probably not, or if it does, check whether they exist.)\nDoes it capture the broad outlines correctly?\nWhere does it feel generic — like a textbook summary rather than a historian’s analysis?\n\nThis is a useful calibration exercise. You now have a sense of what the tool knows and does not know about a topic you understand."
   },
   {
-    "objectID": "index.html#how-it-is-organized",
-    "href": "index.html#how-it-is-organized",
-    "title": "GenAI for Historians",
-    "section": "How It Is Organized",
-    "text": "How It Is Organized\nThe guide moves from free, low-commitment starting points to more advanced (and more expensive) tools:\n\nWhat Are LLMs? — A brief, non-technical explanation of how these tools work, what they are good at, and why they make mistakes. Understanding the basics helps you use them more effectively and spot their failures.\nGetting Started — How to begin with freely available tools (ChatGPT, Google Gemini) today, with no account setup beyond an email address. Includes a first exercise you can try in ten minutes.\nResearch Tasks — Concrete examples of how historians are using GenAI for transcription, translation, literature discovery, and coding. Each section includes sample prompts you can adapt to your own work.\nDeep Research Tools — Several products now offer automated literature review: they search the web, read sources, and produce structured reports with citations. These are powerful and impressive — and they are also where GenAI’s tendency to hallucinate becomes most dangerous. This section explains what they do well and how to avoid being misled.\nCase Studies — Two projects built by a historian using these tools: re-OCR’ing and building a searchable knowledge graph of 8,128 Royal Society articles (1665–1869), and transcribing and visualizing an archival collection of Joseph Banks’ correspondence on the British leather trade. Neither required advanced programming skills.\nCopy Editing — Using GenAI to proofread and polish your own drafted prose — what it does well, where it over-corrects, and how to stay in control of your voice.\nGoing Further — When free tools hit their limits and paid subscriptions become worthwhile. An honest look at costs, capabilities, and what the more advanced tools (Claude Pro, ChatGPT Plus, Claude Code) actually offer.\nLimitations — What these tools get wrong, how to recognize it, and what you should never trust them to do unsupervised. This section is as important as any of the others."
+    "objectID": "getting-started.html#a-more-useful-exercise-transcription",
+    "href": "getting-started.html#a-more-useful-exercise-transcription",
+    "title": "Getting Started",
+    "section": "A More Useful Exercise: Transcription",
+    "text": "A More Useful Exercise: Transcription\nLLMs are often more useful for concrete tasks than for open-ended questions. Try this:\n\nFind a page from a digitized historical document — a handwritten letter, a printed government report with difficult typography, or a census page. If you have a PDF on your computer, many LLM tools now allow you to upload images or documents directly.\nUpload or paste the text and ask:\n\n\nPlease transcribe the text in this image as accurately as possible. This is a [type of document] from [approximate date and context]. Preserve the original spelling and punctuation.\n\n\nCompare the output against the original. Where does it succeed? Where does it struggle?\n\nFor printed text in good condition, LLMs are often very accurate. For handwriting, the results are more variable but can still be a useful first pass that you then correct."
   },
   {
-    "objectID": "index.html#a-note-on-tools-and-vendors",
-    "href": "index.html#a-note-on-tools-and-vendors",
-    "title": "GenAI for Historians",
-    "section": "A Note on Tools and Vendors",
-    "text": "A Note on Tools and Vendors\nThis guide mentions specific products by name (ChatGPT, Claude, Gemini) because it is impossible to give practical advice without doing so. Naming a tool is not an endorsement. The landscape is changing rapidly, and the specific products available when you read this may differ from those available when it was written. The underlying skills — writing effective prompts, verifying outputs, knowing when to trust and when to doubt — transfer across tools."
+    "objectID": "getting-started.html#understanding-the-conversation-model",
+    "href": "getting-started.html#understanding-the-conversation-model",
+    "title": "Getting Started",
+    "section": "Understanding the Conversation Model",
+    "text": "Understanding the Conversation Model\nA few things are worth knowing about how these tools work in practice:\nContext window. The model can only “remember” a certain amount of text within a single conversation. If your conversation becomes very long, the model may lose track of things you said earlier. For long tasks, it can help to start a new conversation and restate the key context.\nSystem prompts and instructions. You can begin a conversation by telling the model what role you want it to play or what constraints to follow. For example:\n\nYou are helping me transcribe 19th-century French colonial correspondence. The documents are from the Archives nationales d’outre-mer. Please preserve the original French text and flag any words you are uncertain about with [?].\n\nThis kind of framing improves results significantly.\nFollow-up questions. You can refine the model’s output by asking follow-up questions in the same conversation:\n\nThat transcription looks mostly right, but I think the word you read as “commerce” in line 3 is actually “commode.” Can you look at that section again?\n\nThe model will adjust. This iterative back-and-forth is often more productive than trying to get a perfect result on the first try."
   },
   {
-    "objectID": "index.html#getting-started",
-    "href": "index.html#getting-started",
-    "title": "GenAI for Historians",
-    "section": "Getting Started",
-    "text": "Getting Started\nIf you have fifteen minutes and want to try something right now, go to Getting Started."
+    "objectID": "getting-started.html#what-you-have-learned",
+    "href": "getting-started.html#what-you-have-learned",
+    "title": "Getting Started",
+    "section": "What You Have Learned",
+    "text": "What You Have Learned\nAfter fifteen minutes with a free tool, you should have a sense of:\n\nHow the conversational interface works\nWhat kind of output the model produces for topics you know\nHow transcription assistance works in practice\nThe importance of checking everything\n\nThe next section, Research Tasks, walks through specific applications in more detail."
+  },
+  {
+    "objectID": "copy-editing.html",
+    "href": "copy-editing.html",
+    "title": "Copy Editing",
+    "section": "",
+    "text": "There is a difference between asking an LLM to write for you and asking it to edit what you have already written. This guide is about the latter. The assumption is that you have drafted your own prose — the arguments, the structure, the evidence are yours — and you want help catching errors, tightening sentences, and improving clarity.\nThis is not meaningfully different from asking a colleague to read a draft, or from using Grammarly, or from working with a copy editor. The tool is more capable than a spell-checker and less capable than a good human editor. It is useful precisely in that middle range."
+  },
+  {
+    "objectID": "copy-editing.html#the-distinction-that-matters",
+    "href": "copy-editing.html#the-distinction-that-matters",
+    "title": "Copy Editing",
+    "section": "",
+    "text": "There is a difference between asking an LLM to write for you and asking it to edit what you have already written. This guide is about the latter. The assumption is that you have drafted your own prose — the arguments, the structure, the evidence are yours — and you want help catching errors, tightening sentences, and improving clarity.\nThis is not meaningfully different from asking a colleague to read a draft, or from using Grammarly, or from working with a copy editor. The tool is more capable than a spell-checker and less capable than a good human editor. It is useful precisely in that middle range."
+  },
+  {
+    "objectID": "copy-editing.html#how-to-do-it",
+    "href": "copy-editing.html#how-to-do-it",
+    "title": "Copy Editing",
+    "section": "How to Do It",
+    "text": "How to Do It\n\nBasic Proofreading\nPaste a section of your draft and ask:\n\nPlease proofread the following passage for spelling, grammar, and punctuation errors. Do not change the content, argument, or voice — only flag mechanical errors. List each error with the original text and the suggested correction.\n\nThis produces a list of corrections you can accept or reject individually, rather than a rewritten passage that you have to compare line by line.\n\n\nClarity and Flow\n\nPlease read the following passage and suggest improvements to clarity and readability. Do not change the argument or the evidence. Focus on sentence structure, word choice, and flow. Present your suggestions as a list of specific changes, not a rewritten version.\n\n\n\nConsistency Checking\n\nI am writing a chapter that uses the following terms: “enslaved person” (not “slave”), “slaveholder” (not “slave owner”), and “plantation” (not “estate” except when referring to legal documents). Please check the following passage for consistency with these preferences and flag any deviations.\n\n\n\nCitation and Footnote Review\n\nPlease check the following passage for any footnotes that appear to reference the wrong source, or for claims that are made without a supporting footnote. I have pasted the passage with its footnotes below."
+  },
+  {
+    "objectID": "copy-editing.html#staying-in-control",
+    "href": "copy-editing.html#staying-in-control",
+    "title": "Copy Editing",
+    "section": "Staying in Control",
+    "text": "Staying in Control\nThe key risk with AI-assisted editing is that the tool may “improve” your prose in ways that change your meaning or flatten your voice. A few guidelines:\n\nAlways review changes individually. Do not accept a batch rewrite. Ask for a list of specific suggestions, not a new version of the paragraph.\nReject stylistic changes that do not suit you. LLMs tend toward a generic, slightly formal tone. If the model suggests replacing your phrasing with something blander, keep yours.\nWatch for meaning drift. The model may tighten a sentence in a way that subtly changes what you are saying. Read each suggestion against your intended meaning.\nDo not let it restructure your argument. If you ask for “clarity” suggestions and the model proposes reordering your paragraphs, that is an intellectual decision, not a copy-editing one. Make those choices yourself."
+  },
+  {
+    "objectID": "copy-editing.html#what-it-does-well",
+    "href": "copy-editing.html#what-it-does-well",
+    "title": "Copy Editing",
+    "section": "What It Does Well",
+    "text": "What It Does Well\n\nCatching typos and grammatical errors, including subtle ones (subject-verb agreement across long sentences, misplaced modifiers)\nIdentifying repetitive word choice\nFlagging inconsistent formatting (dates, capitalization, hyphenation)\nSpotting missing articles or prepositions that a spell-checker would miss"
+  },
+  {
+    "objectID": "copy-editing.html#what-it-does-poorly",
+    "href": "copy-editing.html#what-it-does-poorly",
+    "title": "Copy Editing",
+    "section": "What It Does Poorly",
+    "text": "What It Does Poorly\n\nRecognizing intentional stylistic choices (sentence fragments for emphasis, deliberate repetition, rhetorical structure)\nUnderstanding disciplinary conventions (Chicago-style footnotes, the use of the historical present, block quotation formatting)\nKnowing when not to change something"
+  },
+  {
+    "objectID": "copy-editing.html#a-practical-workflow",
+    "href": "copy-editing.html#a-practical-workflow",
+    "title": "Copy Editing",
+    "section": "A Practical Workflow",
+    "text": "A Practical Workflow\n\nWrite your draft yourself. Do not use GenAI for initial drafting.\nRevise your draft yourself. Get the argument and structure where you want them.\nRun a proofreading pass with the LLM, asking for a list of mechanical errors.\nAccept or reject each suggestion individually.\nOptionally, run a clarity pass — again reviewing each suggestion against your original intent.\nRead the final version yourself. You are responsible for every word.\n\nThis workflow keeps you in the author’s seat throughout. The LLM functions as a very fast, very patient proofreader — nothing more."
   },
   {
     "objectID": "limitations.html",
@@ -259,95 +308,102 @@
     "text": "The Bottom Line\nThese tools are useful. They are also unreliable, biased, and incapable of the interpretive work that defines our discipline. Using them well means using them for what they are good at (mechanical tasks, pattern recognition, draft editing) while keeping the intellectual work — the reading, the thinking, the arguing — firmly in your own hands.\nThat is not a limitation of the technology. It is the point."
   },
   {
-    "objectID": "copy-editing.html",
-    "href": "copy-editing.html",
-    "title": "Copy Editing",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "GenAI for Historians",
     "section": "",
-    "text": "There is a difference between asking an LLM to write for you and asking it to edit what you have already written. This guide is about the latter. The assumption is that you have drafted your own prose — the arguments, the structure, the evidence are yours — and you want help catching errors, tightening sentences, and improving clarity.\nThis is not meaningfully different from asking a colleague to read a draft, or from using Grammarly, or from working with a copy editor. The tool is more capable than a spell-checker and less capable than a good human editor. It is useful precisely in that middle range."
+    "text": "This guide is for historians — faculty and graduate students — who are curious about generative AI tools but have not yet used them, or who have tried them briefly and want to understand what they can realistically do for historical research. No technical background is assumed. You do not need to know how to code, and you do not need to spend any money to get started."
   },
   {
-    "objectID": "copy-editing.html#the-distinction-that-matters",
-    "href": "copy-editing.html#the-distinction-that-matters",
-    "title": "Copy Editing",
+    "objectID": "index.html#who-this-guide-is-for",
+    "href": "index.html#who-this-guide-is-for",
+    "title": "GenAI for Historians",
     "section": "",
-    "text": "There is a difference between asking an LLM to write for you and asking it to edit what you have already written. This guide is about the latter. The assumption is that you have drafted your own prose — the arguments, the structure, the evidence are yours — and you want help catching errors, tightening sentences, and improving clarity.\nThis is not meaningfully different from asking a colleague to read a draft, or from using Grammarly, or from working with a copy editor. The tool is more capable than a spell-checker and less capable than a good human editor. It is useful precisely in that middle range."
+    "text": "This guide is for historians — faculty and graduate students — who are curious about generative AI tools but have not yet used them, or who have tried them briefly and want to understand what they can realistically do for historical research. No technical background is assumed. You do not need to know how to code, and you do not need to spend any money to get started."
   },
   {
-    "objectID": "copy-editing.html#how-to-do-it",
-    "href": "copy-editing.html#how-to-do-it",
-    "title": "Copy Editing",
-    "section": "How to Do It",
-    "text": "How to Do It\n\nBasic Proofreading\nPaste a section of your draft and ask:\n\nPlease proofread the following passage for spelling, grammar, and punctuation errors. Do not change the content, argument, or voice — only flag mechanical errors. List each error with the original text and the suggested correction.\n\nThis produces a list of corrections you can accept or reject individually, rather than a rewritten passage that you have to compare line by line.\n\n\nClarity and Flow\n\nPlease read the following passage and suggest improvements to clarity and readability. Do not change the argument or the evidence. Focus on sentence structure, word choice, and flow. Present your suggestions as a list of specific changes, not a rewritten version.\n\n\n\nConsistency Checking\n\nI am writing a chapter that uses the following terms: “enslaved person” (not “slave”), “slaveholder” (not “slave owner”), and “plantation” (not “estate” except when referring to legal documents). Please check the following passage for consistency with these preferences and flag any deviations.\n\n\n\nCitation and Footnote Review\n\nPlease check the following passage for any footnotes that appear to reference the wrong source, or for claims that are made without a supporting footnote. I have pasted the passage with its footnotes below."
+    "objectID": "index.html#what-this-guide-is-not",
+    "href": "index.html#what-this-guide-is-not",
+    "title": "GenAI for Historians",
+    "section": "What This Guide Is Not",
+    "text": "What This Guide Is Not\nThis is not an argument that you should use these tools. It is not a technology manifesto or a prediction about the future of the discipline. Some historians will find GenAI useful for specific research tasks. Others will try it and decide it does not suit their workflow. Both are reasonable outcomes.\nThe goal is simply to give you enough hands-on experience to make an informed judgment."
   },
   {
-    "objectID": "copy-editing.html#staying-in-control",
-    "href": "copy-editing.html#staying-in-control",
-    "title": "Copy Editing",
-    "section": "Staying in Control",
-    "text": "Staying in Control\nThe key risk with AI-assisted editing is that the tool may “improve” your prose in ways that change your meaning or flatten your voice. A few guidelines:\n\nAlways review changes individually. Do not accept a batch rewrite. Ask for a list of specific suggestions, not a new version of the paragraph.\nReject stylistic changes that do not suit you. LLMs tend toward a generic, slightly formal tone. If the model suggests replacing your phrasing with something blander, keep yours.\nWatch for meaning drift. The model may tighten a sentence in a way that subtly changes what you are saying. Read each suggestion against your intended meaning.\nDo not let it restructure your argument. If you ask for “clarity” suggestions and the model proposes reordering your paragraphs, that is an intellectual decision, not a copy-editing one. Make those choices yourself."
+    "objectID": "index.html#how-it-is-organized",
+    "href": "index.html#how-it-is-organized",
+    "title": "GenAI for Historians",
+    "section": "How It Is Organized",
+    "text": "How It Is Organized\nThe guide moves from free, low-commitment starting points to more advanced (and more expensive) tools:\n\nWhat Are LLMs? — A brief, non-technical explanation of how these tools work, what they are good at, and why they make mistakes. Understanding the basics helps you use them more effectively and spot their failures.\nGetting Started — How to begin with freely available tools (ChatGPT, Google Gemini) today, with no account setup beyond an email address. Includes a first exercise you can try in ten minutes.\nResearch Tasks — Concrete examples of how historians are using GenAI for transcription, translation, literature discovery, and coding. Each section includes sample prompts you can adapt to your own work.\nDeep Research Tools — Several products now offer automated literature review: they search the web, read sources, and produce structured reports with citations. These are powerful and impressive — and they are also where GenAI’s tendency to hallucinate becomes most dangerous. This section explains what they do well and how to avoid being misled.\nCase Studies — Two projects built by a historian using these tools: re-OCR’ing and building a searchable knowledge graph of 8,128 Royal Society articles (1665–1869), and transcribing and visualizing an archival collection of Joseph Banks’ correspondence on the British leather trade. Neither required advanced programming skills.\nLLMs and Teaching — Why prohibition is difficult to enforce, why AI detection tools are unreliable (and biased), and what actually works: process-based assessment, Google Docs version history, assignment design, oral verification, and the ownership model for courses that move beyond prohibition.\nCopy Editing — Using GenAI to proofread and polish your own drafted prose — what it does well, where it over-corrects, and how to stay in control of your voice.\nGoing Further — When free tools hit their limits and paid subscriptions become worthwhile. An honest look at costs, capabilities, and what the more advanced tools (Claude Pro, ChatGPT Plus, Claude Code) actually offer.\nLimitations — What these tools get wrong, how to recognize it, and what you should never trust them to do unsupervised. This section is as important as any of the others."
   },
   {
-    "objectID": "copy-editing.html#what-it-does-well",
-    "href": "copy-editing.html#what-it-does-well",
-    "title": "Copy Editing",
-    "section": "What It Does Well",
-    "text": "What It Does Well\n\nCatching typos and grammatical errors, including subtle ones (subject-verb agreement across long sentences, misplaced modifiers)\nIdentifying repetitive word choice\nFlagging inconsistent formatting (dates, capitalization, hyphenation)\nSpotting missing articles or prepositions that a spell-checker would miss"
+    "objectID": "index.html#a-note-on-tools-and-vendors",
+    "href": "index.html#a-note-on-tools-and-vendors",
+    "title": "GenAI for Historians",
+    "section": "A Note on Tools and Vendors",
+    "text": "A Note on Tools and Vendors\nThis guide mentions specific products by name (ChatGPT, Claude, Gemini) because it is impossible to give practical advice without doing so. Naming a tool is not an endorsement. The landscape is changing rapidly, and the specific products available when you read this may differ from those available when it was written. The underlying skills — writing effective prompts, verifying outputs, knowing when to trust and when to doubt — transfer across tools."
   },
   {
-    "objectID": "copy-editing.html#what-it-does-poorly",
-    "href": "copy-editing.html#what-it-does-poorly",
-    "title": "Copy Editing",
-    "section": "What It Does Poorly",
-    "text": "What It Does Poorly\n\nRecognizing intentional stylistic choices (sentence fragments for emphasis, deliberate repetition, rhetorical structure)\nUnderstanding disciplinary conventions (Chicago-style footnotes, the use of the historical present, block quotation formatting)\nKnowing when not to change something"
+    "objectID": "index.html#getting-started",
+    "href": "index.html#getting-started",
+    "title": "GenAI for Historians",
+    "section": "Getting Started",
+    "text": "Getting Started\nIf you have fifteen minutes and want to try something right now, go to Getting Started."
   },
   {
-    "objectID": "copy-editing.html#a-practical-workflow",
-    "href": "copy-editing.html#a-practical-workflow",
-    "title": "Copy Editing",
-    "section": "A Practical Workflow",
-    "text": "A Practical Workflow\n\nWrite your draft yourself. Do not use GenAI for initial drafting.\nRevise your draft yourself. Get the argument and structure where you want them.\nRun a proofreading pass with the LLM, asking for a list of mechanical errors.\nAccept or reject each suggestion individually.\nOptionally, run a clarity pass — again reviewing each suggestion against your original intent.\nRead the final version yourself. You are responsible for every word.\n\nThis workflow keeps you in the author’s seat throughout. The LLM functions as a very fast, very patient proofreader — nothing more."
-  },
-  {
-    "objectID": "getting-started.html",
-    "href": "getting-started.html",
-    "title": "Getting Started",
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "LLMs and Teaching",
     "section": "",
-    "text": "You can begin with either of these free options. Both require only an email address to create an account:\n\nChatGPT (chatgpt.com) — Made by OpenAI. The free tier gives you access to the GPT-4o model with some usage limits. This is probably the most widely used LLM.\nGoogle Gemini (gemini.google.com) — Made by Google. Free with a Google account. Comparable capability to ChatGPT for most tasks.\n\nBoth tools work in a web browser. You type a message, the model responds, and you can continue the conversation. There is nothing to install.\nFor this guide, the examples use ChatGPT, but the prompts work in any tool with minor adjustments."
+    "text": "Three years after ChatGPT’s release, the evidence is clear: most university students use GenAI tools regularly, regardless of course policies. Surveys across multiple countries and institutions consistently find usage rates above 80%. A 2025 study at Middlebury College found that over 80% of students used GenAI for coursework — one of the fastest technology adoption rates ever documented in higher education. A UK survey the same year put the figure at 92% of undergraduates using AI in some aspect of academic work.\nThis does not mean every student is using GenAI to cheat. Most use it for legitimate tasks — explaining concepts, brainstorming, grammar checking. But it does mean that prohibition, as a policy, exists in tension with the reality of student behaviour. Faculty who choose prohibition need to understand both why it is worth attempting and why it is difficult to enforce, so they can design their courses accordingly.\nThis section is addressed to faculty in all positions on the spectrum: those who want to prohibit GenAI use, those who want to permit it cautiously, and those still deciding. The goal is practical advice grounded in what we have learned since 2023."
   },
   {
-    "objectID": "getting-started.html#choose-a-tool",
-    "href": "getting-started.html#choose-a-tool",
-    "title": "Getting Started",
+    "objectID": "teaching.html#the-situation-in-2026",
+    "href": "teaching.html#the-situation-in-2026",
+    "title": "LLMs and Teaching",
     "section": "",
-    "text": "You can begin with either of these free options. Both require only an email address to create an account:\n\nChatGPT (chatgpt.com) — Made by OpenAI. The free tier gives you access to the GPT-4o model with some usage limits. This is probably the most widely used LLM.\nGoogle Gemini (gemini.google.com) — Made by Google. Free with a Google account. Comparable capability to ChatGPT for most tasks.\n\nBoth tools work in a web browser. You type a message, the model responds, and you can continue the conversation. There is nothing to install.\nFor this guide, the examples use ChatGPT, but the prompts work in any tool with minor adjustments."
+    "text": "Three years after ChatGPT’s release, the evidence is clear: most university students use GenAI tools regularly, regardless of course policies. Surveys across multiple countries and institutions consistently find usage rates above 80%. A 2025 study at Middlebury College found that over 80% of students used GenAI for coursework — one of the fastest technology adoption rates ever documented in higher education. A UK survey the same year put the figure at 92% of undergraduates using AI in some aspect of academic work.\nThis does not mean every student is using GenAI to cheat. Most use it for legitimate tasks — explaining concepts, brainstorming, grammar checking. But it does mean that prohibition, as a policy, exists in tension with the reality of student behaviour. Faculty who choose prohibition need to understand both why it is worth attempting and why it is difficult to enforce, so they can design their courses accordingly.\nThis section is addressed to faculty in all positions on the spectrum: those who want to prohibit GenAI use, those who want to permit it cautiously, and those still deciding. The goal is practical advice grounded in what we have learned since 2023."
   },
   {
-    "objectID": "getting-started.html#your-first-conversation",
-    "href": "getting-started.html#your-first-conversation",
-    "title": "Getting Started",
-    "section": "Your First Conversation",
-    "text": "Your First Conversation\nOpen one of the tools above and try the following prompt. Copy and paste it, or adapt it to a topic you know well:\n\nI am a historian studying the development of the western Canadian grain trade in the early twentieth century. Can you give me a brief overview of the major developments between 1900 and 1930, focusing on the role of grain elevators and the Winnipeg Grain Exchange?\n\nRead the response. Some of it will be accurate. Some of it may be vague or slightly wrong. Notice:\n\nDoes it cite specific sources? (Probably not, or if it does, check whether they exist.)\nDoes it capture the broad outlines correctly?\nWhere does it feel generic — like a textbook summary rather than a historian’s analysis?\n\nThis is a useful calibration exercise. You now have a sense of what the tool knows and does not know about a topic you understand."
+    "objectID": "teaching.html#why-prohibition-is-difficult",
+    "href": "teaching.html#why-prohibition-is-difficult",
+    "title": "LLMs and Teaching",
+    "section": "Why Prohibition Is Difficult",
+    "text": "Why Prohibition Is Difficult\nProhibition is a legitimate pedagogical choice, particularly in courses designed to develop foundational writing and research skills. But it faces several structural challenges:\nUbiquitous access. GenAI tools are free, require only a web browser, and are increasingly integrated into the software students already use — word processors, search engines, email clients, and phones. There is no way to prevent access outside the classroom, and increasingly little way to prevent it inside the classroom.\nUnreliable detection. AI detection tools (Turnitin’s AI detector, GPTZero, Originality.ai, and others) do not work reliably enough to serve as evidence of misconduct. Independent testing has found false positive rates far higher than vendors claim, and the tools are systematically biased against non-native English speakers and neurodivergent students. A growing number of universities — including Vanderbilt, Johns Hopkins, UCLA, the University of Waterloo, Michigan State, and the University of Pittsburgh — have disabled Turnitin’s AI detection feature entirely. Several students have successfully sued or settled after false accusations based on AI detector output.\nEvasion tools. A thriving industry of “humanizer” tools (Undetectable.ai, StealthWriter, StealthGPT, and many others) rewrites AI-generated text to evade detection software. These tools are cheap or free, easy to use, and specifically marketed to students. Turnitin announced “AI bypasser detection” in August 2025, but this creates an arms race that detection is unlikely to win. The existence of these tools means that even if detection software were accurate — which it is not — determined students could circumvent it.\nChilling effect. Surveys find that roughly half of students report being afraid to use AI in any capacity for fear of false accusations, even in courses where some use is permitted. This punishes cautious, honest students while doing little to deter deliberate misuse.\nNone of this means prohibition is impossible. It means that prohibition enforced primarily through detection is a losing strategy. Effective prohibition requires a different approach."
   },
   {
-    "objectID": "getting-started.html#a-more-useful-exercise-transcription",
-    "href": "getting-started.html#a-more-useful-exercise-transcription",
-    "title": "Getting Started",
-    "section": "A More Useful Exercise: Transcription",
-    "text": "A More Useful Exercise: Transcription\nLLMs are often more useful for concrete tasks than for open-ended questions. Try this:\n\nFind a page from a digitized historical document — a handwritten letter, a printed government report with difficult typography, or a census page. If you have a PDF on your computer, many LLM tools now allow you to upload images or documents directly.\nUpload or paste the text and ask:\n\n\nPlease transcribe the text in this image as accurately as possible. This is a [type of document] from [approximate date and context]. Preserve the original spelling and punctuation.\n\n\nCompare the output against the original. Where does it succeed? Where does it struggle?\n\nFor printed text in good condition, LLMs are often very accurate. For handwriting, the results are more variable but can still be a useful first pass that you then correct."
+    "objectID": "teaching.html#the-problem-with-ai-detection-tools",
+    "href": "teaching.html#the-problem-with-ai-detection-tools",
+    "title": "LLMs and Teaching",
+    "section": "The Problem with AI Detection Tools",
+    "text": "The Problem with AI Detection Tools\nThis deserves its own section because faculty may be under the impression that detection tools are a viable safeguard. They are not.\n\nFalse Positives\nAI detection tools work by measuring statistical features of text — perplexity (how surprising the word choices are) and burstiness (how much sentence length and structure vary). Human writing tends to be more variable; AI-generated text tends to be more uniform. But these are tendencies, not rules, and the overlap is large.\nIndependent research has documented:\n\nFalse positive rates between 5% and 20% on general student submissions, far higher than the &lt;1% vendors claim.\nA Washington Post test that produced a 50% false positive rate on certain content using Turnitin’s detector.\nAccuracy that drops to 80–85% when text has been lightly paraphrased or edited — which is how most students actually use GenAI.\n\n\n\nBias Against Non-Native English Speakers\nThis is the most serious problem. A widely cited 2023 study found that AI detectors misclassified over 61% of essays by non-native English speakers as AI-generated, while achieving near-perfect accuracy on native English speaker essays. A follow-up found that 97% of TOEFL essays were flagged by at least one detector.\nThe reason is structural: detectors penalize simpler vocabulary, shorter sentences, and more formulaic structures — precisely the features of competent second-language academic writing. This is not a bug that can be patched; it is inherent to how the technology works.\nIn 2025, multiple institutions reported cases of international students accused of AI cheating based on detector output that was later shown to be wrong. A 2025 study found that Black students were disproportionately accused, with 20% reporting false accusations compared to 7% of white students.\n\n\nBias Against Neurodivergent Students\nStudents on the autism spectrum often produce writing that is highly structured, literal, and consistent in tone — features that overlap with the statistical signatures detectors associate with AI. Students with ADHD who write in focused bursts can produce similar patterns. Documented cases include students falsely accused who had to disclose their diagnoses to clear their names.\n\n\nThe Institutional Response\nThe American Historical Association published its Guiding Principles for Artificial Intelligence in History Education in August 2025, reflecting a two-year process of consultation. The AHA emphasizes that GenAI “can produce material that appears polished and credible, but assessing their outputs demands critical skills that the models themselves can neither teach nor foster.” The framing is disciplinary rather than technological: the question is what historical training requires, not what detection tools can do.\nA growing consensus among teaching and learning centres holds that detection-based enforcement is unsustainable. As Inside Higher Ed reported in December 2025: “You can’t AI-proof the classroom, experts say. Get creative instead.”"
   },
   {
-    "objectID": "getting-started.html#understanding-the-conversation-model",
-    "href": "getting-started.html#understanding-the-conversation-model",
-    "title": "Getting Started",
-    "section": "Understanding the Conversation Model",
-    "text": "Understanding the Conversation Model\nA few things are worth knowing about how these tools work in practice:\nContext window. The model can only “remember” a certain amount of text within a single conversation. If your conversation becomes very long, the model may lose track of things you said earlier. For long tasks, it can help to start a new conversation and restate the key context.\nSystem prompts and instructions. You can begin a conversation by telling the model what role you want it to play or what constraints to follow. For example:\n\nYou are helping me transcribe 19th-century French colonial correspondence. The documents are from the Archives nationales d’outre-mer. Please preserve the original French text and flag any words you are uncertain about with [?].\n\nThis kind of framing improves results significantly.\nFollow-up questions. You can refine the model’s output by asking follow-up questions in the same conversation:\n\nThat transcription looks mostly right, but I think the word you read as “commerce” in line 3 is actually “commode.” Can you look at that section again?\n\nThe model will adjust. This iterative back-and-forth is often more productive than trying to get a perfect result on the first try."
+    "objectID": "teaching.html#best-practices-for-prohibition",
+    "href": "teaching.html#best-practices-for-prohibition",
+    "title": "LLMs and Teaching",
+    "section": "Best Practices for Prohibition",
+    "text": "Best Practices for Prohibition\nIf you choose to prohibit GenAI use in your courses — and there are good reasons to do so, especially in first-year writing courses — the following practices are more effective than relying on detection software.\n\nIn-Class Writing\nThe most straightforward safeguard is supervised writing. If a significant assessment takes place in the classroom, GenAI cannot be used. Options include:\n\nIn-class essay exams (open-book or closed-book).\nSupervised writing sessions where students work on drafts during class time.\nIn-class primary source analysis exercises.\n\nLimitations: In-class writing tests speed as well as understanding, disadvantages students who need accommodations, and cannot be the sole assessment method for courses with substantial research components.\n\n\nProcess-Based Assessment\nRather than evaluating only the final product, require evidence of the writing process:\n\nStaged submissions. Require an annotated outline, a rough draft, and a revised draft at intervals across the term. Each stage should show genuine evolution — new ideas appearing, arguments being restructured, evidence being added or reconsidered.\nResearch logs. Have students maintain logs of sources consulted, search strategies used, and how their argument developed. These are difficult to fabricate convincingly because they require the kind of specific, idiosyncratic detail that GenAI does not produce well.\nReflective annotations. Ask students to annotate their own drafts, explaining why they made specific argumentative choices, where they struggled, and what they would change.\n\n\n\nGoogle Docs Version History\nGoogle Docs automatically saves a timestamped record of every addition, deletion, and edit. If you require students to compose their work in a shared Google Doc (with the instructor added as a viewer), the version history provides an evidence trail of the writing process.\nWhat it reveals:\n\nTyping patterns. Genuine student writing shows incremental word-by-word and sentence-by-sentence additions, with pauses, deletions, false starts, and revisions.\nCopy-paste events. AI-assisted work often appears as large blocks of text pasted in whole, with minimal subsequent editing. This is visible in the revision history.\nTime spent. Total editing time and the number of sessions are logged. A 3,000-word essay that appears fully formed in a single 20-minute session is a different object than one built over five sessions across two weeks.\nEditing trajectory. You can see whether ideas evolved organically or appeared fully formed.\n\nTools that enhance this: Browser extensions like Revision History (used by over 200,000 teachers) provide video replay of the writing process and highlight large paste/deletion events. Draftback offers similar functionality.\nLimitations: A determined student could type AI-generated text character by character, though this is time-consuming enough to be largely self-defeating. Students who draft in another application and paste will be visible in the history, which itself becomes a point of conversation.\nImplementation: State in your syllabus that all written work must be composed in a shared Google Doc. Explain that you may review the version history. This is transparent, does not rely on detection software, and provides a basis for conversation rather than accusation.\n\n\nAssignment Design That Resists GenAI\nSome assignments are harder to complete with GenAI than others. For history courses:\n\nSpecific primary source analysis. Require analysis of particular pages or passages from specific archival collections, especially unpublished or poorly digitized materials unlikely to be in LLM training data. “Analyse folios 12–15 of the York Factory post journal for 1821” is harder to outsource than “Discuss the fur trade in western Canada.”\nPersonal engagement with sources. Ask students to reflect on their experience navigating a finding aid, visiting an archive, or encountering a physical document. “Describe what surprised you about the condition of the original manuscript” cannot be answered by a tool that has never seen the manuscript.\nCourse-specific content. Require engagement with specific in-class discussions, guest lectures, or seminar debates. “How does Thompson’s argument about the moral economy relate to the point raised in seminar about the Saskatchewan wheat pools?” ties the assignment to a conversation the student had to be present for.\nLocal and obscure topics. LLMs perform poorly on topics that are underrepresented in their training data. Saskatchewan local history, small-town newspapers, and understudied archival collections are natural territory for assignments that GenAI cannot handle well.\nMulti-source synthesis. Require students to connect three or four specific primary sources in ways that demand genuine analytical work. The more specific and idiosyncratic the sources, the harder the task is to outsource.\n\n\n\nOral Verification\nA short oral conversation about a written assignment is the single most effective safeguard against work a student does not understand. This can take several forms:\n\nOral exam on a research paper (15–20 minutes). The student discusses their argument, evidence, and research process. The grade reflects demonstrated understanding, not performance anxiety. One model already in use: “If you do the work yourself and write your paper, this will be a low-stress discussion of your evidence and arguments.”\nBrief follow-up conversations (5–10 minutes). After returning a graded assignment, meet individually with students to discuss their work. This need not be framed as verification; it can be framed as feedback.\nIn-class presentations. Students present their research to the class and field questions. This is standard seminar pedagogy and serves double duty as GenAI verification.\n\nResource implications: Oral verification is time-intensive. A 15-minute conversation with each student in a class of 30 requires 7.5 hours of faculty time. This is feasible for seminars and upper-level courses but challenging for large lecture sections without TA support."
   },
   {
-    "objectID": "getting-started.html#what-you-have-learned",
-    "href": "getting-started.html#what-you-have-learned",
-    "title": "Getting Started",
-    "section": "What You Have Learned",
-    "text": "What You Have Learned\nAfter fifteen minutes with a free tool, you should have a sense of:\n\nHow the conversational interface works\nWhat kind of output the model produces for topics you know\nHow transcription assistance works in practice\nThe importance of checking everything\n\nThe next section, Research Tasks, walks through specific applications in more detail."
+    "objectID": "teaching.html#moving-beyond-prohibition",
+    "href": "teaching.html#moving-beyond-prohibition",
+    "title": "LLMs and Teaching",
+    "section": "Moving Beyond Prohibition",
+    "text": "Moving Beyond Prohibition\nSome faculty will conclude that prohibition, while legitimate, is not the right approach for their courses — particularly at the upper-undergraduate or graduate level. The following practices allow GenAI use while maintaining rigorous standards.\n\nThe Ownership Model\nThe most effective framework centres on ownership: students are intellectually responsible for every word they submit, regardless of how it was produced. GenAI may be used for specific tasks (literature review, transcription, copy editing, testing ideas), but the student must be able to explain, defend, and contextualize every claim in their work.\nUnder this model:\n\nThe syllabus specifies what GenAI use is permitted and what is not.\nStudents disclose any GenAI use.\nAn oral component (exam, defence, follow-up conversation) verifies understanding.\nWork that the student cannot defend does not receive credit.\nStudents are advised that completing the core writing themselves is the safest approach.\n\nThis shifts the enforcement mechanism from “did you use AI?” (which cannot be reliably determined) to “do you understand your own work?” (which can be tested directly through conversation).\n\n\nDisclosure Requirements\nWhere GenAI use is permitted, require disclosure. This normalizes transparency and makes concealment — rather than use — the integrity violation.\n\nState in the syllabus exactly what must be disclosed and how.\nProvide examples: “I used ChatGPT to identify relevant secondary literature, then verified each citation in JSTOR” or “I used Claude to help debug a Python script for data cleaning.”\nDistinguish between incidental use (spell-check, grammar tools) and substantive use (drafting, research, analysis).\n\n\n\nAI as Object of Study\nOne approach that serves both pedagogy and AI literacy: make GenAI output something students analyse critically rather than something they produce with.\n\nFact-checking exercises. Have students ask an LLM to summarize a historical debate, then identify what it gets wrong, what perspectives it omits, and what sources it fabricates. This teaches source criticism applied to a new kind of text.\nComparative analysis. Students write their own analysis of a primary source, then generate an LLM analysis of the same source, then write a critical comparison. Where does the LLM miss nuance? Where does it hallucinate context? What does it do well?\nHistoriographic audit. Ask an LLM to produce a reading list on a topic the student knows well. Have them evaluate it: which sources are real? Which are fabricated? Which are accurately characterized? This is a powerful exercise in bibliographic literacy.\n\nThese assignments cannot be completed by GenAI because the task is to evaluate GenAI’s limitations. They teach the critical skills students need whether or not they use these tools in their own research."
+  },
+  {
+    "objectID": "teaching.html#what-we-know-works",
+    "href": "teaching.html#what-we-know-works",
+    "title": "LLMs and Teaching",
+    "section": "What We Know Works",
+    "text": "What We Know Works\nAfter three years of institutional experimentation, a rough consensus is emerging:\n\nDetection tools are not the answer. They produce too many false positives, are biased against vulnerable student populations, and are defeated by freely available evasion tools. Multiple institutions have disabled them. Do not build your integrity strategy around detection.\nAssessment design is the answer. Assignments that require demonstrated understanding — through oral components, process documentation, in-class work, or engagement with specific and idiosyncratic sources — are more robust than any technological fix.\nClarity is essential. Students report confusion about what is permitted. Every syllabus should state the course’s GenAI policy explicitly, including what is allowed, what is prohibited, and what must be disclosed.\nInstructor autonomy matters. Different courses have different goals. A first-year writing course and a fourth-year research seminar warrant different policies. Faculty should be supported in making the choice that serves their students and their pedagogy.\nThe conversation is ongoing. No policy adopted today will be the right policy in three years. Build in review mechanisms and be willing to adjust."
+  },
+  {
+    "objectID": "teaching.html#further-reading",
+    "href": "teaching.html#further-reading",
+    "title": "LLMs and Teaching",
+    "section": "Further Reading",
+    "text": "Further Reading\n\nAmerican Historical Association, Guiding Principles for Artificial Intelligence in History Education (August 2025).\nLiang, W., et al. “GPT Detectors Are Biased Against Non-Native English Writers.” Patterns 4, no. 7 (2023). PMC.\nInside Higher Ed, “You Can’t AI-Proof the Classroom, Experts Say. Get Creative Instead” (December 2025).\nNBC News, “To Avoid Accusations of AI Cheating, College Students Are Turning to AI” (2025)."
   },
   {
     "objectID": "case-studies.html",
