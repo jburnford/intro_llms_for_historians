@@ -11,7 +11,7 @@ This guide is for historians --- faculty and graduate students --- who are curio
 
 This is not an argument that you should use these tools. It is not a technology manifesto or a prediction about the future of the discipline. Some historians will find GenAI useful for specific research tasks. Others will try it and decide it does not suit their workflow. Both are reasonable outcomes.
 
-The goal is simply to give you enough hands-on experience to make an informed judgment.
+The goal is simply to give you enough hands-on experience to make an informed judgement.
 
 ## How It Is Organized
 

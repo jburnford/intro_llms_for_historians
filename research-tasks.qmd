@@ -5,7 +5,7 @@ subtitle: "Concrete applications for historical research"
 
 ## Overview
 
-This section walks through specific research tasks where GenAI tools have proven useful to working historians. Each subsection includes sample prompts you can adapt. The emphasis throughout is on using the tool to accelerate mechanical work while keeping the interpretive judgment in your hands.
+This section walks through specific research tasks where GenAI tools have proven useful to working historians. Each subsection includes sample prompts you can adapt. The emphasis throughout is on using the tool to accelerate mechanical work while keeping the interpretive judgement in your hands.
 
 ## Transcription
 

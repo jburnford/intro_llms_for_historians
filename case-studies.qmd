@@ -133,13 +133,13 @@ Both projects share a pattern that is worth highlighting:
 
 1. **The historian drove the research questions.** The tools did not generate the questions; they made it feasible to pursue questions that would otherwise have been impractical.
 
-2. **GenAI was used for mechanical tasks, not interpretation.** Transcription, entity extraction, code generation, data transformation --- these are the tasks the tools handled. The analysis, the arguments, and the historical judgments remained with the researcher.
+2. **GenAI was used for mechanical tasks, not interpretation.** Transcription, entity extraction, code generation, data transformation --- these are the tasks the tools handled. The analysis, the arguments, and the historical judgements remained with the researcher.
 
 3. **Each stage was built incrementally.** Neither project was planned as a monolith. The historian started with a simple task (transcribe some letters; re-OCR some articles), verified the results, and then asked: "What can I do with this now?" Each stage suggested the next.
 
 4. **The LLM wrote most of the code.** The researcher described what was needed, the LLM produced Python scripts, and the researcher tested and refined them. This is the coding workflow described in the [Research Tasks](research-tasks.qmd) section, applied at scale.
 
-5. **Verification was constant.** Transcriptions were checked against originals. Extracted entities were reviewed. Code was tested on real data. The tools accelerated the work; they did not eliminate the need for critical judgment.
+5. **Verification was constant.** Transcriptions were checked against originals. Extracted entities were reviewed. Code was tested on real data. The tools accelerated the work; they did not eliminate the need for critical judgement.
 
 6. **The results are open and reusable.** Both projects produced publicly accessible resources --- a searchable archive, interactive visualizations, downloadable data --- that other researchers can build on.
 

@@ -76,7 +76,7 @@ None of these are inevitable outcomes, but they are real risks. The best safegua
 | Bias and gaps | Treat output as a starting point, not an authority |
 | Privacy concerns | Do not paste sensitive or unpublished material into free-tier tools |
 | Over-reliance | Decide consciously what to delegate; maintain your own skills |
-| Illusion of understanding | Reserve interpretation, judgment, and argument for yourself |
+| Illusion of understanding | Reserve interpretation, judgement, and argument for yourself |
 
 : Summary of limitations and mitigations {.striped}
 
