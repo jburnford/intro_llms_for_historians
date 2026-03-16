@@ -53,7 +53,7 @@ LLMs excel at tasks where pattern recognition is the core skill:
 LLMs have improved substantially since 2024, but they still fail in characteristic ways:
 
 - **Factual accuracy**: They *hallucinate* --- generating plausible-sounding but false claims, including fabricated citations, invented dates, and non-existent sources. Hallucinations have become less frequent in the latest models, but this actually makes them *more* dangerous: when most output is accurate, it is easier to let your guard down and miss the one fabricated source that slips through.
-- **Archival research**: They cannot access unpublished sources, manuscript collections, or anything not in their training data. They have no way to visit an archive.
+- **Archival research**: Even with web search, they cannot access unpublished sources, manuscript collections, or materials behind paywalls. They have no way to visit an archive.
 - **Interpretation and argument**: Current models are surprisingly capable at synthesis and interpretation --- they can identify historiographic debates, weigh competing claims, and construct plausible arguments. But the *responsibility* for evaluating whether an interpretation is sound, whether the evidence is sufficient, and whether the argument holds up still rests with the historian. The models are getting better at the form *and* substance of argument, but they do not know your sources the way you do.
 - **Knowing what they do not know**: They do not reliably flag uncertainty. A fabricated citation may be presented with the same confidence as a real one, though some models (notably Claude) are better than others at acknowledging gaps.
 
@@ -68,12 +68,15 @@ The single most important skill in using these tools is **verification**. Never 
 
 If this sounds exhausting, it is worth noting that historians already verify sources as a matter of professional practice. The habit transfers directly. The difference is that with an LLM, you must verify the *tool* as well as the *source*.
 
-## A Note on Training Data
+## A Note on Training Data and Web Search
 
-LLMs are trained on text that existed up to a certain date (the "knowledge cutoff"). They do not have access to the internet in real time unless specifically designed to search the web (some tools offer this as a feature). They reflect the biases, gaps, and emphases of their training data. For historians, this means:
+LLMs are trained on text that existed up to a certain date (the "knowledge cutoff"). Most major models now include built-in web search (sometimes called retrieval-augmented generation, or RAG) that allows them to look up current information in real time. However, web search does not always activate: depending on how you phrase your prompt, the model may answer from its training data alone and give you outdated information without warning. If you need current facts, it is worth explicitly asking the model to search the web.
+
+Even with web search, LLMs reflect the biases, gaps, and emphases of both their training data and the sources available online. For historians, this means:
 
 - They know more about topics that are well-represented in English-language digital text.
 - They know less about topics that are primarily documented in archives, rare books, or languages with less digital presence.
 - They can reproduce historiographic biases present in the literature they were trained on.
+- Web search helps with recent events and verifiable facts, but does not give the model access to paywalled databases, archival finding aids, or subscription journals.
 
 None of this is disqualifying, but it means you should treat LLM output the way you would treat any secondary source: as a starting point that requires critical evaluation, not as an authority.
