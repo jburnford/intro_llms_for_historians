@@ -1,0 +1,60 @@
+---
+title: "What Are Large Language Models?"
+subtitle: "A brief, non-technical orientation"
+---
+
+## The Short Version
+
+Large language models (LLMs) are software systems trained on enormous quantities of text. When you type a prompt, the model generates a response by predicting what text is most likely to follow, drawing on patterns learned during training. The result often reads like it was written by a knowledgeable human --- but the process behind it is fundamentally different from human thought.
+
+Understanding this distinction matters. It explains both why these tools are useful and why they fail in characteristic ways.
+
+## How They Work (Without the Jargon)
+
+Imagine you had read every book, article, and webpage published in English (and many other languages) up to a certain date. You would develop a powerful sense of what kinds of sentences follow other sentences --- what arguments historians tend to make about the Atlantic slave trade, what a colonial office list looks like, how a French land grant is typically structured.
+
+An LLM has something like that statistical sense, but without understanding. It does not *know* that the Treaty of Paris was signed in 1763 the way you know it. It has learned that in texts about the Seven Years' War, the phrase "Treaty of Paris" is very often followed by "1763." This is a crucial distinction.
+
+When the pattern is strong and well-represented in the training data, the model produces accurate, useful output. When the pattern is weak, ambiguous, or absent, the model produces confident-sounding nonsense. It does not know the difference.
+
+## What They Are Good At
+
+LLMs excel at tasks where pattern recognition is the core skill:
+
+- **Transcription assistance**: Recognizing words in difficult handwriting or degraded print, especially when given context about the document's era and language.
+- **Translation**: Producing serviceable rough translations, particularly for well-represented languages (French, Spanish, German, Latin).
+- **Summarization**: Condensing long texts into shorter summaries (useful for triage, not for close reading).
+- **Code generation**: Writing scripts in Python, R, or other languages for data tasks --- often faster and more reliably than a historian learning to code from scratch.
+- **Editing and proofreading**: Catching typos, grammar errors, and inconsistencies in your drafted text.
+- **Reformatting and structuring**: Converting data between formats, extracting structured information from unstructured text.
+
+## What They Are Bad At
+
+LLMs fail predictably in areas that require knowledge they do not have or reasoning they cannot do:
+
+- **Factual accuracy**: They *hallucinate* --- generating plausible-sounding but false claims, including fabricated citations, invented dates, and non-existent sources. This is not a bug that will be fixed; it is an inherent feature of how the technology works.
+- **Archival research**: They cannot access unpublished sources, manuscript collections, or anything not in their training data. They have no way to visit an archive.
+- **Interpretation and argument**: They can mimic the form of a historical argument but cannot actually weigh evidence, assess significance, or make the judgments that constitute historical analysis.
+- **Counting and arithmetic**: Paradoxically, language models are unreliable at basic math and counting tasks.
+- **Knowing what they do not know**: They do not flag uncertainty. A fabricated citation is presented with the same confidence as a real one.
+
+## The Key Habit: Verify Everything
+
+The single most important skill in using these tools is **verification**. Never trust an LLM's output without checking it against a source you control. This applies especially to:
+
+- Citations and bibliographic references (check that the book or article actually exists)
+- Dates, names, and factual claims
+- Translations (compare against the original, or a second source)
+- Code (test it; does it actually do what you asked?)
+
+If this sounds exhausting, it is worth noting that historians already verify sources as a matter of professional practice. The habit transfers directly. The difference is that with an LLM, you must verify the *tool* as well as the *source*.
+
+## A Note on Training Data
+
+LLMs are trained on text that existed up to a certain date (the "knowledge cutoff"). They do not have access to the internet in real time unless specifically designed to search the web (some tools offer this as a feature). They reflect the biases, gaps, and emphases of their training data. For historians, this means:
+
+- They know more about topics that are well-represented in English-language digital text.
+- They know less about topics that are primarily documented in archives, rare books, or languages with less digital presence.
+- They can reproduce historiographic biases present in the literature they were trained on.
+
+None of this is disqualifying, but it means you should treat LLM output the way you would treat any secondary source: as a starting point that requires critical evaluation, not as an authority.

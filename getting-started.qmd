@@ -1,0 +1,72 @@
+---
+title: "Getting Started"
+subtitle: "Your first session with a free tool"
+---
+
+## Choose a Tool
+
+You can begin with either of these free options. Both require only an email address to create an account:
+
+- **ChatGPT** ([chatgpt.com](https://chatgpt.com)) --- Made by OpenAI. The free tier gives you access to the GPT-4o model with some usage limits. This is probably the most widely used LLM.
+- **Google Gemini** ([gemini.google.com](https://gemini.google.com)) --- Made by Google. Free with a Google account. Comparable capability to ChatGPT for most tasks.
+
+Both tools work in a web browser. You type a message, the model responds, and you can continue the conversation. There is nothing to install.
+
+For this guide, the examples use ChatGPT, but the prompts work in any tool with minor adjustments.
+
+## Your First Conversation
+
+Open one of the tools above and try the following prompt. Copy and paste it, or adapt it to a topic you know well:
+
+> I am a historian studying the development of the western Canadian grain trade in the early twentieth century. Can you give me a brief overview of the major developments between 1900 and 1930, focusing on the role of grain elevators and the Winnipeg Grain Exchange?
+
+Read the response. Some of it will be accurate. Some of it may be vague or slightly wrong. Notice:
+
+- Does it cite specific sources? (Probably not, or if it does, check whether they exist.)
+- Does it capture the broad outlines correctly?
+- Where does it feel generic --- like a textbook summary rather than a historian's analysis?
+
+This is a useful calibration exercise. You now have a sense of what the tool knows and does not know about a topic you understand.
+
+## A More Useful Exercise: Transcription
+
+LLMs are often more useful for concrete tasks than for open-ended questions. Try this:
+
+1. Find a page from a digitized historical document --- a handwritten letter, a printed government report with difficult typography, or a census page. If you have a PDF on your computer, many LLM tools now allow you to upload images or documents directly.
+
+2. Upload or paste the text and ask:
+
+> Please transcribe the text in this image as accurately as possible. This is a [type of document] from [approximate date and context]. Preserve the original spelling and punctuation.
+
+3. Compare the output against the original. Where does it succeed? Where does it struggle?
+
+For printed text in good condition, LLMs are often very accurate. For handwriting, the results are more variable but can still be a useful first pass that you then correct.
+
+## Understanding the Conversation Model
+
+A few things are worth knowing about how these tools work in practice:
+
+**Context window.** The model can only "remember" a certain amount of text within a single conversation. If your conversation becomes very long, the model may lose track of things you said earlier. For long tasks, it can help to start a new conversation and restate the key context.
+
+**System prompts and instructions.** You can begin a conversation by telling the model what role you want it to play or what constraints to follow. For example:
+
+> You are helping me transcribe 19th-century French colonial correspondence. The documents are from the Archives nationales d'outre-mer. Please preserve the original French text and flag any words you are uncertain about with [?].
+
+This kind of framing improves results significantly.
+
+**Follow-up questions.** You can refine the model's output by asking follow-up questions in the same conversation:
+
+> That transcription looks mostly right, but I think the word you read as "commerce" in line 3 is actually "commode." Can you look at that section again?
+
+The model will adjust. This iterative back-and-forth is often more productive than trying to get a perfect result on the first try.
+
+## What You Have Learned
+
+After fifteen minutes with a free tool, you should have a sense of:
+
+- How the conversational interface works
+- What kind of output the model produces for topics you know
+- How transcription assistance works in practice
+- The importance of checking everything
+
+The next section, **[Research Tasks](research-tasks.qmd)**, walks through specific applications in more detail.

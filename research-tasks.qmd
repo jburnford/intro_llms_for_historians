@@ -1,0 +1,131 @@
+---
+title: "Research Tasks"
+subtitle: "Concrete applications for historical research"
+---
+
+## Overview
+
+This section walks through specific research tasks where GenAI tools have proven useful to working historians. Each subsection includes sample prompts you can adapt. The emphasis throughout is on using the tool to accelerate mechanical work while keeping the interpretive judgment in your hands.
+
+## Transcription
+
+### The Use Case
+
+You have digitized images of manuscripts, printed documents, or typescripts that need to be converted to searchable, editable text. Traditional OCR (optical character recognition) struggles with handwriting, damaged pages, and pre-twentieth-century typefaces. LLMs with vision capabilities (ChatGPT, Claude, Gemini) can often do better because they use context --- they understand that a colonial dispatch is likely to contain certain words and phrases, which helps them read ambiguous characters.
+
+### How to Do It
+
+1. Upload an image of the document page to the chat interface. Most current tools accept image files (JPG, PNG) and PDFs.
+
+2. Provide context in your prompt:
+
+> This is a page from a handwritten letter written by a Hudson's Bay Company factor at York Factory, circa 1820. Please transcribe the text as accurately as possible. Preserve original spelling, capitalization, and punctuation. Where you are uncertain about a word, mark it with [?].
+
+3. Review the output against the original image. Correct errors and ask follow-up questions:
+
+> In line 7, you transcribed "provisions" --- I think the original reads "previsions." Can you look at that word again?
+
+### Tips
+
+- Provide as much context as you can: the document type, date, language, and any distinctive features (e.g., "this writer uses the long s").
+- Process one page at a time for best results.
+- For large-scale transcription projects (hundreds of pages), specialized OCR tools like Transkribus may be more efficient. LLMs are best for small batches or particularly difficult pages.
+
+## Translation
+
+### The Use Case
+
+You are working with primary sources in a language you can read with difficulty, or a language where you need to process many documents quickly. You do not need a publication-quality translation --- you need a working draft that gets you close enough to assess the source's relevance and content.
+
+### How to Do It
+
+> Please translate the following passage from 18th-century French into English. This is from a colonial administrator's report on trade in the Antilles. Preserve the meaning as closely as possible; I do not need an elegant literary translation. Flag any terms that are ambiguous or that you are uncertain about.
+>
+> [paste the French text here]
+
+### Tips
+
+- Always compare the translation against the original for key passages you plan to cite.
+- LLMs handle French, Spanish, German, Dutch, and Latin well. Performance degrades for less-represented languages and for heavily abbreviated or formulaic text (e.g., notarial records).
+- For period-specific vocabulary, tell the model the era: "This is 17th-century legal French; *habitant* here means settler-farmer, not inhabitant."
+- If you plan to quote a translated passage in a publication, have the translation verified independently. LLM translation is a research aid, not a citable source.
+
+## Literature Discovery
+
+### The Use Case
+
+You are beginning a new project or entering an unfamiliar historiography and want to identify key works, major debates, and starting points for reading.
+
+### How to Do It
+
+> I am starting a research project on the role of insurance in the British slave trade, roughly 1700--1807. Can you identify the key secondary works I should read? I am particularly interested in the intersection of financial history and the history of slavery.
+
+### The Critical Caveat
+
+**LLMs frequently hallucinate citations.** They generate titles, authors, and publication details that look correct but do not correspond to any real publication. This is one of the most dangerous failure modes for historians.
+
+**Rules for using LLM-generated reading lists:**
+
+- Treat every citation as a *suggestion to verify*, not a confirmed reference.
+- Search for each title in your library catalogue, JSTOR, or Google Scholar before adding it to your bibliography.
+- If a title does not turn up in any database, it probably does not exist.
+- The model is better at identifying well-known works than obscure articles. Use it for orientation, not for comprehensive literature review.
+
+### Tips
+
+- Ask for the bibliographic details explicitly: "Please include the full title, author, publisher, and date for each work."
+- Cross-reference with review essays, Oxford Bibliographies, or historiographic surveys for the field.
+- Consider this a complement to, not a replacement for, searching databases yourself.
+
+## Coding and Data Management
+
+### The Use Case
+
+You have data --- a spreadsheet of census records, a collection of digitized documents, a database of shipping records --- and you need to clean, transform, analyse, or visualize it. You are not a programmer, or you are a beginning programmer who gets stuck on syntax.
+
+This is one of the areas where LLMs provide the most dramatic productivity gains for historians. Tasks that might take a week to learn from scratch can often be accomplished in an afternoon with LLM assistance.
+
+### How to Do It
+
+> I have a CSV file with 428 rows of data about Saskatchewan settlements from the 1921 census. The columns include settlement name, founding year, population, railway company, and year of railway arrival. Some cells contain multiple values separated by semicolons (e.g., a settlement served by two railway companies). I want to write a Python script that:
+>
+> 1. Reads the CSV file
+> 2. Splits the multi-value cells into separate rows
+> 3. Creates a summary table showing, for each railway company, how many settlements it served and the average population of those settlements
+> 4. Exports the result to a new CSV file
+>
+> Please write the script and explain each step so I can understand what it does.
+
+### Tips
+
+- Be specific about your data: describe the columns, the format, any irregularities.
+- Ask the model to explain the code, not just write it. Understanding what the script does allows you to modify it later and catch errors.
+- **Always test the code on your actual data.** The model may make assumptions about your file structure that are not correct.
+- Start with small, well-defined tasks. Once you are comfortable, you can tackle larger data projects.
+- If the first attempt does not work, paste the error message back into the conversation. The model is usually good at diagnosing and fixing its own mistakes.
+
+### What This Looks Like in Practice
+
+A historian building a database of plantation estates might use an LLM to:
+
+- Write a script that scrapes structured data from a website
+- Clean inconsistent date formats across thousands of records
+- Generate Cypher queries to load data into a Neo4j graph database
+- Create visualizations of temporal patterns (e.g., settlement founding dates by decade)
+
+None of this requires the historian to become a software engineer. It requires them to describe clearly what they want and to verify that the output is correct --- skills that transfer directly from historical method.
+
+## Organizing and Structuring Notes
+
+### The Use Case
+
+You have extensive research notes, archival transcriptions, or document summaries and want to organize them by theme, date, or topic.
+
+### How to Do It
+
+> I have transcribed notes from 30 letters written by colonial administrators in Jamaica between 1815 and 1834. Each note is a paragraph summarizing the letter's contents with the date and author. I am going to paste all 30 summaries below. Please organize them chronologically and identify the major recurring themes across the correspondence.
+
+### Tips
+
+- This works best when you have already done the intellectual work of reading and summarizing. The LLM organizes *your* notes; it does not generate understanding for you.
+- Useful for conference paper preparation, chapter outlining, or identifying gaps in your research.

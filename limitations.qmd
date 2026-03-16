@@ -1,0 +1,87 @@
+---
+title: "Limitations and Risks"
+subtitle: "What GenAI gets wrong and why it matters"
+---
+
+## Why This Section Matters
+
+The preceding pages describe what GenAI tools can do. This section describes what they cannot do, what they do badly, and where using them can lead you astray. For a historian, understanding the failure modes is not optional --- it is the difference between a useful tool and a liability.
+
+## Hallucination
+
+This is the most important limitation. LLMs generate text that is statistically plausible, not text that is true. They will:
+
+- **Invent citations.** They produce author names, titles, journal names, volume numbers, and page ranges that look entirely real but correspond to no actual publication. This is not rare; it happens routinely.
+- **Fabricate historical details.** They may generate plausible-sounding dates, names, or events that did not occur, especially for obscure topics.
+- **Blend real and false information seamlessly.** A paragraph might contain three accurate claims and one fabricated one, with no difference in tone or confidence.
+
+### What to Do About It
+
+- **Verify every factual claim** against a source you trust.
+- **Verify every citation** in a library catalogue, JSTOR, or Google Scholar.
+- **Never cite an LLM as a source** in scholarly work. It is not a source; it is a text-generation engine.
+- **Be especially cautious** about topics that are obscure, recent, or poorly represented in English-language digital text.
+
+## Bias and Representation
+
+LLMs reflect the biases of their training data. For historians, this has specific implications:
+
+- **Anglophone and Western bias.** The models know more about the history of Britain and the United States than about the history of, say, the Swahili coast or Central Asia. Responses about less-represented topics will be thinner, more generic, and more likely to contain errors.
+- **Historiographic lag.** The training data reflects the published literature, which means the models tend to reproduce older historiographic framings. They may default to nationalist narratives, Great Man history, or other interpretive frameworks that the discipline has moved beyond.
+- **Erasure and euphemism.** Some models are tuned to avoid controversial topics, which can result in euphemistic or evasive language about slavery, colonialism, genocide, and other subjects that historians must discuss directly.
+
+### What to Do About It
+
+- Treat LLM output as you would an encyclopedia entry: a starting point that reflects a particular perspective, not a neutral authority.
+- Be alert to gaps --- what the model does *not* say can be as revealing as what it does.
+- If you notice the model using euphemistic language about sensitive historical topics, push back explicitly in your prompt: "Please use direct, scholarly language. Do not euphemize."
+
+## The Illusion of Understanding
+
+LLMs produce text that reads as if it were written by someone who understands the topic. This is misleading. The model does not understand; it predicts. The practical consequence is that:
+
+- It cannot distinguish between a strong argument and a weak one.
+- It cannot judge the reliability of a source.
+- It cannot weigh conflicting evidence.
+- It cannot tell you when a question is more complex than it appears.
+
+These are the tasks that define historical practice. They cannot be delegated to an LLM.
+
+## Privacy and Intellectual Property
+
+### Your Data
+
+When you paste text into a web-based chatbot, that text is transmitted to the company's servers. Consider:
+
+- **Unpublished research.** If you paste a chapter draft into ChatGPT, that text has left your control. Most services state that they do not use paid-tier conversations for training, but policies vary and change.
+- **Sensitive data.** Records involving living people, embargoed materials, or data covered by research ethics agreements should not be pasted into commercial LLM tools without careful consideration.
+- **Student work.** If you are using GenAI tools to evaluate student submissions, be aware that you may be sharing student work with a third-party service.
+
+### The Model's "Knowledge"
+
+LLMs were trained on text scraped from the internet, including copyrighted material. The legal and ethical status of this training is unresolved and actively litigated. This is worth being aware of, though it does not directly affect most research use cases.
+
+## Over-Reliance
+
+The subtlest risk is not that the tool will fail dramatically but that it will work well enough to change your behaviour. Historians who use LLMs for translation may gradually do less of their own translation practice. Historians who use LLMs for literature discovery may search databases less thoroughly. Historians who use LLMs for coding may understand their own scripts less deeply.
+
+None of these are inevitable outcomes, but they are real risks. The best safeguard is intentionality: decide in advance what you want to learn and what you want to delegate, and revisit that decision periodically.
+
+## Summary
+
+| Risk | Mitigation |
+|------|------------|
+| Hallucinated citations | Verify every reference in a catalogue or database |
+| Fabricated facts | Check all claims against trusted sources |
+| Bias and gaps | Treat output as a starting point, not an authority |
+| Privacy concerns | Do not paste sensitive or unpublished material into free-tier tools |
+| Over-reliance | Decide consciously what to delegate; maintain your own skills |
+| Illusion of understanding | Reserve interpretation, judgment, and argument for yourself |
+
+: Summary of limitations and mitigations {.striped}
+
+## The Bottom Line
+
+These tools are useful. They are also unreliable, biased, and incapable of the interpretive work that defines our discipline. Using them well means using them for what they are good at (mechanical tasks, pattern recognition, draft editing) while keeping the intellectual work --- the reading, the thinking, the arguing --- firmly in your own hands.
+
+That is not a limitation of the technology. It is the point.

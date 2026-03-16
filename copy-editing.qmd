@@ -1,0 +1,65 @@
+---
+title: "Copy Editing"
+subtitle: "Using GenAI to polish your own writing"
+---
+
+## The Distinction That Matters
+
+There is a difference between asking an LLM to *write* for you and asking it to *edit* what you have already written. This guide is about the latter. The assumption is that you have drafted your own prose --- the arguments, the structure, the evidence are yours --- and you want help catching errors, tightening sentences, and improving clarity.
+
+This is not meaningfully different from asking a colleague to read a draft, or from using Grammarly, or from working with a copy editor. The tool is more capable than a spell-checker and less capable than a good human editor. It is useful precisely in that middle range.
+
+## How to Do It
+
+### Basic Proofreading
+
+Paste a section of your draft and ask:
+
+> Please proofread the following passage for spelling, grammar, and punctuation errors. Do not change the content, argument, or voice --- only flag mechanical errors. List each error with the original text and the suggested correction.
+
+This produces a list of corrections you can accept or reject individually, rather than a rewritten passage that you have to compare line by line.
+
+### Clarity and Flow
+
+> Please read the following passage and suggest improvements to clarity and readability. Do not change the argument or the evidence. Focus on sentence structure, word choice, and flow. Present your suggestions as a list of specific changes, not a rewritten version.
+
+### Consistency Checking
+
+> I am writing a chapter that uses the following terms: "enslaved person" (not "slave"), "slaveholder" (not "slave owner"), and "plantation" (not "estate" except when referring to legal documents). Please check the following passage for consistency with these preferences and flag any deviations.
+
+### Citation and Footnote Review
+
+> Please check the following passage for any footnotes that appear to reference the wrong source, or for claims that are made without a supporting footnote. I have pasted the passage with its footnotes below.
+
+## Staying in Control
+
+The key risk with AI-assisted editing is that the tool may "improve" your prose in ways that change your meaning or flatten your voice. A few guidelines:
+
+- **Always review changes individually.** Do not accept a batch rewrite. Ask for a list of specific suggestions, not a new version of the paragraph.
+- **Reject stylistic changes that do not suit you.** LLMs tend toward a generic, slightly formal tone. If the model suggests replacing your phrasing with something blander, keep yours.
+- **Watch for meaning drift.** The model may tighten a sentence in a way that subtly changes what you are saying. Read each suggestion against your intended meaning.
+- **Do not let it restructure your argument.** If you ask for "clarity" suggestions and the model proposes reordering your paragraphs, that is an intellectual decision, not a copy-editing one. Make those choices yourself.
+
+## What It Does Well
+
+- Catching typos and grammatical errors, including subtle ones (subject-verb agreement across long sentences, misplaced modifiers)
+- Identifying repetitive word choice
+- Flagging inconsistent formatting (dates, capitalization, hyphenation)
+- Spotting missing articles or prepositions that a spell-checker would miss
+
+## What It Does Poorly
+
+- Recognizing intentional stylistic choices (sentence fragments for emphasis, deliberate repetition, rhetorical structure)
+- Understanding disciplinary conventions (Chicago-style footnotes, the use of the historical present, block quotation formatting)
+- Knowing when *not* to change something
+
+## A Practical Workflow
+
+1. **Write your draft yourself.** Do not use GenAI for initial drafting.
+2. **Revise your draft yourself.** Get the argument and structure where you want them.
+3. **Run a proofreading pass** with the LLM, asking for a list of mechanical errors.
+4. **Accept or reject each suggestion** individually.
+5. **Optionally, run a clarity pass** --- again reviewing each suggestion against your original intent.
+6. **Read the final version yourself.** You are responsible for every word.
+
+This workflow keeps you in the author's seat throughout. The LLM functions as a very fast, very patient proofreader --- nothing more.

@@ -1,0 +1,148 @@
+---
+title: "Deep Research Tools"
+subtitle: "Automated literature review and its pitfalls"
+---
+
+## What Are Deep Research Tools?
+
+Several GenAI products now offer a "deep research" or "research" mode that goes beyond a simple chatbot response. Instead of answering your question from memory, these tools search the web, read multiple sources, synthesize what they find, and produce a structured report --- often with citations and footnotes.
+
+The major options as of early 2026:
+
+- **Gemini Deep Research** (Google) --- available with Gemini Advanced ($20/month). Searches the web, reads pages, and produces multi-page reports with source links.
+- **ChatGPT Deep Research** (OpenAI) --- available with ChatGPT Plus and Pro. Similar approach: extended web browsing, synthesis, and structured output.
+- **Perplexity** ([perplexity.ai](https://perplexity.ai)) --- available in a free tier with limits, and a Pro tier (~$20/month). Designed from the ground up as a research tool. Every claim is linked to a source. The free tier is a good starting point.
+- **Claude with web search** (Anthropic) --- Claude Pro can search the web when asked. Less automated than the dedicated deep research tools, but the underlying model is strong on synthesis and nuance.
+
+These tools represent a genuine step forward from the basic chatbot experience described in earlier sections. They can produce results in minutes that would take hours of manual searching. They are also where GenAI's limitations become most consequential for historians.
+
+## What They Do Well
+
+### Rapid Orientation in an Unfamiliar Field
+
+If you are beginning a project in a historiography you do not know, a deep research tool can produce a useful map of the terrain in fifteen minutes. Ask:
+
+> I am a historian beginning a research project on the role of marine insurance in the British Atlantic slave trade, roughly 1700--1807. Please search for the key secondary literature and major scholarly debates. I am interested in work published since 2000, particularly at the intersection of financial history and the history of slavery. Provide full bibliographic details for each source and a brief summary of its argument.
+
+The result will typically be a structured report identifying major scholars, key monographs and articles, and the main lines of debate. This is genuinely useful as a starting point --- comparable to asking a knowledgeable colleague for reading suggestions, but faster and more systematic.
+
+### Finding Recent Work
+
+Deep research tools that search the web can surface recent publications that may not yet appear in standard bibliographic databases. For fast-moving fields or recent special issues, this is a real advantage over traditional database searching.
+
+### Identifying Connections Across Fields
+
+Because these tools search broadly, they sometimes surface relevant work in adjacent fields that a historian searching within disciplinary databases might miss --- economics journals, legal history, historical geography, environmental science.
+
+### Producing Working Bibliographies
+
+The best deep research reports include enough bibliographic detail that you can quickly verify each source in your library catalogue or JSTOR. This makes them useful as a triage tool: generate a long list, verify what exists, and then decide what to read.
+
+## Where They Fail --- and Why It Matters More Here
+
+The limitations described in the [Limitations](limitations.qmd) section apply to deep research tools with particular force, because the output *looks* more authoritative. A chatbot response that gets something wrong is easy to spot --- it reads like a casual answer. A deep research report with footnotes, structured sections, and scholarly language is much harder to evaluate critically. The very features that make these tools useful also make their failures more dangerous.
+
+### Mixed Real and Fabricated Citations
+
+This is the central problem. Deep research reports typically contain a mixture of:
+
+- **Real sources**, correctly cited and accurately summarized.
+- **Real sources**, cited but inaccurately summarized or mischaracterized.
+- **Fabricated sources** that do not exist, presented with plausible-sounding titles, authors, journal names, and dates.
+
+The fabricated sources are not flagged. They appear in the same footnote format as the real ones. The ratio varies --- some reports are largely accurate, others contain multiple fabrications --- but you cannot tell in advance which kind you have received.
+
+**This means every single citation in a deep research report must be independently verified.** This is not a suggestion; it is a requirement. A historian who cites a source from a deep research report without checking that it exists risks citing a work that was never published.
+
+### Confident Mischaracterization
+
+Even when a source is real, the tool may misrepresent its argument. A nuanced article that complicates a received narrative may be summarized as if it simply confirms it. A book that is primarily about one topic may be cited for a claim it makes only in passing. The tool does not distinguish between a work's central thesis and an incidental observation.
+
+### Historiographic Flattening
+
+Deep research tools tend to present scholarly debates as settled when they are not, or to smooth over genuine disagreements. A report on the "Williams thesis" might present it as either confirmed or refuted, when the actual historiographic situation is far more complicated. The tools do not handle ambiguity, ongoing debate, or productive disagreement well.
+
+### Source Quality Blindness
+
+These tools do not distinguish between a peer-reviewed article in *Past & Present* and a blog post. They weight sources by accessibility and relevance to the query, not by scholarly authority. A deep research report may cite high-quality scholarship alongside popular histories, journalism, or Wikipedia summaries without distinguishing between them.
+
+## A Practical Workflow
+
+Given these strengths and limitations, here is a workflow that gets the most value from deep research tools while managing the risks:
+
+### Step 1: Generate
+
+Run a deep research query on your topic. Be specific about what you want:
+
+> Search for peer-reviewed scholarship published since 2010 on [your topic]. Focus on [specific aspects]. Provide full bibliographic details (author, title, journal/publisher, date, volume, pages) for each source.
+
+### Step 2: Verify Every Citation
+
+Go through the report's citations one by one:
+
+- Search for each title in your library catalogue, Google Scholar, JSTOR, or WorldCat.
+- If a source does not appear in any database, it probably does not exist. Remove it.
+- If a source exists, check that the author, date, and publication details match.
+
+This step is non-negotiable. Budget time for it.
+
+### Step 3: Check Summaries Against Originals
+
+For sources you plan to use, read at least the abstract and introduction yourself. Verify that the tool's summary accurately reflects the work's argument. Do not rely on the tool's characterization.
+
+### Step 4: Fill the Gaps
+
+Deep research reports are biased toward digitally accessible, English-language sources. After verifying what the tool found, search manually for:
+
+- Work in other languages relevant to your topic.
+- Older foundational texts that may not be well-represented online.
+- Archival sources and primary source collections (which these tools cannot access).
+- Recent work that may not yet be indexed.
+
+### Step 5: Read
+
+There is no substitute for this. The deep research report tells you what might be worth reading. The reading itself is your job.
+
+## Comparing the Tools
+
+Each deep research tool has different strengths. Based on early 2026 capabilities:
+
+| Tool | Strengths | Weaknesses |
+|------|-----------|------------|
+| **Perplexity** | Source links for every claim; free tier available; good for quick factual queries | Can be shallow on historiographic nuance; free tier has limits |
+| **Gemini Deep Research** | Excellent on well-documented historiography; thorough multi-page reports | Degrades badly at the edges of knowledge (see below) |
+| **ChatGPT Deep Research** | Strong synthesis; good at identifying scholarly debates | Citation accuracy varies; can hallucinate convincingly |
+| **Claude (web search)** | More cautious; better at flagging uncertainty and acknowledging gaps | Weaker on historiography; less automated; requires more guidance |
+
+These assessments will change as the tools improve. The verification workflow remains the same regardless of which tool you use.
+
+### A Note on Gemini and the Limits of Knowledge
+
+Gemini Deep Research deserves special mention because it illustrates a pattern that applies to all these tools but is particularly visible here. When you ask Gemini about a well-established historiographic debate --- the Williams thesis, the standard of living debate, the "great divergence" --- it is genuinely impressive. It identifies the key scholars, maps the lines of argument, and produces reports that a graduate student would find useful.
+
+The problem emerges when you push toward questions at the frontier of historical knowledge --- topics where the primary sources are thin, not digitized, or simply do not exist. When Gemini cannot find strong evidence, it does not say so. Instead, it answers the question anyway, drawing on whatever it can find: sources from the wrong decade, tangentially related evidence, or speculative claims from weak secondary sources presented with the same confidence as established scholarship. The report reads just as polished and authoritative as one about a well-documented topic. The difference is invisible unless you already know enough to spot it.
+
+This is the fundamental trap of deep research tools: **they are most useful when you know the least about a topic, and least reliable in exactly that situation.** When you are entering an unfamiliar field --- the very moment you most need guidance --- you are also least equipped to evaluate what the tool gives you. The verification workflow described above is the only safeguard.
+
+### A Note on Claude and the Limits of Training Data
+
+Claude presents roughly the opposite trade-off from Gemini. Because Anthropic likely had less access to paywalled academic journals and monographs in its training data, Claude is noticeably weaker on established historiography --- it may miss key works or be vague where Gemini is specific. On the other hand, Claude is better at recognizing and communicating its own uncertainty. When it cannot find strong evidence for a claim, it is more likely to say so rather than filling the gap with weak or mismatched sources.
+
+This is a genuine advantage, but it is not absolute. Claude will still sometimes present uncertain claims with more confidence than they deserve. The difference is one of degree: you are somewhat less likely to receive a confident answer built on evidence from the wrong decade, and somewhat more likely to receive an honest "I am not sure about this." For a historian, a tool that says "I don't know" is often more useful than one that gives you a plausible-sounding wrong answer --- but you should still verify everything regardless of which tool you use.
+
+## When Deep Research Tools Are Most Useful
+
+- **Entering a new field.** You are starting a project outside your usual area and need a map of the literature.
+- **Checking for recent work.** You have not searched a particular topic in a year or two and want to see what has been published.
+- **Interdisciplinary questions.** Your project touches on economics, law, environmental science, or another field, and you want to find relevant work outside history journals.
+- **Generating leads, not conclusions.** You treat the output as a list of things to check, not as a finished literature review.
+
+## When They Are Not Useful
+
+- **Your own specialty.** You almost certainly know the literature better than the tool does. It may surface the occasional overlooked article, but the risk of fabricated or mischaracterized sources is not worth the time for a field you already command.
+- **Archival research.** These tools cannot access unpublished sources, manuscript collections, or finding aids.
+- **Historiographic argument.** A literature review in a thesis or article must reflect *your* reading and *your* interpretation of the field. A deep research report is a starting point for that work, not a substitute for it.
+
+## The Bottom Line
+
+Deep research tools are the most impressive and the most dangerous GenAI application for historians. They can save you hours of initial searching. They can also fill your bibliography with sources that do not exist and your notes with summaries that misrepresent the scholarship. The tool does the searching. The verification, the reading, and the thinking are yours.

@@ -1,0 +1,155 @@
+---
+title: "Case Studies"
+subtitle: "What a historian can build with these tools"
+---
+
+## Why Case Studies?
+
+The earlier sections of this guide describe individual tasks --- transcription, translation, coding, copy editing. But the real power of GenAI tools emerges when you combine them into a sustained research workflow. The two projects described here were built by a historian, not a computer scientist, using the kinds of tools discussed in this guide. Neither required advanced programming skills at the outset. Both started with a straightforward question and grew as the tools made each next step feasible.
+
+The point is not that every historian should build a knowledge graph. It is that these tools lower the barrier to computational research methods enough that projects which once required a dedicated digital humanities team can now be undertaken by a single researcher with a clear question and a willingness to learn.
+
+---
+
+## Case Study 1: The Philosophical Transactions of the Royal Society (1665--1869)
+
+### The Question
+
+The *Philosophical Transactions* is the world's first and longest-running scientific journal, published continuously since 1665. Its 8,128 articles and 106,829 pages document over two centuries of scientific thought in Britain and beyond --- from Newton's optics to Darwin's early papers, from earthquake reports to experiments on air pressure. The full run is digitized and available through JSTOR's Early Journal Content on the Internet Archive. But how do you actually *use* 200 years of scientific literature as a historical source? You cannot read 107,000 pages. Keyword search misses vocabulary drift ("electrical fluid" for electricity, "natural philosophy" for science). And the connections between articles --- the people, the places, the specimens, the ideas --- are invisible in a flat text archive.
+
+### What Was Built
+
+The project proceeded in stages, each one made possible by GenAI tools:
+
+**Stage 1: Re-OCR the entire collection.** The existing digitizations had mediocre OCR, particularly for early volumes with long-s typography and Latin text. Using OLMoCR (an AI-powered OCR system) running on H100 GPUs at a university cluster, all 8,128 articles were re-processed. The result: 197 MB of clean, searchable text, with language detection (English, Latin, French) and table identification. Processing took roughly a day of cluster time.
+
+**Stage 2: Extract entities.** Using an LLM (Gemini), the project extracted people, places, and scientific taxa (species names) mentioned across the entire corpus. The result: over 86,000 entity mentions --- 36,824 people, 32,527 places, and 17,122 scientific taxa --- linked back to the specific articles and pages where they appear.
+
+**Stage 3: Build a knowledge graph.** The extracted entities were assembled into a network: nodes for people, places, taxa, and articles, with edges representing co-occurrence (who is mentioned alongside whom) and document membership (which entities appear in which article). The graph contains 94,601 nodes and over a million edges. A temporal layer links articles to years, decades, and centuries, enabling queries like "show me all articles about electricity published between 1740 and 1760."
+
+**Stage 4: Create searchable embeddings.** Every page of every article was converted into a numerical vector (an "embedding") that captures its semantic content. This enables similarity search: you can ask for pages that are *about* a topic, not just pages that contain a specific word. The vector index holds 92,786 page embeddings.
+
+**Stage 5: Build a query interface.** The knowledge graph and vector index were combined into a GraphRAG (Graph Retrieval-Augmented Generation) system. A researcher types a natural language question. The system searches the graph for relevant entities and the vector index for semantically similar pages, retrieves the actual text of the most relevant articles, and uses an LLM to synthesize a response grounded in the primary sources, with full citations.
+
+**Stage 6: Publish the archive.** All 8,128 articles were published as a browsable, searchable static website with downloadable Markdown and JSON files for every article.
+
+### What It Looks Like in Practice
+
+A historian studying Joseph Banks' influence on botanical exploration types:
+
+> What role did Joseph Banks play in directing botanical research through the Royal Society?
+
+The system searches the entity graph for Banks, finds the 1,599 pages that mention him, retrieves the most relevant articles, and generates a synthesized response drawing on dozens of primary sources --- with clickable citations to each article. The entire process takes about 20 seconds.
+
+A historian of electricity types:
+
+> How did understandings of electricity change between 1700 and 1800?
+
+The system finds articles discussing electrical phenomena across the century, accounts for vocabulary change (it knows that "electrical fluid," "Leyden jar," and "galvanism" are all relevant), and produces a narrative overview grounded in the actual articles, not in the LLM's general knowledge.
+
+### The Tools Used
+
+| Task | Tool | Difficulty |
+|------|------|------------|
+| OCR processing | OLMoCR on university GPU cluster | Moderate (required cluster access) |
+| Entity extraction | Gemini API (LLM) | Low (write a prompt, run a script) |
+| Knowledge graph | NetworkX (Python library) | Low-moderate (LLM wrote most of the code) |
+| Vector embeddings | NVIDIA NV-Embed-v2 | Moderate (requires GPU) |
+| Query system | Python + Gemini API | Low (LLM assisted with code) |
+| Static website | Jekyll + Pagefind | Low |
+| Deployment | Modal.com (serverless) | Low-moderate |
+
+The historian who built this project is not a software engineer. Most of the Python code was written with LLM assistance --- describing what was needed, reviewing what the LLM produced, testing it on the data, and iterating. The skills required were: a clear research question, the ability to describe data clearly, and the patience to verify that each stage worked correctly before moving to the next.
+
+### What It Made Possible
+
+The project has already supported research on ecological constraints in early modern science, the economic botany of the British Empire, and the history of tanning materials --- topics that would have required months of manual searching to investigate across a corpus this large. The GraphRAG system does not replace close reading. It tells the historian *which* articles to read closely, and it surfaces connections between articles that no individual reader would notice across 8,128 documents.
+
+The entire archive is publicly accessible, and the query interface costs roughly three cents per query to operate.
+
+---
+
+## Case Study 2: The Banks Archive --- Transcribing and Visualizing an Archival Collection
+
+### The Question
+
+Sir Joseph Banks (1743--1820) was president of the Royal Society for over 40 years and one of the most connected figures in British science. His correspondence --- thousands of letters spanning botany, exploration, colonial administration, and industrial development --- is scattered across archives worldwide. One collection at the Sutro Library in San Francisco contains letters focused on a specific episode: the British leather trade crisis of the late eighteenth century, when oak bark shortages threatened the tanning industry and Banks mobilized his scientific network to find botanical alternatives from across the Empire.
+
+The letters were digitized but not transcribed. Handwritten correspondence from the 1790s is not searchable. The question was: could GenAI tools turn a collection of page images into a searchable, queryable, visualizable research resource?
+
+### What Was Built
+
+**Stage 1: Image processing and transcription.** The digitized letter images were preprocessed (rotation correction, contrast enhancement) and then transcribed using an LLM with vision capabilities. The model was given context about the collection --- the era, the handwriting conventions, the subject matter --- which significantly improved accuracy. The result: 181 transcribed documents, ready for analysis.
+
+**Stage 2: Entity extraction and knowledge graph.** Using the same LLM-assisted approach as the Royal Society project, the transcriptions were processed to extract people, places, commodities, and institutions. These were loaded into a Neo4j knowledge graph with 3,200 nodes and 5,300 relationships. The graph captures who wrote to whom, what commodities were discussed, which institutions were involved, and when.
+
+**Stage 3: Enrichment from linked data.** The knowledge graph was enriched by connecting its entities to external databases:
+
+- **Wikidata**: Biographical data for 76 identified correspondents (birth/death dates, occupations, institutional affiliations).
+- **VIAF** (Virtual International Authority File): 735 published works linked to people in the network.
+- **GBIF** (Global Biodiversity Information Facility): 215 botanical specimens collected by members of Banks' network, with geographic coordinates.
+- **Historical trade data**: 129 records of British tannin imports from 1800--1844, showing the commercial impact of the botanical alternatives Banks' network identified.
+
+**Stage 4: Interactive visualizations.** Five interactive visualizations were generated from the knowledge graph:
+
+- A **timeline-network** showing the leather crisis unfolding from 1773 to 1810, with Banks' correspondence network layered on top --- revealing how scientific knowledge, commercial interests, and parliamentary reform intersected.
+- A **correspondence network** mapping the top 120 correspondents as a force-directed graph, showing the structure of Banks' intellectual community.
+- A **correspondence flow diagram** (Sankey) showing who wrote to Banks and who Banks wrote to, organized by decade, revealing asymmetries in the network.
+- A **topic-commodity-place flow** showing what was discussed, what materials were mentioned, and where they came from, across decades.
+- A **temporal network** anchoring people to the years of their correspondence, showing how the network evolved over time.
+
+### What It Looks Like in Practice
+
+A historian studying the relationship between science and commerce in the late eighteenth century can now:
+
+- Search the transcribed letters for any mention of a specific commodity (cutch, valonia, oak bark) and see every letter that discusses it, with dates and correspondents.
+- Visualize Banks' network of correspondents on the leather question and identify who the key intermediaries were between scientific institutions and commercial interests.
+- Trace how knowledge about a specific tanning material (say, Indian cutch) moved from botanical collectors in Bengal through Banks' correspondence to commercial adoption in London, with dates at every step.
+- Cross-reference the correspondence with actual import data to see whether Banks' advocacy had measurable commercial effects.
+
+None of this was possible before the letters were transcribed. The transcription alone --- turning page images into searchable text --- transformed the collection from an archival curiosity into a usable research resource.
+
+### The Tools Used
+
+| Task | Tool | Difficulty |
+|------|------|------------|
+| Image preprocessing | Python (rotation, contrast) | Low (LLM wrote the scripts) |
+| Transcription | LLM with vision (Gemini) | Low (upload images, provide context) |
+| Entity extraction | LLM (Gemini API) | Low |
+| Knowledge graph | Neo4j + Python | Moderate (LLM assisted with Cypher queries) |
+| Linked data enrichment | Wikidata, VIAF, GBIF APIs | Low-moderate (LLM wrote API scripts) |
+| Vector embeddings | Gemini embeddings (3072-dim) | Low |
+| Visualizations | D3.js, vis.js (generated by Python scripts) | Moderate (LLM wrote visualization code) |
+
+### What It Made Possible
+
+The project turned an untranscribed archival collection into a research infrastructure. The visualizations revealed structural features of Banks' network that are invisible in the letters themselves --- particularly the role of intermediary figures who connected scientific, commercial, and governmental spheres. The trade data integration showed that the botanical alternatives Banks' network identified did enter British commerce at scale, a finding that would have required painstaking manual cross-referencing without the knowledge graph.
+
+---
+
+## What These Projects Have in Common
+
+Both projects share a pattern that is worth highlighting:
+
+1. **The historian drove the research questions.** The tools did not generate the questions; they made it feasible to pursue questions that would otherwise have been impractical.
+
+2. **GenAI was used for mechanical tasks, not interpretation.** Transcription, entity extraction, code generation, data transformation --- these are the tasks the tools handled. The analysis, the arguments, and the historical judgments remained with the researcher.
+
+3. **Each stage was built incrementally.** Neither project was planned as a monolith. The historian started with a simple task (transcribe some letters; re-OCR some articles), verified the results, and then asked: "What can I do with this now?" Each stage suggested the next.
+
+4. **The LLM wrote most of the code.** The researcher described what was needed, the LLM produced Python scripts, and the researcher tested and refined them. This is the coding workflow described in the [Research Tasks](research-tasks.qmd) section, applied at scale.
+
+5. **Verification was constant.** Transcriptions were checked against originals. Extracted entities were reviewed. Code was tested on real data. The tools accelerated the work; they did not eliminate the need for critical judgment.
+
+6. **The results are open and reusable.** Both projects produced publicly accessible resources --- a searchable archive, interactive visualizations, downloadable data --- that other researchers can build on.
+
+### What Was Actually Hard
+
+It would be misleading to suggest these projects were effortless. The genuinely difficult parts were:
+
+- **Getting access to compute resources** for large-scale OCR and embedding generation (university cluster access, or paid cloud GPU time).
+- **Data cleaning** --- historical data is messy, inconsistent, and full of edge cases that no tool handles automatically.
+- **Verification at scale** --- checking thousands of transcriptions and entity extractions for accuracy is time-consuming even when the error rate is low.
+- **Learning enough about the tools** to describe what you want effectively. The LLM writes better code when you can describe your data clearly.
+
+What was *not* hard, and would have been prohibitively hard five years ago: the transcription itself, the entity extraction, the code generation, the visualization, and the construction of a queryable knowledge graph. These are the tasks that GenAI tools have made accessible to historians working without dedicated technical support.

@@ -1,0 +1,32 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "GenAI for Historians: A Practical Introduction"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: what-are-llms.qmd
+        text: What Are LLMs?
+      - href: getting-started.qmd
+        text: Getting Started
+      - href: research-tasks.qmd
+        text: Research Tasks
+      - href: deep-research.qmd
+        text: Deep Research
+      - href: case-studies.qmd
+        text: Case Studies
+      - href: copy-editing.qmd
+        text: Copy Editing
+      - href: going-further.qmd
+        text: Going Further
+      - href: limitations.qmd
+        text: Limitations
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3

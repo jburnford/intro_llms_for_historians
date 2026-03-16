@@ -1,0 +1,42 @@
+---
+title: "GenAI for Historians"
+subtitle: "A practical guide to large language models for historical research"
+---
+
+## Who This Guide Is For
+
+This guide is for historians --- faculty and graduate students --- who are curious about generative AI tools but have not yet used them, or who have tried them briefly and want to understand what they can realistically do for historical research. No technical background is assumed. You do not need to know how to code, and you do not need to spend any money to get started.
+
+## What This Guide Is Not
+
+This is not an argument that you should use these tools. It is not a technology manifesto or a prediction about the future of the discipline. Some historians will find GenAI useful for specific research tasks. Others will try it and decide it does not suit their workflow. Both are reasonable outcomes.
+
+The goal is simply to give you enough hands-on experience to make an informed judgment.
+
+## How It Is Organized
+
+The guide moves from free, low-commitment starting points to more advanced (and more expensive) tools:
+
+1. **[What Are LLMs?](what-are-llms.qmd)** --- A brief, non-technical explanation of how these tools work, what they are good at, and why they make mistakes. Understanding the basics helps you use them more effectively and spot their failures.
+
+2. **[Getting Started](getting-started.qmd)** --- How to begin with freely available tools (ChatGPT, Google Gemini) today, with no account setup beyond an email address. Includes a first exercise you can try in ten minutes.
+
+3. **[Research Tasks](research-tasks.qmd)** --- Concrete examples of how historians are using GenAI for transcription, translation, literature discovery, and coding. Each section includes sample prompts you can adapt to your own work.
+
+4. **[Deep Research Tools](deep-research.qmd)** --- Several products now offer automated literature review: they search the web, read sources, and produce structured reports with citations. These are powerful and impressive --- and they are also where GenAI's tendency to hallucinate becomes most dangerous. This section explains what they do well and how to avoid being misled.
+
+5. **[Case Studies](case-studies.qmd)** --- Two projects built by a historian using these tools: re-OCR'ing and building a searchable knowledge graph of 8,128 Royal Society articles (1665--1869), and transcribing and visualizing an archival collection of Joseph Banks' correspondence on the British leather trade. Neither required advanced programming skills.
+
+6. **[Copy Editing](copy-editing.qmd)** --- Using GenAI to proofread and polish your own drafted prose --- what it does well, where it over-corrects, and how to stay in control of your voice.
+
+7. **[Going Further](going-further.qmd)** --- When free tools hit their limits and paid subscriptions become worthwhile. An honest look at costs, capabilities, and what the more advanced tools (Claude Pro, ChatGPT Plus, Claude Code) actually offer.
+
+8. **[Limitations](limitations.qmd)** --- What these tools get wrong, how to recognize it, and what you should never trust them to do unsupervised. This section is as important as any of the others.
+
+## A Note on Tools and Vendors
+
+This guide mentions specific products by name (ChatGPT, Claude, Gemini) because it is impossible to give practical advice without doing so. Naming a tool is not an endorsement. The landscape is changing rapidly, and the specific products available when you read this may differ from those available when it was written. The underlying skills --- writing effective prompts, verifying outputs, knowing when to trust and when to doubt --- transfer across tools.
+
+## Getting Started
+
+If you have fifteen minutes and want to try something right now, go to **[Getting Started](getting-started.qmd)**.
