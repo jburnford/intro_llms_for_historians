@@ -25,7 +25,13 @@ Prohibition is a legitimate pedagogical choice, particularly in courses designed
 
 **Chilling effect.** Surveys find that roughly half of students report being afraid to use AI in any capacity for fear of false accusations, even in courses where some use is permitted. This punishes cautious, honest students while doing little to deter deliberate misuse.
 
-None of this means prohibition is impossible. It means that prohibition enforced primarily through detection is a losing strategy. Effective prohibition requires a different approach.
+**The fairness problem.** This is perhaps the most corrosive consequence of unenforced prohibition, and it deserves frank acknowledgement. When a significant number of students use GenAI to polish their writing while others do not, the overall quality of submissions rises. Faculty may not consciously curve grades, but they calibrate expectations against what they see. A student who writes competently but with occasional passive voice, awkward transitions, or poorly structured paragraphs --- the normal imperfections of developing writers --- will appear weaker relative to a cohort whose prose has been quietly smoothed by an LLM. The honest student's B+ becomes a B; the AI-polished student's B+ becomes an A-.
+
+Students notice this. They see roommates and friends submit AI-assisted work and receive high marks. The message is clear: the system rewards those who use GenAI and punishes those who do not, regardless of what the syllabus says. This breeds cynicism, erodes trust in the instructor, and creates pressure on honest students to start using the tools themselves --- not because they want to, but because they feel they have no choice.
+
+This dynamic is one of the strongest arguments for moving beyond prohibition where possible, or at least for coupling prohibition with assessment methods (oral exams, in-class writing, process documentation) that cannot be gamed in this way. If the grade reflects demonstrated understanding rather than prose quality alone, the advantage of AI-polished text largely disappears.
+
+None of this means prohibition is impossible. It means that prohibition enforced primarily through detection is a losing strategy, and that unenforced prohibition creates its own injustices. Effective prohibition requires a different approach.
 
 ------------------------------------------------------------------------
 
