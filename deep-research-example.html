@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Deep Research Example – GenAI for Historians: A Practical Introduction</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-5cee4c14d6ae2ae54d05c3ac90f01e34.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">GenAI for Historians: A Practical Introduction</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./what-are-llms.html"> 
+<span class="menu-text">What Are LLMs?</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./getting-started.html"> 
+<span class="menu-text">Getting Started</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./research-tasks.html"> 
+<span class="menu-text">Research Tasks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./deep-research.html"> 
+<span class="menu-text">Deep Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./deep-research-example.html" aria-current="page"> 
+<span class="menu-text">— Example</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./case-studies.html"> 
+<span class="menu-text">Case Studies</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./teaching.html"> 
+<span class="menu-text">Teaching</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./copy-editing.html"> 
+<span class="menu-text">Copy Editing</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./going-further.html"> 
+<span class="menu-text">Going Further</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./limitations.html"> 
+<span class="menu-text">Limitations</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#about-this-example" id="toc-about-this-example" class="nav-link active" data-scroll-target="#about-this-example">About This Example</a></li>
+  <li><a href="#financial-underpinnings-of-the-middle-passage-marine-insurance-and-the-british-atlantic-slave-trade-17001807" id="toc-financial-underpinnings-of-the-middle-passage-marine-insurance-and-the-british-atlantic-slave-trade-17001807" class="nav-link" data-scroll-target="#financial-underpinnings-of-the-middle-passage-marine-insurance-and-the-british-atlantic-slave-trade-17001807">Financial Underpinnings of the Middle Passage: Marine Insurance and the British Atlantic Slave Trade (1700–1807)</a>
+  <ul class="collapse">
+  <li><a href="#introduction-capitalism-risk-and-the-business-of-slavery" id="toc-introduction-capitalism-risk-and-the-business-of-slavery" class="nav-link" data-scroll-target="#introduction-capitalism-risk-and-the-business-of-slavery">Introduction: Capitalism, Risk, and the Business of Slavery</a></li>
+  <li><a href="#the-macroeconomic-debate-the-scale-and-importance-of-slave-trade-insurance" id="toc-the-macroeconomic-debate-the-scale-and-importance-of-slave-trade-insurance" class="nav-link" data-scroll-target="#the-macroeconomic-debate-the-scale-and-importance-of-slave-trade-insurance">The Macroeconomic Debate: The Scale and Importance of Slave Trade Insurance</a></li>
+  <li><a href="#institutional-architectures-corporations-coffee-houses-and-private-underwriters" id="toc-institutional-architectures-corporations-coffee-houses-and-private-underwriters" class="nav-link" data-scroll-target="#institutional-architectures-corporations-coffee-houses-and-private-underwriters">Institutional Architectures: Corporations, Coffee Houses, and Private Underwriters</a></li>
+  <li><a href="#the-epistemologies-of-risk-and-uncertainty-operational-dynamics" id="toc-the-epistemologies-of-risk-and-uncertainty-operational-dynamics" class="nav-link" data-scroll-target="#the-epistemologies-of-risk-and-uncertainty-operational-dynamics">The Epistemologies of Risk and Uncertainty: Operational Dynamics</a></li>
+  <li><a href="#the-legal-fictions-of-human-cargo-the-zong-and-jurisprudential-crisis" id="toc-the-legal-fictions-of-human-cargo-the-zong-and-jurisprudential-crisis" class="nav-link" data-scroll-target="#the-legal-fictions-of-human-cargo-the-zong-and-jurisprudential-crisis">The Legal Fictions of Human Cargo: The Zong and Jurisprudential Crisis</a></li>
+  <li><a href="#annotated-analysis-of-key-secondary-literature-20002025" id="toc-annotated-analysis-of-key-secondary-literature-20002025" class="nav-link" data-scroll-target="#annotated-analysis-of-key-secondary-literature-20002025">Annotated Analysis of Key Secondary Literature (2000–2025)</a></li>
+  <li><a href="#conclusion-the-enduring-legacy-of-underwriting-souls" id="toc-conclusion-the-enduring-legacy-of-underwriting-souls" class="nav-link" data-scroll-target="#conclusion-the-enduring-legacy-of-underwriting-souls">Conclusion: The Enduring Legacy of Underwriting Souls</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Deep Research Example</h1>
+<p class="subtitle lead">Gemini Deep Research on marine insurance and the slave trade</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="about-this-example" class="level2">
+<h2 class="anchored" data-anchor-id="about-this-example">About This Example</h2>
+<p>The following report was generated by <strong>Gemini Deep Research</strong> (Google) in March 2026, using this prompt:</p>
+<blockquote class="blockquote">
+<p>I am a historian beginning a research project on the role of marine insurance in the British Atlantic slave trade, roughly 1700–1807. Please search for the key secondary literature and major scholarly debates. I am particularly interested in work published since 2000, particularly at the intersection of financial history and the history of slavery. Provide full bibliographic details for each source and a brief summary of its argument.</p>
+</blockquote>
+<p>The output is reproduced here exactly as Gemini produced it, with formatting cleaned up but no content altered. It is included as a teaching resource — an example of what deep research tools can do, and a demonstration of why <strong>every claim and citation must be independently verified</strong> before use in scholarly work.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+This Report Has Not Been Fact-Checked
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The citations and claims below have <strong>not</strong> been verified against library catalogues, JSTOR, or the original sources. Some citations may be accurate; others may be fabricated or inaccurately described. This is the point of the example: the report <em>looks</em> authoritative, reads fluently, and may contain errors that are invisible without independent verification. See our <a href="./deep-research.html">Deep Research Tools</a> page for a verification workflow.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="financial-underpinnings-of-the-middle-passage-marine-insurance-and-the-british-atlantic-slave-trade-17001807" class="level2">
+<h2 class="anchored" data-anchor-id="financial-underpinnings-of-the-middle-passage-marine-insurance-and-the-british-atlantic-slave-trade-17001807">Financial Underpinnings of the Middle Passage: Marine Insurance and the British Atlantic Slave Trade (1700–1807)</h2>
+<section id="introduction-capitalism-risk-and-the-business-of-slavery" class="level3">
+<h3 class="anchored" data-anchor-id="introduction-capitalism-risk-and-the-business-of-slavery">Introduction: Capitalism, Risk, and the Business of Slavery</h3>
+<p>The historical intersection of financial capitalism and the transatlantic slave trade has undergone a profound historiographical reappraisal over the course of the last two decades. While the foundational thesis linking the immense profits of colonial slavery to the broader economic development of the British Empire was established by Eric Williams in 1944, recent scholarship has increasingly turned its analytical focus toward the specific, highly specialized financial instruments that lubricated this brutal commerce. Among these instruments, marine insurance emerges as a critical, yet historically underexplored, technology of risk mitigation. Between 1700 and the abolition of the British slave trade in 1807, the forced transportation of an estimated 3.2 million enslaved Africans across the Atlantic by British vessels was fraught with immense financial peril for European investors and merchants. The highly volatile nature of the trade — characterized by fluctuating coastal markets, the constant threat of shipboard insurrection, catastrophic mortality rates among both captives and crew, and the unpredictable hazards of transoceanic navigation — required sophisticated institutional mechanisms to transform sheer Knightian uncertainty into calculable, manageable risk.</p>
+<p>Marine insurance provided the indispensable means by which slaving merchants could distribute the localized, catastrophic risks of individual slave-trading voyages across a much broader network of domestic and international underwriters. In doing so, marine underwriting became an essential, load-bearing pillar of the Atlantic plantation complex. Without the structural guarantee of financial indemnity against the loss of ships and human “cargo,” the massive, dynamic expansion of the British slave trade in the eighteenth century would have been structurally and economically untenable. The capability of ship owners to discover methods to navigate the unique risks peculiar to the trade — which encompassed high morbidity rates, exchange value uncertainties, the moral hazard of crew negligence, and the profound threat of violent African resistance — was entirely dependent on the existence of a robust insurance market.</p>
+<p>This report provides an exhaustive, granular analysis of the key secondary literature published since 2000 concerning the role of marine insurance in the British Atlantic slave trade. By synthesizing the major scholarly debates, this document explores the macroeconomic importance of slave insurance to the British financial sector, the institutional architectures of corporate and private underwriting, the evolution of contractual risk models, and the profound legal, moral, and epistemological paradoxes generated by the insurance of human beings as commercial property.</p>
+</section>
+<section id="the-macroeconomic-debate-the-scale-and-importance-of-slave-trade-insurance" class="level3">
+<h3 class="anchored" data-anchor-id="the-macroeconomic-debate-the-scale-and-importance-of-slave-trade-insurance">The Macroeconomic Debate: The Scale and Importance of Slave Trade Insurance</h3>
+<p>A central, highly contested debate within the contemporary historiography of the British slave trade revolves around the macroeconomic footprint of slavery-related marine insurance. Scholars continue to debate the precise extent to which the financial demands of the transatlantic slave trade acted as the primary catalyst for the development of the modern British marine insurance market, versus the perspective that the slave trade simply represented one lucrative sector within a much broader, diversified commercial expansion.</p>
+<section id="the-inikori-hypothesis-and-the-dominance-thesis" class="level4">
+<h4 class="anchored" data-anchor-id="the-inikori-hypothesis-and-the-dominance-thesis">The Inikori Hypothesis and the Dominance Thesis</h4>
+<p>The modern macroeconomic debate was largely initiated by Joseph E. Inikori’s seminal and provocative work, <em>Africans and the Industrial Revolution in England</em> (2002). Inikori advanced the argument that the explosive growth of the British marine insurance sector was largely dependent upon, and fundamentally driven by, the business of underwriting slaving voyages and the closely related West Indian plantation trades. Relying on broad macroeconomic projections, Inikori estimated that the slave trade and the broader “Atlantic slave economy” comprised the vast majority of the premium income for British insurers during the critical decades of the late eighteenth century. To arrive at these striking figures — sometimes cited as accounting for up to 63 percent of premiums earned by the British marine insurance industry — Inikori utilized a back-projection methodology. This method was anchored in the testimony of John Julius Angerstein, a prominent Lloyd’s underwriter, who provided evidence to the Select Committee on Marine Insurance in 1810, stating that total British marine insurance premiums amounted to £10.95 million in 1809. By extrapolating backwards from this 1809 figure, Inikori constructed a model suggesting that slavery-related underwriting was the undisputed engine of the City of London’s insurance market.</p>
+</section>
+<section id="methodological-critiques-and-archival-corrections" class="level4">
+<h4 class="anchored" data-anchor-id="methodological-critiques-and-archival-corrections">Methodological Critiques and Archival Corrections</h4>
+<p>However, subsequent generations of financial historians have vigorously challenged Inikori’s methodology and his sweeping conclusions. Robin Pearson and David Richardson, in their definitive 2019 study “Insuring the Transatlantic Slave Trade,” highlight severe methodological flaws in Inikori’s back-projection techniques. While Pearson and Richardson agree that insurance was an absolutely vital risk mitigation device that facilitated the growth of the slave trade, their rigorous analysis of surviving merchant and brokerage archives demonstrates that direct slave voyages constituted a much smaller percentage of total U.K. marine insurance premiums than Inikori originally claimed.</p>
+<p>Nicholas Draper has similarly contested the Inikori dominance thesis through meticulous corporate archival research. Through an analysis of the London Assurance Corporation (LAC) records from the period of 1769 to 1770, Draper demonstrates that approximately 15 percent of all sums insured on marine policies, and exactly one-third of total premiums, derived from the African and West Indian trades. While these are highly significant figures that underscore the deep complicity of the financial sector, they remain well below the overwhelming majorities estimated by Inikori for the 1790s.</p>
+</section>
+<section id="micro-level-analysis-of-merchant-outlays" class="level4">
+<h4 class="anchored" data-anchor-id="micro-level-analysis-of-merchant-outlays">Micro-Level Analysis of Merchant Outlays</h4>
+<p>To understand the true economic weight of marine insurance, Pearson and Richardson shifted the focus from macroeconomic modeling to micro-level, voyage-by-voyage empirical analysis. By examining the largest dataset ever compiled for slave trade insurance, they revealed the precise financial burden that risk mitigation placed on individual slaving operations.</p>
+<p>Their research analyzed the accounts of William Davenport, a prominent Liverpool slave trader, who operated 74 slaving voyages between 1757 and 1784. The surviving records indicate that every single one of Davenport’s voyages was fully insured. Similarly, all 55 slaving voyages undertaken by James Rogers of Bristol between 1784 and 1793 carried comprehensive marine insurance. From this data, historians conclude that mid-eighteenth-century slave traders regularly and systematically insured their ventures; it was not a peripheral choice, but a core operational requirement.</p>
+<p>Furthermore, Pearson and Richardson calculated the precise proportion of outlay costs accounted for by insurance premiums. For Davenport’s 74 voyages out of Liverpool, insurance premiums constituted 8.6 percent of total outlay costs. Across a broader sample of 60 “African ventures” from 1757 to 1806, insurance premiums accounted for 9.8 percent of outward voyage costs. Consequently, during the second half of the eighteenth century, insurance premiums routinely amounted to nearly 10 percent of the total capital required to launch a slaving voyage, a ratio that spiked even higher during periods of international wartime conflict when the threat of capture by privateers surged.</p>
+</section>
+<section id="re-evaluating-market-share-direct-voyages-vs.-bilateral-trade" class="level4">
+<h4 class="anchored" data-anchor-id="re-evaluating-market-share-direct-voyages-vs.-bilateral-trade">Re-evaluating Market Share: Direct Voyages vs.&nbsp;Bilateral Trade</h4>
+<p>The current scholarly consensus, forged through the meticulous archival recovery of individual underwriting books and corporate ledgers, presents a more nuanced, dualistic picture of the marine insurance market. Rather than a singular dominance of direct slave voyages (the outbound leg to Africa and the infamous Middle Passage to the Americas), the true, massive financial windfall for London’s insurers came from the broader, bilateral plantation economy.</p>
+<p>Recent estimations compiled by institutional historians and scholars indicate that the insurance of direct slave voyages accounted for roughly 5 to 10 percent of total marine insurance premiums in the latter half of the eighteenth century. However, the vessels returning from the Caribbean and the Americas were of far greater financial importance to the City of London. These custom-built “West Indiamen” ships — capable of carrying far more bulk cargo than the specialized slave-ships — transported vital plantation supplies to the colonies and returned heavily laden with slave-grown produce such as sugar, tobacco, rum, cotton, coffee, indigo, and mahogany. The insurance on these returning voyages and the direct bilateral colonial trades accounted for approximately 30 percent of total marine insurance premiums paid.</p>
+<p>When combined, the overarching slavery-related business — comprising both the direct trafficking of human beings and the transportation of the commodities they were forced to produce — is reliably estimated to have accounted for between 33 percent and 40 percent of all British premium income in the second half of the eighteenth century.</p>
+</section>
+<section id="table-1-comparative-historiographical-estimates" class="level4">
+<h4 class="anchored" data-anchor-id="table-1-comparative-historiographical-estimates">Table 1: Comparative Historiographical Estimates</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Scholar / Source</th>
+<th>Analytical Focus</th>
+<th>Estimated Market Share</th>
+<th>Methodological Approach</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Inikori (2002)</td>
+<td>Total Atlantic Slave Economy</td>
+<td>Up to 63% of total marine premiums (widely disputed)</td>
+<td>Macroeconomic back-projection from Angerstein’s 1809 estimates</td>
+</tr>
+<tr class="even">
+<td>Draper (2008, 2010)</td>
+<td>London Assurance Corporation</td>
+<td>15% of sums insured; ~33% of premium income (1769–1770)</td>
+<td>Archival sampling of surviving corporate ledgers</td>
+</tr>
+<tr class="odd">
+<td>Pearson &amp; Richardson (2019)</td>
+<td>Individual Slave Trader Outlays</td>
+<td>Premiums = ~8.6–10% of total voyage outlay costs</td>
+<td>Micro-level analysis of merchant accounts (Davenport, Rogers)</td>
+</tr>
+<tr class="even">
+<td>Lloyd’s Historical Research</td>
+<td>Overall Market Breakdown</td>
+<td>5–10% from direct slave voyages; ~30% from bilateral plantation trade</td>
+<td>Synthesis of institutional research on the broader slave economy</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="institutional-architectures-corporations-coffee-houses-and-private-underwriters" class="level3">
+<h3 class="anchored" data-anchor-id="institutional-architectures-corporations-coffee-houses-and-private-underwriters">Institutional Architectures: Corporations, Coffee Houses, and Private Underwriters</h3>
+<p>The facilitation of the transatlantic slave trade required highly organized financial hubs capable of absorbing massive, concentrated liabilities. During the eighteenth century, the British marine insurance market was characterized by a distinct structural division: a heavily regulated corporate duopoly operating alongside a vast, decentralized, and dynamic network of private underwriters.</p>
+<section id="the-corporate-duopoly-london-assurance-and-royal-exchange" class="level4">
+<h4 class="anchored" data-anchor-id="the-corporate-duopoly-london-assurance-and-royal-exchange">The Corporate Duopoly: London Assurance and Royal Exchange</h4>
+<p>Following the financial catastrophe of the South Sea Bubble, the British Parliament passed the Bubble Act of 1720, which strictly restricted corporate marine underwriting to two newly chartered companies: the London Assurance Corporation (LAC) and the Royal Exchange Assurance (REA). These institutions provided foundational, legally sanctioned underwriting capacity for early commercial ventures into the Atlantic world.</p>
+<p>Surviving records from the Royal African Company (RAC) — the nation’s premier, albeit declining, slave-trading monopoly in the early eighteenth century — reveal an extensive reliance on these two corporations. An ‘Account of Insurances Made’ by the RAC in the early 1720s demonstrates that the monopoly held thirty-one active policies with the LAC and REA, insuring slave ships and trade goods for a substantial £116,000.</p>
+<p>Despite their prestigious chartered status, the corporate duopoly actually accounted for a surprisingly small proportion of the total British marine insurance market. By the early nineteenth century, the combined market share of the LAC and REA fluctuated between merely 2 percent and 18.4 percent. The true, massive engine of slave trade underwriting lay outside the corporate boardrooms, in the coffee houses of the City of London.</p>
+</section>
+<section id="the-centrality-of-lloyds-of-london-and-private-underwriting" class="level4">
+<h4 class="anchored" data-anchor-id="the-centrality-of-lloyds-of-london-and-private-underwriting">The Centrality of Lloyd’s of London and Private Underwriting</h4>
+<p>The vast majority of marine insurance in the eighteenth century was written by private individuals operating within syndicates, for whom Lloyd’s of London functioned as the critical organizing platform. Operating initially out of Edward Lloyd’s original coffee house on Lombard Street (established circa 1688) and later moving to the Royal Exchange as the formally organized “New Lloyd’s” in 1771, this decentralized market rapidly became the undisputed global centre for insuring the shipping industry that facilitated the Middle Passage.</p>
+<p>Recent institutional historiography, particularly the groundbreaking <em>Underwriting Souls</em> project spearheaded by Alexandre White at Johns Hopkins University (2023–2025), has forensically mapped the dense networks of complicity at Lloyd’s. White’s detailed analysis of the Lloyd’s archives demonstrates that the market was not merely passively involved, but deeply integrated into the operational structures of the transatlantic slave trade.</p>
+<p>An analysis of the 77 surviving names from the critical 1771 list of New Lloyd’s founders reveals the profound overlap between the financial sector and the plantation economy. At least eight of these founding subscribers were direct, active investors in slave-trading voyages. A further seven subscribers were themselves slave-owners or held vast financial assets, such as colonial loans and annuities, that were legally secured by the bodies of enslaved people.</p>
+<p>The involvement of Lloyd’s did not cleanly cease with the 1807 abolition of the British slave trade or the subsequent 1833 abolition of colonial slavery. The market seamlessly transitioned to underwriting the global trade in slave-grown commodities, providing insurance for cotton grown by enslaved people in the antebellum United States until 1865, and for sugar produced by enslaved labour in the Empire of Brazil until 1888.</p>
+</section>
+</section>
+<section id="the-epistemologies-of-risk-and-uncertainty-operational-dynamics" class="level3">
+<h3 class="anchored" data-anchor-id="the-epistemologies-of-risk-and-uncertainty-operational-dynamics">The Epistemologies of Risk and Uncertainty: Operational Dynamics</h3>
+<p>To underwrite the transatlantic slave trade was to engage in the constant, ruthless recalibration of risk. European slave traders and their metropolitan insurers had to navigate a labyrinth of financial and operational perils.</p>
+<section id="mitigating-voyage-volatility-the-morice-strategies" class="level4">
+<h4 class="anchored" data-anchor-id="mitigating-voyage-volatility-the-morice-strategies">Mitigating Voyage Volatility: The Morice Strategies</h4>
+<p>Matthew David Mitchell’s exhaustive monograph <em>The Prince of Slavers</em> (2020) provides crucial insights into how operational risk was managed during the transition from monopoly trading to private enterprise in the early 1700s. Analyzing the extensive career of Humphry Morice — a Member of Parliament, Governor of the Bank of England, and the largest-volume British slave trader of his era who forcibly transported over 30,000 enslaved Africans across 103 voyages — Mitchell demonstrates how private merchants developed innovative “best practices” to mitigate the inherent risks of the trade.</p>
+<p>Morice frequently employed a highly complex multiple-ship strategy. By utilizing smaller craft, such as yawls, to navigate shallow African river systems and barter for captives rapidly, he reduced the time his primary vessel spent exposed to disease, depreciation, and rebellion on the coast.</p>
+</section>
+<section id="insuring-against-anticolonial-resistance" class="level4">
+<h4 class="anchored" data-anchor-id="insuring-against-anticolonial-resistance">Insuring Against Anticolonial Resistance</h4>
+<p>The pervasive threat of shipboard rebellion — which historical data indicates occurred on an estimated one in ten, to perhaps one in five, slaving voyages — forced insurers to constantly alter the scope of their financial coverage. Because enslaved people, unlike passive commodities such as sugar or tobacco, possessed human agency and continuously fought against their captors, underwriters had to price the risk of African resistance.</p>
+<p>Scholars such as Alexandre White argue that the marine insurance archive, despite its colonial and financial ontology, paradoxically serves as a vital repository documenting anticolonial action. Insurers demanded higher premiums to cover the losses incurred during an insurrection, and pricing guidance directly influenced how slave ships were physically designed, heavily armed, and crewed to deal with the inevitable possibility of revolt.</p>
+</section>
+</section>
+<section id="the-legal-fictions-of-human-cargo-the-zong-and-jurisprudential-crisis" class="level3">
+<h3 class="anchored" data-anchor-id="the-legal-fictions-of-human-cargo-the-zong-and-jurisprudential-crisis">The Legal Fictions of Human Cargo: The Zong and Jurisprudential Crisis</h3>
+<p>The legal architecture of marine insurance inherently required the categorization of living, breathing enslaved humans as inanimate commercial goods. This profound legal fiction produced horrific, violent outcomes when the abstract logic of the insurance contract collided with the material realities of the Middle Passage.</p>
+<section id="the-zong-massacre-and-gregson-v.-gilbert-1783" class="level4">
+<h4 class="anchored" data-anchor-id="the-zong-massacre-and-gregson-v.-gilbert-1783">The Zong Massacre and Gregson v. Gilbert (1783)</h4>
+<p>In August 1781, the British slave ship <em>Zong</em>, owned by the Gregson syndicate of Liverpool, departed West Africa severely overcrowded with 442 enslaved people — more than twice its safe capacity. Delayed by gross navigational errors and purportedly facing a severe water shortage, the ship’s captain, Luke Collingwood, made a calculated, financially driven decision. Over several days, Collingwood ordered his crew to systematically throw 133 living, sick enslaved people overboard to their deaths.</p>
+<p>This atrocity was, fundamentally, an act of insurance fraud. Under the standard terms of eighteenth-century marine insurance, if enslaved individuals died of disease, dehydration, or starvation in the ship’s hold, it was legally classified as a “natural death,” and the entire financial loss was borne exclusively by the ship’s owners. However, under the deeply entrenched maritime legal principle of “general average,” if a portion of the “cargo” had to be intentionally jettisoned to save the ship and the remaining crew from an existential threat, the loss could be legally claimed against the underwriters as a legitimate “peril of the sea.” Collingwood knew there was a poor market for sick captives in Jamaica; by murdering them, he sought to realize their full insured value.</p>
+<p>The resulting trial, <em>Gregson v. Gilbert</em> (1783), was heard before Lord Chief Justice Mansfield at London’s Guildhall. While a jury initially ruled in favour of the shipowners, Mansfield ordered a retrial upon discovering new evidence suggesting that the severe water shortage was not an act of God, but a direct result of the captain’s gross mismanagement and navigational incompetence. Ultimately, the owners did not receive the insurance payout. However, the legal proceedings treated the mass murder of 133 people entirely as a routine civil dispute over property, contract terms, and maritime law, utterly ignoring the humanity of the victims and the criminality of the act.</p>
+</section>
+<section id="the-redefinition-of-liability-tatham-v.-hodgson-1796" class="level4">
+<h4 class="anchored" data-anchor-id="the-redefinition-of-liability-tatham-v.-hodgson-1796">The Redefinition of Liability: Tatham v. Hodgson (1796)</h4>
+<p>The public outrage generated by the <em>Zong</em> and similar maritime abuses forced a rapid legal and statutory redefinition of insurance liabilities. In <em>Tatham v. Hodgson</em> (1796), the court determined that the starvation or death of slaves due to insufficient provisions — even if those catastrophic shortages were caused by extraordinary delays resulting from bad weather — constituted “natural death” and was strictly not recoverable as a “peril of the sea.” This critical judicial ruling was subsequently codified into British statutory law, and the insurance of enslaved people on British vessels was outlawed entirely in 1807, concurrent with the passage of the act that abolished the British slave trade.</p>
+</section>
+</section>
+<section id="annotated-analysis-of-key-secondary-literature-20002025" class="level3">
+<h3 class="anchored" data-anchor-id="annotated-analysis-of-key-secondary-literature-20002025">Annotated Analysis of Key Secondary Literature (2000–2025)</h3>
+<dl>
+<dt><strong>Inikori, Joseph E.</strong> <em>Africans and the Industrial Revolution in England: A Study in International Trade and Economic Development.</em> Cambridge: Cambridge University Press, 2002.</dt>
+<dd>
+Inikori’s massive macroeconomic study is the foundational text that sparked the modern debate regarding the scale of slave trade insurance. Using back-projection methods derived from 1809 Lloyd’s data, he controversially estimated that the slaving economy accounted for upwards of 63 percent of British premium income. While his specific projections have been heavily revised downward, his central thesis — that slavery was the indispensable engine of British financial modernization — remains a cornerstone of the field.
+</dd>
+<dt><strong>Baucom, Ian.</strong> <em>Specters of the Atlantic: Finance Capital, Slavery, and the Philosophy of History.</em> Durham: Duke University Press, 2005.</dt>
+<dd>
+Operating at the intersection of critical theory, literary analysis, and financial history, Baucom analyzes the <em>Zong</em> massacre to chart the epistemological evolution of global capitalism. He argues that the marine insurance industry drove a speculative, abstract shift in finance capital that subjugated material human life to the concept of monetary equivalence.
+</dd>
+<dt><strong>Rupprecht, Anita.</strong> “‘A Very Uncommon Case’: Representations of the Zong and the British Campaign to Abolish the Slave Trade.” <em>Journal of Legal History</em> 28, no. 3 (2007): 329–346.</dt>
+<dd>
+Rupprecht challenges existing treatments of the <em>Zong</em> massacre by returning to the unpublished trial proceedings at the National Maritime Museum. She argues that the abolitionist movement actively stripped the event of its complex insurance logic to craft a sentimentalized narrative of suffering.
+</dd>
+<dt><strong>Draper, Nicholas.</strong> <em>The Price of Emancipation: Slave-Ownership, Compensation and British Society at the End of Slavery.</em> Cambridge: Cambridge University Press, 2010.</dt>
+<dd>
+Draper utilizes London Assurance Corporation data to refute the extreme upper bounds of Inikori’s dominance thesis, while confirming that roughly one-third of corporate insurance premiums derived from the African and West Indian trades.
+</dd>
+<dt><strong>Pearson, Robin, and David Richardson.</strong> “Insuring the Transatlantic Slave Trade.” <em>The Journal of Economic History</em> 79, no. 2 (June 2019): 417–446.</dt>
+<dd>
+The most rigorous quantitative analysis of slave trade insurance to date. Utilizing the largest dataset ever compiled, Pearson and Richardson prove that insurance was ubiquitous (~10% of voyage outlays) and decisively refute Inikori’s macroeconomic estimates for direct voyages.
+</dd>
+<dt><strong>Mitchell, Matthew David.</strong> <em>The Prince of Slavers: Humphry Morice and the Transformation of Britain’s Transatlantic Slave Trade, 1698–1732.</em> Palgrave Macmillan, 2020.</dt>
+<dd>
+A micro-historical analysis of Humphry Morice, the largest-volume British slave trader of the early eighteenth century. Mitchell details how private merchants innovated operational risk management strategies that directly shaped the contractual clauses adopted by the marine insurance market.
+</dd>
+<dt><strong>Hope, Mallory.</strong> “Underwriting the Slave Trade: Risk, Uncertainty, and Marine Insurance in the Eighteenth-Century French Atlantic.” <em>International Journal of Maritime History</em>, 2023.</dt>
+<dd>
+Hope advances the field through comparative analysis of standard legal merchant manuals against actual surviving manuscript insurance contracts, demonstrating how merchants and underwriters engaged in strategic language games to manipulate financial exposure.
+</dd>
+<dt><strong>White, Alexandre, et al.</strong> <em>Underwriting Souls</em> (Digital Exhibition and Scholarship). Johns Hopkins University / Mellon Foundation, 2023–2024.</dt>
+<dd>
+A groundbreaking digital humanities project based on unprecedented access to the Lloyd’s of London archives, documenting how underwriters mathematically modelled the risks of African resistance and insurrection.
+</dd>
+</dl>
+<section id="table-2-quick-reference" class="level4">
+<h4 class="anchored" data-anchor-id="table-2-quick-reference">Table 2: Quick Reference</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Author(s) &amp; Year</th>
+<th>Title</th>
+<th>Core Methodological Contribution</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Inikori (2002)</td>
+<td><em>Africans and the Industrial Revolution</em></td>
+<td>Macroeconomic back-projection establishing the dominance thesis</td>
+</tr>
+<tr class="even">
+<td>Baucom (2005)</td>
+<td><em>Specters of the Atlantic</em></td>
+<td>Critical theory analysis of the Zong and the epistemology of finance</td>
+</tr>
+<tr class="odd">
+<td>Rupprecht (2007)</td>
+<td>“‘A Very Uncommon Case’”</td>
+<td>Legal history decoupling the Zong trial from abolitionist mythology</td>
+</tr>
+<tr class="even">
+<td>Draper (2010)</td>
+<td><em>The Price of Emancipation</em></td>
+<td>Corporate archival sampling (LAC) correcting premium estimates</td>
+</tr>
+<tr class="odd">
+<td>Pearson &amp; Richardson (2019)</td>
+<td>“Insuring the Transatlantic Slave Trade”</td>
+<td>Micro-level merchant outlays proving ubiquity of insurance</td>
+</tr>
+<tr class="even">
+<td>Mitchell (2020)</td>
+<td><em>The Prince of Slavers</em></td>
+<td>Biography of Morice mapping early operational risk innovations</td>
+</tr>
+<tr class="odd">
+<td>Hope (2023)</td>
+<td>“Underwriting the Slave Trade”</td>
+<td>Contractual analysis of Knightian risk vs.&nbsp;uncertainty</td>
+</tr>
+<tr class="even">
+<td>White (2023–2024)</td>
+<td><em>Underwriting Souls</em></td>
+<td>Digital humanities excavation of the Lloyd’s archive</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="conclusion-the-enduring-legacy-of-underwriting-souls" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion-the-enduring-legacy-of-underwriting-souls">Conclusion: The Enduring Legacy of Underwriting Souls</h3>
+<p>The exhaustive historical investigation into marine insurance and the British Atlantic slave trade reveals a profound, inseparable symbiosis between the development of modern financial capitalism and the systematic commodification of human life. The robust secondary literature published since 2000 conclusively demonstrates that while direct Middle Passage voyages may not have monopolized the entire ledger of British marine insurance as Joseph Inikori originally hypothesized, the broader Atlantic slave economy was an indispensable, load-bearing engine for the growth of metropolitan financial institutions. For the individual European slave trader, securing a marine insurance policy was not merely a peripheral financial precaution; it was an absolute structural necessity that insulated merchants against the catastrophic, existential volatility of oceanic transit, epidemic disease, and the pervasive, terrifying threat of African resistance.</p>
+<p>Today, the historiography of slave insurance has matured significantly, moving far beyond the simple macroeconomic quantification of premiums to encompass the cultural, theoretical, and digital excavation of the archive itself. The meticulous historical reconstruction of these eighteenth-century underwriting practices serves as a vital, permanent reminder that the advanced technologies of risk mitigation — the very bedrock of contemporary global finance — were forged, in significant part, through the systematic pricing of human misery and the relentless, actuarial calculation of captive survival.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/jburnford\.github\.io\/intro_llms_for_historians\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
