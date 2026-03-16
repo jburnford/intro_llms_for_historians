@@ -16,6 +16,8 @@ website:
         text: Research Tasks
       - href: deep-research.qmd
         text: Deep Research
+      - href: deep-research-example.qmd
+        text: "— Example"
       - href: case-studies.qmd
         text: Case Studies
       - href: teaching.qmd

@@ -143,6 +143,10 @@ This is a genuine advantage, but it is not absolute. Claude will still sometimes
 - **Archival research.** These tools cannot access unpublished sources, manuscript collections, or finding aids.
 - **Historiographic argument.** A literature review in a thesis or article must reflect *your* reading and *your* interpretation of the field. A deep research report is a starting point for that work, not a substitute for it.
 
+## See It for Yourself
+
+To illustrate what deep research output actually looks like --- and why verification is essential --- we ran the marine insurance prompt from the examples above through Gemini Deep Research and reproduced the full output as a **[worked example](deep-research-example.qmd)**. The report is impressive, well-structured, and reads like the work of a knowledgeable historian. Whether every citation in it actually exists is a question we leave to the reader.
+
 ## The Bottom Line
 
 Deep research tools are the most impressive and the most dangerous GenAI application for historians. They can save you hours of initial searching. They can also fill your bibliography with sources that do not exist and your notes with summaries that misrepresent the scholarship. The tool does the searching. The verification, the reading, and the thinking are yours.
