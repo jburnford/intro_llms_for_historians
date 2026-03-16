@@ -14,10 +14,14 @@ website:
         text: Getting Started
       - href: research-tasks.qmd
         text: Research Tasks
-      - href: deep-research.qmd
-        text: Deep Research
-      - href: deep-research-example.qmd
-        text: "— Example"
+      - text: Deep Research
+        menu:
+          - href: deep-research.qmd
+            text: Deep Research Tools
+          - href: deep-research-example.qmd
+            text: "Example: Marine Insurance"
+          - href: deep-research-algonquin.qmd
+            text: "Example: Algonquin Land Claim"
       - href: case-studies.qmd
         text: Case Studies
       - href: teaching.qmd

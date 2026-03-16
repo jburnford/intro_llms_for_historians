@@ -7,14 +7,69 @@ subtitle: "Automated literature review and its pitfalls"
 
 Several GenAI products now offer a "deep research" or "research" mode that goes beyond a simple chatbot response. Instead of answering your question from memory, these tools search the web, read multiple sources, synthesize what they find, and produce a structured report --- often with citations and footnotes.
 
-The major options as of mid-2026:
+The major options as of early 2026:
 
-- **Gemini Deep Research** (Google) --- available with Gemini Advanced ($20/month). Searches the web, reads pages, and produces multi-page reports with source links.
+- **Gemini Deep Research** (Google) --- available with Google AI Pro ($20/month). Searches the web, reads pages, and produces multi-page reports with source links.
 - **ChatGPT Deep Research** (OpenAI) --- available with ChatGPT Plus and Pro. Similar approach: extended web browsing, synthesis, and structured output.
 - **Perplexity** ([perplexity.ai](https://perplexity.ai)) --- available in a free tier with limits, and a Pro tier (~$20/month). Designed from the ground up as a research tool. Every claim is linked to a source. The free tier is a good starting point.
 - **Claude with web search** (Anthropic) --- Claude Pro can search the web when asked. Less automated than the dedicated deep research tools, but the underlying model is strong on synthesis and nuance.
 
 These tools represent a genuine step forward from the basic chatbot experience described in earlier sections. They can produce results in minutes that would take hours of manual searching. They are also where GenAI's limitations become most consequential for historians.
+
+## Two Cases: Discovery and Fabrication
+
+The best way to understand what deep research tools can and cannot do is to see them in action. The two cases below, both drawn from real research projects, illustrate the full range of outcomes: from genuine historiographic contribution to confident, systematic fabrication. Both outputs looked equally authoritative. Only domain expertise and careful verification could tell the difference.
+
+### Case 1: The Algonquin Land Claim --- A Genuine Discovery
+
+A historian had spent three years researching the history of Westmeath Township and the Algonquin in the Ottawa Valley. Through conventional archival work, he had assembled a detailed picture of Algonquin petitions and land claims using Joan Holmes & Associates' comprehensive research reports, which included many transcribed petitions. But a key piece of the story remained elusive: why had the promising 1835 negotiations between Algonquin leaders and Lieutenant-Governor Sir John Colborne collapsed so abruptly in 1836?
+
+When the historian ran a deep research query on the topic, Gemini produced a structured report that identified two sources he had not encountered in three years of research:
+
+1. **Brian Lawson, "Aboriginal Dispossession in the Emergence of a Capitalist Resource Extractive Region: The Ottawa Valley, 1800--1830s"** (a conference paper presented at the Canadian Political Science Association, 2009), which analyzed the political economy behind the Crown's treatment of the Algonquin claims.
+2. **A Government of Canada publication** from the federal publications archive, containing additional documentation of the negotiations.
+
+These sources provided the missing context: Colborne had left Toronto in late 1835 and been replaced by Sir Francis Bond Head, who was ideologically opposed to creating new reserves near areas of active settlement. Head revoked the agreement Colborne's administration had made, citing a contested interpretation of the Crawford Purchase (a 1783 treaty with the Mississauga) as justification. This explained the abrupt reversal that the Holmes reports documented but did not fully account for.
+
+The historian followed his standard practice: *Interesting, I wonder if that is true.* He located the Lawson PDF, read it carefully, and confirmed that it contained the analysis of the Colborne-to-Head transition and its implications for the Algonquin reserve proposal. The source was real, and the key historical argument held up. Not every detail in the deep research report was necessarily correct --- for example, some of the narrative about specific meetings may have been embellished or inferred beyond what the sources support --- but the tool had surfaced the crucial sources and the essential connection between them. That was enough to answer a question that had remained unresolved for years.
+
+Crucially, this finding had not been flagged by three peer reviewers who had read the historian's earlier work on the topic. The deep research tool surfaced a connection across a conference paper and a government publication that conventional research methods and expert human review had both missed.
+
+### Case 2: Marine Insurance and the Slave Trade --- Systematic Fabrication
+
+The same verification habit --- *Interesting, I wonder if that is true* --- produced very different results when applied to a deep research report on marine insurance and the British Atlantic slave trade. This report, [reproduced in full as a worked example](deep-research-example.qmd), was generated by Gemini Deep Research in response to a query about the key secondary literature and scholarly debates on the topic. It was fluent, well-structured, and read like the work of a knowledgeable historian. Careful verification revealed systematic errors across several categories.
+
+#### Distorted quantitative claims
+
+The report cited Pearson and Richardson's 2019 study in the *Journal of Economic History* as finding that direct slave voyages accounted for "5 to 10 percent" of total marine insurance premiums and bilateral plantation trade for "~30 percent," with a combined estimate of "33 percent and 40 percent." The actual article reports **7 percent** for slaving voyages and **41 percent** combined --- specific, single findings, not the vague ranges the report presented. The report appears to have blended Pearson and Richardson's numbers with Nicholas Draper's earlier 33% figure for 1769--1770, then fabricated a "consensus" range of 33--40% that appears nowhere in the literature.
+
+Matthew David Mitchell's monograph *The Prince of Slavers* says Humphry Morice trafficked "over 25,000" enslaved Africans. The report inflated this to "over 30,000."
+
+#### Garbled and fabricated citations
+
+Mallory Hope's article was cited as "Underwriting the Slave Trade: Risk, Uncertainty, and Marine Insurance in the Eighteenth-Century French Atlantic." The actual title is **"Risk and Uncertainty in France's Atlantic Slave Trade"** --- and the article analyzes the *French* Atlantic, not the British system. The report presented it as if it were a comparative study of the British insurance market.
+
+The ISBNs for both Ian Baucom's *Specters of the Atlantic* and Mitchell's *The Prince of Slavers* were wrong --- close enough to look plausible, but with transposed or altered digits. This is a hallmark of LLM fabrication: the numbers look right at a glance but do not correspond to any real edition.
+
+The report cited "Lloyd's Historical Research (Recent)" as a source for the 5--10% / 30% breakdown. This does not correspond to any identifiable publication. It appears to be a wholly invented institutional citation designed to anchor a fabricated data point.
+
+#### Invented scholarly consensus
+
+Perhaps most dangerously, the report constructed a false consensus by blending figures from different scholars, periods, and methodologies into composite ranges that no individual source supports. It presented these ranges in a table with scholarly attributions, giving the fabricated synthesis the visual authority of a literature review. A reader unfamiliar with the field would have no reason to doubt it.
+
+#### Mischaracterized arguments
+
+Anita Rupprecht's article on the *Zong* massacre was summarized as arguing that "abolitionists deliberately stripped the event of its complex insurance logic." Rupprecht's actual argument is more nuanced: she traces how the case was *transformed* as it circulated through abolitionist propaganda, not that abolitionists conspired to simplify it. The difference matters for how you would use the source.
+
+The "Underwriting Souls" project was attributed solely to Alexandre White at Johns Hopkins, omitting his co-investigator Pyar Seth entirely.
+
+### What the Two Cases Tell Us
+
+Both reports were produced by the same tool, using the same technology, with the same confident, authoritative tone. The Algonquin report made a real contribution to an active research project. The insurance report systematically fabricated a scholarly consensus out of distorted numbers, garbled citations, and invented sources. There was nothing in the format, tone, or structure of either report that would allow a reader to distinguish the reliable one from the unreliable one without independent verification.
+
+This is the fundamental challenge of deep research tools for historians: **they are most impressive when they are right, and most dangerous when they are wrong, and they look exactly the same in both cases.**
+
+The only safeguard is the question the historian applied to both reports: *Interesting, I wonder if that is true.* In the Algonquin case, verification confirmed a genuine discovery. In the insurance case, verification exposed systematic fabrication. The habit is the same; only the outcome differs.
 
 ## What They Do Well
 
@@ -22,17 +77,17 @@ These tools represent a genuine step forward from the basic chatbot experience d
 
 If you are beginning a project in a historiography you do not know, a deep research tool can produce a useful map of the terrain in fifteen minutes. Ask:
 
-> I am a historian beginning a research project on the role of marine insurance in the British Atlantic slave trade, roughly 1700--1807. Please search for the key secondary literature and major scholarly debates. I am interested in work published since 2000, particularly at the intersection of financial history and the history of slavery. Provide full bibliographic details for each source and a brief summary of its argument.
+> I am a historian beginning a research project on the role of marine insurance in the British Atlantic slave trade, roughly 1700--1807. Please search for the key secondary literature and major scholarly debates. I am particularly interested in work published since 2000, particularly at the intersection of financial history and the history of slavery. Provide full bibliographic details for each source and a brief summary of its argument.
 
 The result will typically be a structured report identifying major scholars, key monographs and articles, and the main lines of debate. This is genuinely useful as a starting point --- comparable to asking a knowledgeable colleague for reading suggestions, but faster and more systematic.
+
+### Surfacing Sources Across Disciplines and Archives
+
+As the Algonquin case demonstrates, deep research tools search broadly and can surface relevant work in adjacent fields, government publications, conference papers, and other sources that a historian searching within disciplinary databases might miss. This is a real advantage, particularly for topics that span multiple archives, jurisdictions, or scholarly communities.
 
 ### Finding Recent Work
 
 Deep research tools that search the web can surface recent publications that may not yet appear in standard bibliographic databases. For fast-moving fields or recent special issues, this is a real advantage over traditional database searching.
-
-### Identifying Connections Across Fields
-
-Because these tools search broadly, they sometimes surface relevant work in adjacent fields that a historian searching within disciplinary databases might miss --- economics journals, legal history, historical geography, environmental science.
 
 ### Producing Working Bibliographies
 
@@ -44,23 +99,23 @@ The limitations described in the [Limitations](limitations.qmd) section apply to
 
 ### Mixed Real and Fabricated Citations
 
-This is the central problem. Deep research reports typically contain a mixture of:
+As the insurance case demonstrates, deep research reports typically contain a mixture of:
 
 - **Real sources**, correctly cited and accurately summarized.
-- **Real sources**, cited but inaccurately summarized or mischaracterized.
-- **Fabricated sources** that do not exist, presented with plausible-sounding titles, authors, journal names, and dates.
+- **Real sources**, cited but with wrong titles, wrong ISBNs, or inaccurately summarized.
+- **Fabricated sources** that do not exist, presented with plausible-sounding institutional attributions.
 
 The fabricated sources are not flagged. They appear in the same footnote format as the real ones. The ratio has improved --- current models fabricate less frequently than their 2024 predecessors --- but this makes the problem harder, not easier. When most citations check out, the temptation to stop verifying is strong. The one fabrication you miss is the one that ends up in your footnotes.
 
-**This means every single citation in a deep research report must be independently verified.** This is not a suggestion; it is a requirement. A historian who cites a source from a deep research report without checking that it exists risks citing a work that was never published.
+**This means every single citation in a deep research report must be independently verified.** This is not a suggestion; it is a requirement.
 
 ### Confident Mischaracterization
 
-Even when a source is real, the tool may misrepresent its argument. A nuanced article that complicates a received narrative may be summarized as if it simply confirms it. A book that is primarily about one topic may be cited for a claim it makes only in passing. The tool does not distinguish between a work's central thesis and an incidental observation.
+Even when a source is real, the tool may misrepresent its argument. The insurance report's treatment of Rupprecht's article is a clear example: a nuanced argument about how the *Zong* case was transformed through circulation was flattened into a claim about deliberate simplification by abolitionists. A book that is primarily about one topic may be cited for a claim it makes only in passing. The tool does not distinguish between a work's central thesis and an incidental observation.
 
-### Historiographic Flattening
+### Fabricated Consensus
 
-Deep research tools tend to present scholarly debates as settled when they are not, or to smooth over genuine disagreements. A report on the "Williams thesis" might present it as either confirmed or refuted, when the actual historiographic situation is far more complicated. That said, the best current models have improved markedly at handling historiographic nuance. Cameron Blevins tested ChatGPT's deep research mode on American Western history in late 2025 and found it produced a "remarkably accurate" synthesis that demonstrated sophisticated understanding of major historiographic frameworks.^[Blevins, "Generative AI and History in 2025."] The tools are getting better at this --- but "better" is not "reliable," and historiographic flattening remains a risk, particularly for less well-documented debates.
+The most insidious failure mode, visible in the insurance case, is the construction of false scholarly consensus. The tool blended figures from different scholars, different periods, and different methodologies into composite ranges, then presented these ranges in a table with scholarly attributions. The result looked like a literature review summarizing established findings. It was actually a fabrication built from distorted parts of real scholarship. This kind of error is far harder to catch than a simple invented citation, because each individual piece has a kernel of truth.
 
 ### Source Quality Blindness
 
@@ -83,14 +138,19 @@ Go through the report's citations one by one:
 - Search for each title in your library catalogue, Google Scholar, JSTOR, or WorldCat.
 - If a source does not appear in any database, it probably does not exist. Remove it.
 - If a source exists, check that the author, date, and publication details match.
+- Check ISBNs. LLMs frequently generate plausible-looking but incorrect ISBNs with transposed digits.
 
 This step is non-negotiable. Budget time for it.
 
 ### Step 3: Check Summaries Against Originals
 
-For sources you plan to use, read at least the abstract and introduction yourself. Verify that the tool's summary accurately reflects the work's argument. Do not rely on the tool's characterization.
+For sources you plan to use, read at least the abstract and introduction yourself. Verify that the tool's summary accurately reflects the work's argument. Do not rely on the tool's characterization. As the insurance case shows, even real sources can be subtly misrepresented in ways that distort your understanding of the field.
 
-### Step 4: Fill the Gaps
+### Step 4: Check the Numbers
+
+If the report presents quantitative claims attributed to specific scholars, verify them against the original sources. The insurance case demonstrated how a tool can take real numbers from real scholars and blend them into fabricated consensus ranges. A table with scholarly attributions is not the same as a table that accurately reflects what those scholars actually found.
+
+### Step 5: Fill the Gaps
 
 Deep research reports are biased toward digitally accessible, English-language sources. After verifying what the tool found, search manually for:
 
@@ -99,54 +159,51 @@ Deep research reports are biased toward digitally accessible, English-language s
 - Archival sources and primary source collections (which these tools cannot access).
 - Recent work that may not yet be indexed.
 
-### Step 5: Read
+### Step 6: Read
 
 There is no substitute for this. The deep research report tells you what might be worth reading. The reading itself is your job.
 
 ## Comparing the Tools
 
-Each deep research tool has different strengths. Based on mid-2026 capabilities (these change rapidly --- verify before relying on this comparison):
+Each deep research tool has different strengths. Based on early 2026 capabilities (these change rapidly --- verify before relying on this comparison):
 
 | Tool | Strengths | Weaknesses |
 |------|-----------|------------|
 | **Perplexity** | Source links for every claim; free tier available; good for quick factual queries | Can be shallow on historiographic nuance; free tier has limits |
-| **Gemini Deep Research** | Excellent on well-documented historiography; thorough multi-page reports | Degrades badly at the edges of knowledge (see below) |
+| **Gemini Deep Research** | Excellent on well-documented historiography; thorough multi-page reports; strong Google Scholar integration | Fabricates confidently at the edges of knowledge; does not signal uncertainty |
 | **ChatGPT Deep Research** | Strong synthesis; good at identifying scholarly debates | Citation accuracy varies; can hallucinate convincingly |
-| **Claude (web search)** | More cautious; better at flagging uncertainty and acknowledging gaps | Weaker on historiography; less automated; requires more guidance |
+| **Claude (web search)** | More cautious; better at flagging uncertainty and acknowledging gaps | Less automated; requires more guidance |
 
 These assessments will change as the tools improve. The verification workflow remains the same regardless of which tool you use.
 
 ### A Note on Gemini and the Limits of Knowledge
 
-Gemini Deep Research deserves special mention because it illustrates a pattern that applies to all these tools but is particularly visible here. When you ask Gemini about a well-established historiographic debate --- the Williams thesis, the standard of living debate, the "great divergence" --- it is genuinely impressive. It identifies the key scholars, maps the lines of argument, and produces reports that a graduate student would find useful.
+Gemini Deep Research deserves special mention because it illustrates a pattern that applies to all these tools but is particularly visible here. When you ask Gemini about a well-established historiographic debate --- the Williams thesis, the standard of living debate, the "great divergence" --- it is genuinely impressive. It identifies the key scholars, maps the lines of argument, and produces reports that a graduate student would find useful. As Cameron Blevins tested in late 2025, its synthesis of American Western history was "remarkably accurate."^[Cameron Blevins, "Generative AI and History in 2025," December 19, 2025, <https://cblevins.github.io/posts/gen-ai-history-2025/>.]
 
 The problem emerges when you push toward questions at the frontier of historical knowledge --- topics where the primary sources are thin, not digitized, or simply do not exist. When Gemini cannot find strong evidence, it does not say so. Instead, it answers the question anyway, drawing on whatever it can find: sources from the wrong decade, tangentially related evidence, or speculative claims from weak secondary sources presented with the same confidence as established scholarship. The report reads just as polished and authoritative as one about a well-documented topic. The difference is invisible unless you already know enough to spot it.
 
 This is the fundamental trap of deep research tools: **they are most useful when you know the least about a topic, and least reliable in exactly that situation.** When you are entering an unfamiliar field --- the very moment you most need guidance --- you are also least equipped to evaluate what the tool gives you. The verification workflow described above is the only safeguard.
-
-### A Note on Claude and the Limits of Training Data
-
-Claude presents roughly the opposite trade-off from Gemini. Because Anthropic likely had less access to paywalled academic journals and monographs in its training data, Claude is noticeably weaker on established historiography --- it may miss key works or be vague where Gemini is specific. On the other hand, Claude is better at recognizing and communicating its own uncertainty. When it cannot find strong evidence for a claim, it is more likely to say so rather than filling the gap with weak or mismatched sources.
-
-This is a genuine advantage, but it is not absolute. Claude will still sometimes present uncertain claims with more confidence than they deserve. The difference is one of degree: you are somewhat less likely to receive a confident answer built on evidence from the wrong decade, and somewhat more likely to receive an honest "I am not sure about this." For a historian, a tool that says "I don't know" is often more useful than one that gives you a plausible-sounding wrong answer --- but you should still verify everything regardless of which tool you use.
 
 ## When Deep Research Tools Are Most Useful
 
 - **Entering a new field.** You are starting a project outside your usual area and need a map of the literature.
 - **Checking for recent work.** You have not searched a particular topic in a year or two and want to see what has been published.
 - **Interdisciplinary questions.** Your project touches on economics, law, environmental science, or another field, and you want to find relevant work outside history journals.
+- **Connecting sources across archives.** As the Algonquin case shows, these tools can sometimes link government publications, conference papers, and archival materials that conventional database searches treat as separate silos.
 - **Generating leads, not conclusions.** You treat the output as a list of things to check, not as a finished literature review.
 
 ## When They Are Not Useful
 
-- **Your own specialty.** You almost certainly know the literature better than the tool does. It may surface the occasional overlooked article, but the risk of fabricated or mischaracterized sources is not worth the time for a field you already command.
+- **Your own specialty.** You almost certainly know the literature better than the tool does. It may surface the occasional overlooked source --- as in the Algonquin case --- but the risk of fabricated or mischaracterized sources means you must verify everything regardless.
 - **Archival research.** These tools cannot access unpublished sources, manuscript collections, or finding aids.
 - **Historiographic argument.** A literature review in a thesis or article must reflect *your* reading and *your* interpretation of the field. A deep research report is a starting point for that work, not a substitute for it.
 
 ## See It for Yourself
 
-To illustrate what deep research output actually looks like --- and why verification is essential --- we ran the marine insurance prompt from the examples above through Gemini Deep Research and reproduced the full output as a **[worked example](deep-research-example.qmd)**. The report is impressive, well-structured, and reads like the work of a knowledgeable historian. Whether every citation in it actually exists is a question we leave to the reader.
+To illustrate what deep research output actually looks like --- and why verification is essential --- we ran the marine insurance prompt from the examples above through Gemini Deep Research and reproduced the full output as a **[worked example](deep-research-example.qmd)**. The report is impressive, well-structured, and reads like the work of a knowledgeable historian. The detailed verification above shows what happens when you check.
 
 ## The Bottom Line
 
-Deep research tools are the most impressive and the most dangerous GenAI application for historians. They have improved considerably --- fabrication rates are lower, historiographic synthesis is more sophisticated, and the best reports are genuinely useful starting points. But they can still fill your bibliography with sources that do not exist and your notes with summaries that misrepresent the scholarship. The improvement makes vigilance harder to sustain, not less necessary. The tool does the searching. The verification, the reading, and the thinking are yours.
+Deep research tools can make genuine contributions to historical research. They can also fabricate an entire scholarly consensus out of distorted numbers and garbled citations. Both outputs look equally authoritative. The difference is not visible in the format, the tone, or the footnotes. It is only visible when you do what historians are trained to do: go to the source and check.
+
+The question is always the same: *Interesting, I wonder if that is true.*
