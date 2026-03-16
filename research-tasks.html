@@ -166,6 +166,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#how-to-do-it-2" id="toc-how-to-do-it-2" class="nav-link" data-scroll-target="#how-to-do-it-2">How to Do It</a></li>
   <li><a href="#the-critical-caveat" id="toc-the-critical-caveat" class="nav-link" data-scroll-target="#the-critical-caveat">The Critical Caveat</a></li>
   <li><a href="#tips-2" id="toc-tips-2" class="nav-link" data-scroll-target="#tips-2">Tips</a></li>
+  <li><a href="#notebooklm" id="toc-notebooklm" class="nav-link" data-scroll-target="#notebooklm">Google NotebookLM: A Free Research Assistant</a></li>
   </ul></li>
   <li><a href="#coding-and-data-management" id="toc-coding-and-data-management" class="nav-link" data-scroll-target="#coding-and-data-management">Coding and Data Management</a>
   <ul class="collapse">
@@ -295,6 +296,24 @@ ul.task-list li input[type="checkbox"] {
 <li>Cross-reference with review essays, Oxford Bibliographies, or historiographic surveys for the field.</li>
 <li>Consider this a complement to, not a replacement for, searching databases yourself.</li>
 </ul>
+</section>
+<section id="notebooklm" class="level3">
+<h3 class="anchored" data-anchor-id="notebooklm">Google NotebookLM: A Free Research Assistant</h3>
+<p><a href="https://notebooklm.google/">Google NotebookLM</a> deserves special attention as a tool for literature discovery and source analysis. Unlike the general-purpose chatbots discussed above, NotebookLM is designed around <em>your</em> sources. You upload documents (PDFs, Google Docs, web pages, YouTube videos) and the tool answers questions grounded in that material, citing specific passages from your uploads rather than drawing on its general training data.</p>
+<p><strong>What makes it powerful:</strong></p>
+<ul>
+<li><strong>Source-grounded responses.</strong> Every answer includes inline citations pointing back to your uploaded documents. This dramatically reduces hallucination compared to asking a general chatbot about your topic.</li>
+<li><strong>Audio Overview.</strong> NotebookLM can convert your uploaded sources into a podcast-style discussion between two AI voices. This sounds like a gimmick, but historians working through large reading lists have found it genuinely useful: you can listen to a synthesized discussion of a set of articles while commuting or walking, then return to the originals with a better sense of the key arguments.</li>
+<li><strong>Free.</strong> The free tier is generous: 100 notebooks, 50 sources per notebook, up to 50,000 words per source, and 50 chat queries per day. A paid tier (NotebookLM Plus, included with some Google Workspace plans) raises these limits.</li>
+<li><strong>Comparative analysis.</strong> You can upload multiple sources and ask NotebookLM to compare arguments, identify points of agreement and disagreement, or trace how a particular concept is treated across different texts. This is especially useful when surveying a historiographic debate.</li>
+</ul>
+<p><strong>Where it struggles:</strong></p>
+<ul>
+<li><strong>Handwriting and difficult documents.</strong> NotebookLM uses lower-tier models to process free-tier content. For relatively clean printed text, OCR and comprehension are strong. For handwritten documents, damaged pages, or complex layouts, results degrade significantly compared to what you would get from the best models (Gemini 3 Pro, Claude Opus) via paid access or the API. Worse, when NotebookLM misreads a handwritten source, it can hallucinate content and then cite the source as evidence for claims the source does not actually contain. Because the tool’s design encourages you to trust its inline citations, this failure mode is particularly insidious: you may click through to the linked source and find that the passage NotebookLM cited does not support (or even contain) the claim it attributed to it. If you push back, the model may double down rather than acknowledge the error. For handwritten or otherwise difficult sources, verify every cited passage against the original.</li>
+<li><strong>Source limitations.</strong> It can only work with what you upload. It does not search the web or access databases on your behalf. You need to curate the source material yourself.</li>
+<li><strong>Depth of analysis.</strong> For straightforward questions (“What does Author X argue about Y?”), NotebookLM is excellent. For more interpretive work (“How does Author X’s argument compare to the archival evidence I found in Series Z?”), it is limited by both the quality of the uploaded sources and the capacity of the underlying model.</li>
+</ul>
+<p><strong>Best for:</strong> Surveying a set of secondary sources you have already collected, preparing for a historiographic essay, digesting a large reading list, or exploring a collection of transcribed primary sources. Think of it as a research assistant who has read everything you have uploaded and can answer questions about it on demand, but who cannot go to the library for you.</p>
 </section>
 </section>
 <section id="coding-and-data-management" class="level2">
