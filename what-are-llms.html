@@ -157,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#what-they-are-good-at" id="toc-what-they-are-good-at" class="nav-link" data-scroll-target="#what-they-are-good-at">What They Are Good At</a></li>
   <li><a href="#where-they-struggle" id="toc-where-they-struggle" class="nav-link" data-scroll-target="#where-they-struggle">Where They Struggle</a></li>
   <li><a href="#the-key-habit-verify-everything" id="toc-the-key-habit-verify-everything" class="nav-link" data-scroll-target="#the-key-habit-verify-everything">The Key Habit: Verify Everything</a></li>
-  <li><a href="#a-note-on-training-data" id="toc-a-note-on-training-data" class="nav-link" data-scroll-target="#a-note-on-training-data">A Note on Training Data</a></li>
+  <li><a href="#a-note-on-training-data-and-web-search" id="toc-a-note-on-training-data-and-web-search" class="nav-link" data-scroll-target="#a-note-on-training-data-and-web-search">A Note on Training Data and Web Search</a></li>
   </ul>
 </nav>
     </div>
@@ -231,7 +231,7 @@ ul.task-list li input[type="checkbox"] {
 <p>LLMs have improved substantially since 2024, but they still fail in characteristic ways:</p>
 <ul>
 <li><strong>Factual accuracy</strong>: They <em>hallucinate</em> — generating plausible-sounding but false claims, including fabricated citations, invented dates, and non-existent sources. Hallucinations have become less frequent in the latest models, but this actually makes them <em>more</em> dangerous: when most output is accurate, it is easier to let your guard down and miss the one fabricated source that slips through.</li>
-<li><strong>Archival research</strong>: They cannot access unpublished sources, manuscript collections, or anything not in their training data. They have no way to visit an archive.</li>
+<li><strong>Archival research</strong>: Even with web search, they cannot access unpublished sources, manuscript collections, or materials behind paywalls. They have no way to visit an archive.</li>
 <li><strong>Interpretation and argument</strong>: Current models are surprisingly capable at synthesis and interpretation — they can identify historiographic debates, weigh competing claims, and construct plausible arguments. But the <em>responsibility</em> for evaluating whether an interpretation is sound, whether the evidence is sufficient, and whether the argument holds up still rests with the historian. The models are getting better at the form <em>and</em> substance of argument, but they do not know your sources the way you do.</li>
 <li><strong>Knowing what they do not know</strong>: They do not reliably flag uncertainty. A fabricated citation may be presented with the same confidence as a real one, though some models (notably Claude) are better than others at acknowledging gaps.</li>
 </ul>
@@ -247,13 +247,15 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>If this sounds exhausting, it is worth noting that historians already verify sources as a matter of professional practice. The habit transfers directly. The difference is that with an LLM, you must verify the <em>tool</em> as well as the <em>source</em>.</p>
 </section>
-<section id="a-note-on-training-data" class="level2">
-<h2 class="anchored" data-anchor-id="a-note-on-training-data">A Note on Training Data</h2>
-<p>LLMs are trained on text that existed up to a certain date (the “knowledge cutoff”). They do not have access to the internet in real time unless specifically designed to search the web (some tools offer this as a feature). They reflect the biases, gaps, and emphases of their training data. For historians, this means:</p>
+<section id="a-note-on-training-data-and-web-search" class="level2">
+<h2 class="anchored" data-anchor-id="a-note-on-training-data-and-web-search">A Note on Training Data and Web Search</h2>
+<p>LLMs are trained on text that existed up to a certain date (the “knowledge cutoff”). Most major models now include built-in web search (sometimes called retrieval-augmented generation, or RAG) that allows them to look up current information in real time. However, web search does not always activate: depending on how you phrase your prompt, the model may answer from its training data alone and give you outdated information without warning. If you need current facts, it is worth explicitly asking the model to search the web.</p>
+<p>Even with web search, LLMs reflect the biases, gaps, and emphases of both their training data and the sources available online. For historians, this means:</p>
 <ul>
 <li>They know more about topics that are well-represented in English-language digital text.</li>
 <li>They know less about topics that are primarily documented in archives, rare books, or languages with less digital presence.</li>
 <li>They can reproduce historiographic biases present in the literature they were trained on.</li>
+<li>Web search helps with recent events and verifiable facts, but does not give the model access to paywalled databases, archival finding aids, or subscription journals.</li>
 </ul>
 <p>None of this is disqualifying, but it means you should treat LLM output the way you would treat any secondary source: as a starting point that requires critical evaluation, not as an authority.</p>
 
