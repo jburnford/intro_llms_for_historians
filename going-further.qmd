@@ -5,7 +5,9 @@ subtitle: "When free tools hit their limits"
 
 ## When Free Is Enough
 
-For many historians, the free tiers of ChatGPT and Google Gemini will be sufficient for occasional use: a few transcription sessions, some translation help, the odd coding question. If you use these tools a few times a week for modest tasks, you may never need to pay for anything.
+For many historians, the free tiers of ChatGPT, Google Gemini, and Claude will be sufficient for occasional use: a few transcription sessions, some translation help, the odd coding question. If you use these tools a few times a week for modest tasks, you may never need to pay for anything.
+
+Google's [NotebookLM](https://notebooklm.google/) is also worth exploring: it lets you upload your own sources and query them conversationally, grounding responses in your materials rather than general training data. See the [Research Tasks](research-tasks.qmd#notebooklm) page for a fuller discussion of what it can and cannot do.
 
 ## When Free Is Not Enough
 
@@ -14,67 +16,82 @@ You are likely to hit the limits of free tools if you:
 - **Process large volumes of documents.** Free tiers have daily usage caps. A sustained transcription or translation project will exhaust them quickly.
 - **Work with long documents.** Free models often have smaller context windows --- they can only process a limited amount of text at once. If you need to feed in a 30-page chapter or a long set of notes, you may need a paid tier.
 - **Need the most capable models.** The best-performing models are typically reserved for paid subscribers. The difference is noticeable for complex tasks like nuanced translation, sophisticated code generation, or working with messy data.
-- **Want to upload files.** Some free tiers restrict file uploads (PDFs, images, spreadsheets). Paid tiers generally allow this.
+- **Want to build things.** If you want to create databases, process archival images at scale, build a website, or develop custom analysis tools, you will need paid access to agentic tools that can read and write files on your computer.
 
-## Paid Options
+## The Three Platforms
 
-Prices and capabilities change frequently. The following is accurate as of mid-2026 but should be verified before subscribing.
+Prices and capabilities change frequently. The following is accurate as of early 2026 but should be verified before subscribing. All three major platforms now offer comparable pricing (~$20 USD/month), million-token context windows, and built-in web search. The differences lie in their strengths.
 
-### ChatGPT Plus (~$20 USD/month)
+### Claude Pro (~$20 USD/month) {#claude}
 
-- Access to the most capable OpenAI models
-- Higher usage limits
-- File uploads (PDFs, images, spreadsheets)
-- Custom instructions that persist across conversations
-- Web browsing and image generation
-
-**Best for:** General-purpose use across transcription, translation, and writing tasks. The most widely used option, with the largest ecosystem of guides and tutorials.
-
-### Claude Pro (~$20 USD/month)
-
-- Access to Anthropic's Claude models (Sonnet, Opus)
-- Larger context window --- Claude can process significantly longer documents in a single conversation (up to ~150 pages of text)
+- Access to Anthropic's Claude models (Sonnet 4.6, Opus 4.6)
+- 1 million token context window --- Claude can process book-length documents in a single conversation
 - File uploads, including large PDFs
 - Careful, detailed responses; tends to be more cautious about stating things it is unsure of
+- Includes access to Claude Code, Cowork, and Research tools (see below)
 
-**Best for:** Working with long documents, detailed transcription, and tasks where you value accuracy and caution over speed. Claude's longer context window is a meaningful advantage for historians working with multi-page sources.
+**Best for:** Working with long documents, detailed transcription, and tasks where you value accuracy and caution over speed. Claude's combination of a very large context window and careful handling of uncertainty makes it a strong default choice for historians. In coding and complex reasoning tasks, Claude currently leads the major benchmarks.
 
-### Google Gemini Advanced (~$20 USD/month, bundled with Google One AI Premium)
+### ChatGPT Plus (~$20 USD/month) {#chatgpt}
 
-- Access to Google's most capable models
-- Integration with Google Workspace (Docs, Sheets, Gmail)
-- Large context window
+- Access to OpenAI's most capable models (currently GPT-5.4)
+- File uploads (PDFs, images, spreadsheets)
+- Custom instructions that persist across conversations
+- Web browsing, image generation, and video generation
+- The largest user base and ecosystem of guides and tutorials
 
-**Best for:** Historians already embedded in the Google ecosystem who want AI assistance across their existing workflow.
+**Best for:** General-purpose use across transcription, translation, and writing tasks. ChatGPT remains the most widely used AI tool, and its breadth of features (image generation, computer use, custom GPTs) is unmatched. If you want a single subscription that does a bit of everything, this is the safe choice. OpenAI also offers a budget tier ("Go") at $8/month for lighter use.
 
-### Claude Code (Subscription or usage-based)
+### Google AI Pro (~$20 USD/month) {#gemini}
 
-Claude Code is a different kind of tool. It runs in your computer's terminal (command line) rather than in a web browser, and it can read, write, and edit files on your computer directly. It is designed for extended, multi-step tasks rather than quick questions.
+- Access to Google's most capable models (currently Gemini 3 Pro)
+- 1 million token context window
+- Deep integration with Google Workspace (Docs, Sheets, Gmail)
+- Deep Research mode for multi-step literature searches
+- Free for students (one-year Google AI Pro access via .edu email)
 
-**What it can do that a chatbot cannot:**
+**Best for:** Historians already embedded in the Google ecosystem, and anyone doing exploratory literature reviews or historiographic surveys. Gemini's Deep Research mode, which executes multi-step web searches and synthesizes results into a structured report, is particularly useful for surveying a field or mapping a historiographic debate. It draws more heavily on Google Scholar than the other platforms do. Be aware, however, that Deep Research still relies primarily on openly available web content and will miss paywalled journals, so it is a starting point for a literature review rather than a substitute for one.
 
-- Read an entire project directory --- your chapter drafts, your data files, your scripts --- and work with them as a whole.
-- Write and run code directly on your machine, testing it and fixing errors automatically.
-- Edit your files in place, with your review and approval.
-- Maintain context across long work sessions.
+## Beyond the Chatbot: Agentic Tools
 
-**Why a historian might want this:**
+The most significant development in 2025-2026 has been the rise of *agentic* AI tools that go beyond conversation. Instead of answering questions in a chat window, these tools can read your files, write code, execute commands, and complete multi-step tasks on your computer. All three major platforms now offer these.
 
-- Building and maintaining a database (e.g., loading census data into Neo4j, cleaning a large spreadsheet)
-- Processing a batch of digitized documents
-- Writing and debugging data analysis scripts
-- Proofreading a multi-chapter manuscript with consistent style guidelines
+### Claude Code and Cowork {#claude-code}
 
-Claude Code is the most powerful option discussed in this guide but also the one with the steepest learning curve. It requires basic comfort with the command line. For historians doing computationally intensive research, the investment in learning it can pay off substantially.
+[Claude Code](https://claude.com/product/claude-code) runs in your computer's terminal (command line) and can read, write, and edit files directly. It is included with a Claude Pro subscription. [Cowork](https://claude.com/blog/cowork-research-preview), launched in early 2026, brings the same file-access capabilities into the Claude desktop app without requiring the terminal.
+
+**What historians have used Claude Code for:**
+
+- **Building a professional website in minutes.** This guide's website was built with Claude Code: the Quarto project, the page structure, the CSS styling, and the deployment to GitHub Pages were all created through conversation with the tool.
+- **Creating and managing databases.** Loading historical census data into Neo4j, cleaning and restructuring large spreadsheets, building queryable research databases from messy sources.
+- **Processing thousands of archival images.** Using the Claude API to send batches of digitized documents (photographs, manuscripts, maps) through automated transcription and description pipelines.
+- **Learning computational methods interactively.** Instead of working through a textbook, you can learn text mining, network analysis, or spatial methods through a back-and-forth session where Claude Code writes the code, explains what it does, runs it on your data, and helps you interpret the results.
+- **Creating bespoke visualizations.** Generating custom maps, charts, and figures tailored to your specific research questions and data, iterating on the design in real time.
+- **Building local RAG systems.** Setting up a system where Claude can search and explore your own research documents (PDFs, transcriptions, notes) locally on your machine, grounding its responses in your specific sources rather than its general training data.
+
+Claude Code is the most powerful option discussed in this guide but also the one with the steepest learning curve. It requires basic comfort with the command line, though Cowork lowers this barrier significantly. For historians doing computationally intensive research, the investment in learning it can pay off substantially.
+
+### OpenAI Codex CLI {#codex}
+
+OpenAI's [Codex CLI](https://github.com/openai/codex) is a direct competitor to Claude Code: an open-source terminal tool that reads, modifies, and executes code on your machine. It is included with ChatGPT Plus. It offers configurable approval modes (from read-only to full autonomy) and uses a specialized coding model.
+
+### Gemini CLI {#gemini-cli}
+
+Google's [Gemini CLI](https://github.com/google-gemini/gemini-cli) is the newest entry in this category. It is open-source and free to use with a personal Google account. It includes built-in Google Search, file operations, and support for extensions. A recently added "plan mode" lets it analyze a codebase and design an implementation strategy without modifying any files.
+
+### Which agentic tool to choose?
+
+As of early 2026, Claude Code is the most mature and capable of these tools, particularly for complex, multi-step tasks. Codex CLI and Gemini CLI are functional alternatives but newer and less battle-tested. If you are already paying for one platform's subscription, start with its agentic tool before adding another.
 
 ## Do You Need Any of This?
 
-Honestly --- maybe not. If you are writing a traditional monograph based on archival research, and your sources are in languages you read fluently, and you do not work with large datasets, the free tier of ChatGPT or Gemini may serve you well for the occasional task. The paid tools are most valuable for researchers whose work involves:
+Honestly --- maybe not. If you are writing a traditional monograph based on archival research, and your sources are in languages you read fluently, and you do not work with large datasets, the free tier of any major platform (or NotebookLM) may serve you well for the occasional task. The paid tools are most valuable for researchers whose work involves:
 
 - Large-scale document processing
 - Sources in multiple languages
 - Computational methods (databases, text analysis, mapping)
 - Long and complex writing projects
+- Building custom research infrastructure
 
 Start with the free tools. If you find yourself bumping against their limits regularly, a $20/month subscription is a modest investment for a professional research tool.
 
@@ -85,3 +102,4 @@ When you use a web-based LLM, the text you provide is sent to the company's serv
 - **Do not paste unpublished, embargoed, or confidential material** into a free-tier chatbot without understanding the service's data policy.
 - Most paid tiers offer options to opt out of having your conversations used for model training. Check the settings.
 - If you are working with sensitive data (e.g., records involving living individuals), consult your institution's research ethics guidelines.
+- Agentic tools like Claude Code, Codex CLI, and Gemini CLI run on your local machine but still send your prompts and file contents to remote servers for processing. The same privacy considerations apply.
