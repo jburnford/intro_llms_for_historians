@@ -18,6 +18,8 @@ website:
         text: Deep Research
       - href: case-studies.qmd
         text: Case Studies
+      - href: teaching.qmd
+        text: Teaching
       - href: copy-editing.qmd
         text: Copy Editing
       - href: going-further.qmd

@@ -27,11 +27,13 @@ The guide moves from free, low-commitment starting points to more advanced (and 
 
 5. **[Case Studies](case-studies.qmd)** --- Two projects built by a historian using these tools: re-OCR'ing and building a searchable knowledge graph of 8,128 Royal Society articles (1665--1869), and transcribing and visualizing an archival collection of Joseph Banks' correspondence on the British leather trade. Neither required advanced programming skills.
 
-6. **[Copy Editing](copy-editing.qmd)** --- Using GenAI to proofread and polish your own drafted prose --- what it does well, where it over-corrects, and how to stay in control of your voice.
+6. **[LLMs and Teaching](teaching.qmd)** --- Why prohibition is difficult to enforce, why AI detection tools are unreliable (and biased), and what actually works: process-based assessment, Google Docs version history, assignment design, oral verification, and the ownership model for courses that move beyond prohibition.
 
-7. **[Going Further](going-further.qmd)** --- When free tools hit their limits and paid subscriptions become worthwhile. An honest look at costs, capabilities, and what the more advanced tools (Claude Pro, ChatGPT Plus, Claude Code) actually offer.
+7. **[Copy Editing](copy-editing.qmd)** --- Using GenAI to proofread and polish your own drafted prose --- what it does well, where it over-corrects, and how to stay in control of your voice.
 
-8. **[Limitations](limitations.qmd)** --- What these tools get wrong, how to recognize it, and what you should never trust them to do unsupervised. This section is as important as any of the others.
+8. **[Going Further](going-further.qmd)** --- When free tools hit their limits and paid subscriptions become worthwhile. An honest look at costs, capabilities, and what the more advanced tools (Claude Pro, ChatGPT Plus, Claude Code) actually offer.
+
+9. **[Limitations](limitations.qmd)** --- What these tools get wrong, how to recognize it, and what you should never trust them to do unsupervised. This section is as important as any of the others.
 
 ## A Note on Tools and Vendors
 
